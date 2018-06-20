@@ -40,6 +40,8 @@ gem 'kaminari-i18n', '~> 0.5.0'
 
 gem 'routing-filter', '~> 0.6.0'
 
+gem 'mobility', '~> 0.7.5'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
