@@ -14,8 +14,10 @@ Mobility.configure do |config|
   # to something else.
   config.query_method    = :i18n
 
+
   config.default_options[:dirty] = true
   config.default_options[:type]  = :string
+
   # Uncomment and remove (or add) items to (from) this list to completely
   # disable/enable plugins globally (so they cannot be used and are never even
   # loaded). Note that if you remove an item from the list, you will not be
@@ -43,7 +45,7 @@ Mobility.configure do |config|
   # If you enable this, you should also enable +locale_accessors+ by default
   # (see below).
   #
-  # config.default_options[:dirty] = true
+
 
   # No fallbacks are used by default. To define default fallbacks, uncomment
   # and set the default fallback option value here. A "true" value will use
