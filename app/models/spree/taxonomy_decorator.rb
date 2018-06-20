@@ -4,3 +4,4 @@ module Spree
     translates :name,  type: :string
   end
 end
+
