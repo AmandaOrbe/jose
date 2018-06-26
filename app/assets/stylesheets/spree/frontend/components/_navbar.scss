@@ -1,0 +1,177 @@
+%n-placeholder{
+  position: absolute;
+  width: 30rem;
+  display: inline-block;
+  top: 0;
+ }
+
+
+
+
+/* Main navbar */
+.navbar{
+  background: white;
+  transition: all 0.3s ease;
+  height: 8rem;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+
+
+  /* Logo */
+
+  &__logo-box{
+  width: 16rem;
+  margin: 0;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+
+    &__image {
+    height: 6.4rem;
+    }
+  }
+
+
+  &--center{
+    margin: 0 auto;
+    width: 50rem;
+    height: 8rem;
+    top: 50%;
+    transform: translateY(-0.9rem);
+
+  }
+
+
+  &--right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 16rem;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    &__icon{
+      font-size: 1.6rem;
+      &:first-child{
+        position: relative;
+      }
+    }
+  }
+}
+
+.taxonomies-list{
+  position: relative;
+
+    &__taxonomy{
+
+
+
+      &__major{
+        text-transform: uppercase;
+      }
+
+      &__subtaxons{
+        h5{
+          margin: .5rem;
+        }
+      }
+    }
+
+    &__n1{
+      @extend %n-placeholder;
+      left: 0;
+      &:hover .mujer{
+       display: flex;
+      }
+    }
+    &__n2{
+      @extend %n-placeholder;
+      left: 10rem;
+      &:hover .hombre{
+       display: flex;
+      }
+    }
+    &__n3{
+      @extend %n-placeholder;
+      left: 20rem;
+      &:hover .niños{
+       display: flex;
+      }
+    }
+
+    &__n4{
+      @extend %n-placeholder;
+      left: 30rem;
+      &:hover .regalos{
+       display: flex;
+      }
+    }
+
+    &__n5{
+      @extend %n-placeholder;
+      left: 40rem;
+      &:hover .nosotros{
+       display: flex;
+      }
+    }
+
+
+
+}
+
+
+
+
+
+.mujer{
+  display: none;
+  &:hover{
+    display: flex;
+  }
+}
+
+.hombre{
+  display: none;
+   &:hover{
+    display: flex;
+
+  }
+}
+
+.niños{
+  display: none;
+   &:hover{
+    display: flex;
+  }
+}
+
+.regalos{
+    display: none;
+     &:hover{
+    display: flex;
+  }
+}
+
+.nosotros{
+  display: none;
+   &:hover{
+    display: flex;
+  }
+  h5{
+    white-space: nowrap;
+  }
+}
+
+
+.languages{
+  margin-top: 30px;
+}
+
+
+

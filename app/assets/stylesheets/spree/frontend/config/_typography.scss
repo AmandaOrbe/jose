@@ -1,0 +1,38 @@
+.heading-primary{
+  position: absolute;
+  top: 30%;
+  width: 60rem;
+  text-align: right;
+
+  &--main{
+    h1{
+    color: white;
+      line-height: 10rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+
+.heading-secondary{
+
+  text-align: center;
+  width: 80%;
+  &--main{
+
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 5rem auto;
+  width: 100%;
+  }
+  &--sub{
+
+    display: inline-block;
+    width: 100%;
+    margin: 2rem auto;
+    padding-right: 4rem;
+
+
+  }
+}
+

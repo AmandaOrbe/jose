@@ -1,0 +1,22 @@
+// Specific CSS for your home-page
+.header{
+  height: 90vh;
+  width: 100%;
+  background-size:cover;
+  background-position: top;
+  margin: 0;
+  position: relative;
+
+  &__banner-content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 90vh;
+  width: 60rem;
+  text-align: right;
+  }
+}
+
+
+
+

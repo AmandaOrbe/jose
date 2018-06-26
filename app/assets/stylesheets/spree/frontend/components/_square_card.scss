@@ -1,0 +1,38 @@
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+$box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+
+
+
+
+.featured{
+  width: 100%;
+  &__row{
+   display: flex;
+   justify-content: space-between;
+
+  }
+}
+
+
+.square-card{
+  margin-top: 7.2vh;
+  width: calc((96%) / 2);
+  height: calc((86.4vw ) / 2);
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+
+  &--text{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+  }
+
+  &__picture{
+    width: auto;
+    height: 100%;
+  }
+}

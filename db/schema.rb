@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_121236) do
+ActiveRecord::Schema.define(version: 2018_06_26_161707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1045,7 +1045,7 @@ ActiveRecord::Schema.define(version: 2018_06_19_121236) do
   create_table "spree_taxons", id: :serial, force: :cascade do |t|
     t.integer "parent_id"
     t.integer "position", default: 0
-    t.string "name", null: false
+    t.string "name"
     t.string "permalink"
     t.integer "taxonomy_id"
     t.integer "lft"
