@@ -1,0 +1,94 @@
+
+
+@import "colors";
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Lora|Montserrat" rel="stylesheet");
+// Define fonts for body and headers
+$body-font: "Lora", "serif";
+$headers-font: "Montserrat", "Helvetica", "sans-serif";
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+
+
+ body{
+  color: black;
+
+
+  h1 {
+    font-size: 3.6rem;
+    color: $red;
+    font-family: "Lora", "serif";
+    font-weight: bold;
+  }
+  h2{
+    font-size: 3.4rem;
+    color: black;
+    font-family: "Lora", "serif";
+    font-weight: 200;
+  }
+  h3{
+   font-size: 1.6rem;
+    color: black;
+    font-family: "Lora", "serif";
+    font-weight: 200;
+  }
+  h4{
+   font-size: 1.4rem;
+    color: black;
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-weight: 100;
+  }
+  h5{
+   font-size: 1rem;
+    color: black;
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-weight: 100;
+  }
+  h6{
+   font-size: 1rem;
+    color: white;
+    font-family: "Montserrat", "Helvetica", "sans-serif";
+    font-weight: 100;
+  }
+  p{
+  font-size: 1.4rem;
+    color: black;
+    font-family: "Lora", "serif";
+    font-weight: 300;
+  }
+  a{
+    color: inherit;
+  }
+  a:hover{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+  }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

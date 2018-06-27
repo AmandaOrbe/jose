@@ -1,0 +1,77 @@
+
+<div class="navbar">
+  <!-- Logo -->
+
+  <div class="navbar__logo-box">
+    <%= link_to root_path do %>
+    <%= image_tag "logo.png", class: "navbar__logo-box__image"%>
+    <% end %>
+  </div>
+
+  <div class="space">
+
+  </div>
+  <!-- Links  -->
+
+  <nav  class="navbar--center taxonomies-list" data-hook>
+    <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+      <% @taxonomies.each do |taxonomy| %>
+      <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
+          <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.position %>">
+
+
+              <h4>  <%= link_to taxonomy.name, "#{root_path}t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+
+              <%= nav_tree(taxonomy.root, @taxon, max_level)%>
+
+          </div>
+        <% end %>
+      <% end %>
+
+      <div class="taxonomies-list__taxonomy taxonomies-list__n5">
+
+
+
+        <h4><%= link_to "nosotros", "#", class: "taxonomies-list__taxonomy__major" %></h4>
+         <div class="nosotros taxonomies-list__taxonomy__subtaxons list-inline">
+          <h5><%= link_to "historia", "#"%></h5>
+          <h5><%= link_to "prensa", "#"%></h5>
+          <h5><%= link_to "pasarela", "#"%></h5>
+          <h5><%= link_to "puntos de venta", "#"%></h5>
+         </div>
+      </div>
+
+  </nav>
+
+
+  <!-- NAVBAR RIGHT ICONS-->
+  <div class="navbar--right list-inline">
+
+      <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
+
+      <%= link_to "#" do %>
+        <i class="navbar--right__icon fa fa-user" id="user"></i>
+      <% end %>
+      <%= link_to "#" do %>
+        <i class="navbar--right__icon fa fa-search" id="search"></i>
+      <% end %>
+      <%= link_to spree.cart_path do %>
+        <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
+      <% end %>
+
+  </div>
+
+
+</div>
+<div class="navbar">
+
+  <%= render partial: 'spree/shared/nav_bar' %>
+  <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
+</div>
+
+
+
+
+
+
+
