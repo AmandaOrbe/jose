@@ -75,7 +75,7 @@ module Spree
       private
 
       def taxon_params
-        params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_it, :name_en)
+        params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_fr, :name_en)
       end
     end
   end
