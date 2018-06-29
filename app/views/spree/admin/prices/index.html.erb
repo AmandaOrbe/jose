@@ -1,0 +1,12 @@
+<%= render 'spree/admin/shared/product_tabs', current: 'Prices' %>
+<% admin_breadcrumb(plural_resource_name(Spree::Price)) %>
+<% content_for :page_actions do %>
+  <li id="new_price_link">
+    <%= link_to t(".new_price"), new_object_url, class: 'btn btn-primary' %>
+  </li>
+<% end if can?(:create, Spree::Product) %>
+
+
+
+<%= render 'master_variant_table', master_prices: @master_prices, variants: @product.variants.any? %>
+<%= render 'table', variant_prices: @variant_prices if @product.variants.any? %>
