@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  amanda:
+    productpage:
+      generalaspects: General Aspects
+      english: English
+      spanish: Spanish
+      french: French

@@ -1,4 +1,11 @@
 es:
+  amanda:
+    productpage:
+      generalaspects: Características Generales
+      english: Inglés
+      spanish: Español
+      french: Francés
+
   date:
     abbr_day_names:
       - dim
@@ -205,6 +212,8 @@ es:
       short: "%d %b %Hh%M"
     pm: pm
 
+
+
 #SPREE TRANSLATION
 
   activemodel:
@@ -367,13 +376,13 @@ es:
         description: Descripción
         depth: Profundidad
         height: Altura
-        master_price: Precio Principal
+        master_price: Precio
         meta_description: Meta Description
         meta_keywords: Meta Keywords
         meta_title: Meta Title
         name: Nombre
         on_hand: En Mano
-        price: Precio Principal
+        price: Precio
         promotionable: Promocionable
         shipping_category: Categoría de Envío
         slug: Slug
@@ -1075,9 +1084,9 @@ es:
         areas: Ubicaciones
         checkout: Reembolsos y Devoluciones
         configuration: Configuración
-        display_order: Mostrar Pedido
-        option_types: Tipos de Opción
-        orders: Pedidos 
+        display_order: Orden de aparición
+        option_types: Opciones
+        orders: Pedidos
         overview: Resumen
         payments: Pagos
         products: Productos
@@ -1093,7 +1102,7 @@ es:
         stock_transfers: Transferencias de Stock
         stores: Tiendas
         taxes: Impuestos
-        taxonomies: Taxonomías
+        taxonomies: Categorías
         taxons: Taxons
         users: Usuarios
       taxons:
@@ -1601,7 +1610,7 @@ es:
     manage_stock: Stock de Tienda
     manual_intervention_required: Se requiere intervención manual
     manage_variants: Gestionar Variantes
-    master_price: Precio principal
+    master_price: Precio
     master_variant: Variante principal
     match_choices:
       all: Todos

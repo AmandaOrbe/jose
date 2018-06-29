@@ -1,0 +1,240 @@
+<div data-hook="admin_product_form_fields">
+
+      <h3><%=t('amanda.productpage.generalaspects')%></h3>
+
+    <div class="row" data-hook="admin_product_form_left">
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_price">
+
+            <%= f.field_container :price do %>
+              <%= f.label :price, class: Spree::Config.require_master_price ? 'required' : '' %>
+              <%= render "spree/admin/shared/number_with_currency", f: f,
+                         amount_attr: :price,
+                         required: Spree::Config.require_master_price,
+                         currency: Spree::Config.default_pricing_options.currency %>
+              <%= f.error_message_on :price %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_available_on">
+            <%= f.field_container :available_on do %>
+              <%= f.label :available_on %>
+              <%= f.field_hint :available_on %>
+              <%= render "spree/admin/shared/datepicker", f: f, date_attr: :available_on %>
+              <%= f.error_message_on :available_on %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_sku">
+            <%= f.field_container :sku do %>
+              <%= f.label :sku, Spree::Variant.human_attribute_name(:sku) %>
+              <%= f.text_field :sku, size: 16 %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+         <div data-hook="admin_product_form_taxons">
+          <%= f.field_container :taxons do %>
+            <%= f.label :taxon_ids, plural_resource_name(Spree::Taxon) %><br />
+            <%= f.hidden_field :taxon_ids, value: @product.taxon_ids.join(',') %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+
+
+      <% if show_rebuild_vat_checkbox? %>
+        <%= render "spree/admin/shared/rebuild_vat_prices_checkbox", form: f, model_name: "product" %>
+        <div class="clearfix"></div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-8">
+           <div data-hook="admin_product_form_slug">
+            <%= f.field_container :slug do %>
+              <%= f.label :slug, class: ('required' if !f.object.new_record?) %>
+              <%= f.text_field :slug, class: 'fullwidth title', required: !f.object.new_record?, disabled: f.object.new_record? %>
+              <%= f.error_message_on :slug %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_shipping_categories">
+            <%= f.field_container :shipping_categories do %>
+              <%= f.label :shipping_category_id, Spree::ShippingCategory.model_name.human, class: 'required' %>
+              <%= f.field_hint :shipping_category %>
+              <%= f.collection_select(:shipping_category_id, @shipping_categories, :id, :name, { include_blank: t('spree.match_choices.none') }, { class: 'custom-select' , required: true}) %>
+              <%= f.error_message_on :shipping_category %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <h3 class="col-4"><%=t('amanda.productpage.english')%></h3>
+          <h3 class="col-4"><%=t('amanda.productpage.spanish')%></h3>
+          <h3 class="col-4"><%=t('amanda.productpage.french')%></h3>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div data-hook="admin_product_form_name">
+            <%= f.field_container :name_en do %>
+              <%= f.label :name, class: 'required' %>
+              <%= f.text_field :name_en, class: 'fullwidth title', required: true %>
+              <%= f.error_message_on :name %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_name">
+            <%= f.field_container :name_es do %>
+              <%= f.label :name, class: 'required' %>
+              <%= f.text_field :name_es, class: 'fullwidth title', required: true %>
+              <%= f.error_message_on :name %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div data-hook="admin_product_form_name">
+            <%= f.field_container :name_fr do %>
+              <%= f.label :name, class: 'required' %>
+              <%= f.text_field :name_fr, class: 'fullwidth title', required: true %>
+              <%= f.error_message_on :name %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div data-hook="admin_product_form_description">
+            <%= f.field_container :description_en do %>
+              <%= f.label :description %>
+              <%= f.text_area :description_en, {rows: "#{unless @product.has_variants? then '22' else '15' end}", class: 'fullwidth'} %>
+              <%= f.error_message_on :description %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_description">
+            <%= f.field_container :description_es do %>
+              <%= f.label :description %>
+              <%= f.text_area :description_es, {rows: "#{unless @product.has_variants? then '22' else '15' end}", class: 'fullwidth'} %>
+              <%= f.error_message_on :description %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_description">
+            <%= f.field_container :description_fr do %>
+              <%= f.label :description %>
+              <%= f.text_area :description_fr, {rows: "#{unless @product.has_variants? then '22' else '15' end}", class: 'fullwidth'} %>
+              <%= f.error_message_on :description %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_title">
+            <%= f.field_container :meta_title_en do %>
+              <%= f.label :meta_title_en %>
+              <%= f.text_field :meta_title_en, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+           <div data-hook="admin_product_form_meta_title">
+            <%= f.field_container :meta_title_es do %>
+              <%= f.label :meta_title_es %>
+              <%= f.text_field :meta_title_es, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <%= f.field_container :meta_title_fr do %>
+              <%= f.label :meta_title_fr %>
+              <%= f.text_field :meta_title_fr, class: 'fullwidth' %>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_keywords">
+            <%= f.field_container :meta_keywords_en do %>
+              <%= f.label :meta_keywords %>
+              <%= f.text_field :meta_keywords_en, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_keywords">
+            <%= f.field_container :meta_keywords_es do %>
+              <%= f.label :meta_keywords %>
+              <%= f.text_field :meta_keywords_es, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_keywords">
+            <%= f.field_container :meta_keywords_fr do %>
+              <%= f.label :meta_keywords %>
+              <%= f.text_field :meta_keywords_fr, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_description">
+            <%= f.field_container :meta_description_en do %>
+              <%= f.label :meta_description %>
+              <%= f.text_field :meta_description_en, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_description">
+            <%= f.field_container :meta_description_es do %>
+              <%= f.label :meta_description %>
+              <%= f.text_field :meta_description_es, class: 'fullwidth' %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-4">
+          <div data-hook="admin_product_form_meta_description">
+          <%= f.field_container :meta_description_fr do %>
+            <%= f.label :meta_description %>
+            <%= f.text_field :meta_description_fr, class: 'fullwidth' %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+  <div class="clear"></div>
+
+  <div data-hook="admin_product_form_additional_fields"></div>
+
+  <div class="clear"></div>
+</div>
