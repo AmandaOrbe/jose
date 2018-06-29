@@ -40,7 +40,7 @@
       </div>
 
       <div class="row">
-        <div class="col-12">
+        <div class="col-8">
          <div data-hook="admin_product_form_taxons">
           <%= f.field_container :taxons do %>
             <%= f.label :taxon_ids, plural_resource_name(Spree::Taxon) %><br />
@@ -48,6 +48,16 @@
           <% end %>
         </div>
         </div>
+        <div class="col-4">
+
+      <div data-hook="admin_product_form_option_types">
+        <%= f.field_container :option_types do %>
+          <%= f.label :option_type_ids, plural_resource_name(Spree::OptionType) %>
+          <%= f.hidden_field :option_type_ids, value: @product.option_type_ids.join(',') %>
+        <% end %>
+      </div>
+        </div>
+
       </div>
 
 
@@ -228,6 +238,14 @@
 
 
 
+
+
+  <div class="clear"></div>
+
+  <div data-hook="admin_product_form_additional_fields"></div>
+
+  <div class="clear"></div>
+</div>
 
 
 

@@ -1,0 +1,32 @@
+
+<div data-hook="admin_option_type_form_fields" class="align-center row">
+  <div class="col-3">
+    <%= f.field_container :name do %>
+      <%= f.label :name, class: 'required' %><br />
+      <%= f.text_field :name, class: "fullwidth" %>
+      <%= f.error_message_on :name %>
+    <% end %>
+  </div>
+
+  <div class="col-3">
+    <%= f.field_container :presentation_en do %>
+      <%= f.label :presentation_en, class: 'required' %><br />
+      <%= f.text_field :presentation_en, class: "fullwidth" %>
+      <%= f.error_message_on :presentation %>
+    <% end %>
+  </div>
+  <div class="col-3">
+    <%= f.field_container :presentation_es do %>
+      <%= f.label :presentation_es, class: 'required' %><br />
+      <%= f.text_field :presentation_es, class: "fullwidth" %>
+      <%= f.error_message_on :presentation %>
+    <% end %>
+  </div>
+  <div class="col-3">
+    <%= f.field_container :presentation_fr do %>
+      <%= f.label :presentation_fr, class: 'required' %><br />
+      <%= f.text_field :presentation_fr, class: "fullwidth" %>
+      <%= f.error_message_on :presentation %>
+    <% end %>
+  </div>
+</div>
