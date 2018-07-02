@@ -14,7 +14,8 @@
       <strong class="stock-location-name" data-hook="stock-location-name">'<%= shipment.stock_location.name %>'</strong>
     </legend>
 
-    <% if shipment.ready? && can?(:ship, shipment) %>
+    <% if shipment.can_transition_from_pending_to_ready? && can?(:ship, shipment) %>
+    <% shipment.update_state %>
       <%= form_tag("#", class: "admin-ship-shipment") do %>
         <label>
           <%= check_box_tag :send_mailer, true, true %>
