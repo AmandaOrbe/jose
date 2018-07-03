@@ -11,7 +11,7 @@
 <% content_for :table_filter_title do %>
   <%= t('spree.search') %>
 <% end %>
-<p>holaaaaaaaaaaa</p>
+
 <% content_for :table_filter do %>
   <div data-hook="admin_products_sidebar">
     <%= search_form_for [:admin, @search] do |f| %>
@@ -95,6 +95,6 @@
                   new_resource_url: new_object_url %>
   </div>
 <% end %>
-<p>holaaaaaaaaaaa</p>
+
 
 <%= paginate @collection, theme: "solidus_admin" %>

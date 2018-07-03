@@ -10,8 +10,11 @@ Spree.config do |config|
   # from address for transactional emails
   config.mails_from = "store@example.com"
 
+  # config.require_payment_to_ship = false
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+
+
 
   # When set, product caches are only invalidated when they fall below or rise
   # above the inventory_cache_threshold that is set. Default is to invalidate cache on
