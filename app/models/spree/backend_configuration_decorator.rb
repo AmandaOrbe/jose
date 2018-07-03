@@ -16,7 +16,7 @@ module Spree
                             :payment_methods, :shipping_methods,
                             :shipping_categories, :stock_locations,
                             :refund_reasons, :reimbursement_types, :return_authorization_reasons]
-    STOCK_TABS         ||= [:stock_items]
+
     USER_TABS          ||= [:users, :store_credits]
 
     # An item which should be drawn in the admin menu
@@ -95,13 +95,6 @@ module Spree
           label: :settings,
           partial: 'spree/admin/shared/settings_sub_menu',
           url: :admin_stores_path
-        ),
-        MenuItem.new(
-          STOCK_TABS,
-          'cubes',
-          condition: -> { can?(:admin, Spree::StockItem) },
-          label: :stock,
-          url: :admin_stock_items_path
         ),
         MenuItem.new(
           USER_TABS,
