@@ -36,14 +36,14 @@ div[data-hook="admin_products_index_search_buttons"] {
 }
 
 #upload-zone {
-  border: 2px dashed $color-border;
+  border: 2px dashed very-light($color-10, 12);
   padding: 2rem 5rem;
   text-align: center;
   margin: 1rem auto;
   width: 70%;
 
   i{
-    color: very-light($color-3, 12);
+    color: very-light($color-10, 12);
     font-size: 10rem ;
   }
 
@@ -64,3 +64,53 @@ div[data-hook="admin_products_index_search_buttons"] {
 .modal-image-trigger {
   cursor: zoom-in;
 }
+
+.price-fieldset{
+  &:first-child{
+    padding-top: 5rem;
+  }
+  h4, h2{
+    text-align: center;
+    padding: 1rem;
+    font-weight: $font-weight-normal;
+  }
+  h4 a{
+    color: $color-8;
+
+
+  }
+  h2{
+    font-family: $font-family-lora;
+  }
+}
+
+.number-with-currency-with-select .number-with-currency-select {
+
+    cursor: pointer;
+    width: 5.5rem;
+    border-radius: 0px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

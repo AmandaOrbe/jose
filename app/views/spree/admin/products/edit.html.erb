@@ -12,10 +12,16 @@
 <% admin_breadcrumb(t('spree.product_details')) %>
 
 <%= form_for [:admin, @product], html: { multipart: true } do |f| %>
+<div class="edit-background">
   <fieldset class="no-border-top">
+    <div>
     <%= render partial: 'form', locals: { f: f } %>
     <% if can?(:update, @product) %>
+      <br>
+      <br>
       <%= render partial: 'spree/admin/shared/edit_resource_links' %>
     <% end %>
+    </div>
   </fieldset>
+</div>
 <% end %>

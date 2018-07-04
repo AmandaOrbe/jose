@@ -13,7 +13,7 @@ $letter-spacing: 0.8px;
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$blue:   $color-8 !default;
+$blue:   $color-6 !default;
 $red:    $color-5 !default;
 $orange: $color-6 !default;
 $green:  $color-2 !default;
@@ -51,6 +51,7 @@ $font-family-base:       "Montserrat", "Helvetica Neue", "Helvetica", Helvetica,
 $font-size-root: 13px !default;
 
 $font-weight-normal: 100 !default;
+$font-weight-semibold: 400 !default;
 $font-weight-bold: 600 !default;
 
 $h1-font-size: $font-size-root + 12 !default;
@@ -95,7 +96,6 @@ label{
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
-
 
 
 

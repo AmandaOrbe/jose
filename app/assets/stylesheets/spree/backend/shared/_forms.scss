@@ -173,6 +173,11 @@ fieldset {
   border-right: none;
   box-shadow: $box-shadow;
 
+  h3{
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    margin-top: 40px;
+  }
   &.no-border-bottom {
     border-bottom: none;
   }
@@ -202,6 +207,7 @@ fieldset {
     i {
       color: $link-color;
     }
+
   }
 
   .filter-actions {
@@ -223,10 +229,11 @@ fieldset {
 }
 
 .form-actions {
-  margin-top: 18px;
+  margin-top: 28px;
 }
 .form-buttons {
   text-align: center;
+   margin-top: 28px;
 }
 
 .input-group-text {
@@ -241,7 +248,7 @@ input[type="text"], .custom-select,  input[type="password"], input[type="select"
   border-radius: 0px;
   background: #fff;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 2.1rem;
  &:focus{
     border-color:  #cee1f4;
     outline: none;

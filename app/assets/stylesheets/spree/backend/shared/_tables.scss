@@ -1,7 +1,15 @@
 table {
+    padding: 40px;
+    box-shadow: $box-shadow;
   // Extend all tables with Bootstrap's default table style
+
+
+  td{
+    height: 100px;
+  }
   @extend .table;
   border-spacing: 0;
+
 
   &.sortable td,
   tr.vertical-middle td,
@@ -9,21 +17,30 @@ table {
     vertical-align: middle;
   }
 
+  th{
+    font-family: $font-family-lora;
+    margin-bottom: 15px !important;
+    vertical-align: bottom !important;
+    border-bottom: 1px solid $color-8 !important;
+  }
+
   th, td {
     text-overflow: ellipsis;
-
+    vertical-align: middle;
     .handle {
       @extend .fa;
       @extend .fa-bars;
       cursor: move;
-      display: block !important;
+      display: none;
       text-align: center;
       padding: 3px 0;
+      color: transparent;
     }
 
     &.actions {
       text-align: right;
       padding-left: 1.25rem;
+
 
       span.text {
         font-size: $font-size-base;
@@ -111,6 +128,20 @@ table {
     color: $color-4;
   }
 
+  td {
+    font-weight: $font-weight-normal;
+    img{
+      height: 100px;
+    }
+    a {
+      font-weight: $font-weight-semibold;
+      color: $color-8;
+      &:hover{
+      color: $color-6;
+      }
+    }
+  }
+
   tbody {
     tr {
       &.deleted td {
@@ -121,6 +152,7 @@ table {
 
     &.no-border-top tr:first-child td {
       border-top: none;
+
     }
   }
 }
