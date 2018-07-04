@@ -58,7 +58,8 @@ input[type="button"],
 button,
 .button {
   box-shadow: $box-shadow;
-      transition: ease .3s;
+  transition: ease .3s !important;
+
   &:not(.close):not([class*="btn"]) {
     // We want to apply the primary button coloring to all buttons that do not
     // currently use the Bootstrap class naming convention (`btn`).
@@ -173,6 +174,12 @@ fieldset {
   border-right: none;
   box-shadow: $box-shadow;
 
+
+  h3{
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    margin-top: 40px;
+  }
   &.no-border-bottom {
     border-bottom: none;
   }
@@ -202,6 +209,7 @@ fieldset {
     i {
       color: $link-color;
     }
+
   }
 
   .filter-actions {
@@ -223,10 +231,11 @@ fieldset {
 }
 
 .form-actions {
-  margin-top: 18px;
+  margin-top: 28px;
 }
 .form-buttons {
   text-align: center;
+   margin-top: 28px;
 }
 
 .input-group-text {
@@ -241,7 +250,7 @@ input[type="text"], .custom-select,  input[type="password"], input[type="select"
   border-radius: 0px;
   background: #fff;
   font-size: 1rem;
-  line-height: 2;
+  line-height: 2.1rem;
  &:focus{
     border-color:  #cee1f4;
     outline: none;
@@ -254,7 +263,15 @@ input[type="text"], .custom-select,  input[type="password"], input[type="select"
   }
 }
 
-.custom-select{
+.js-edit-stock-item{
+  tr{
+    border: none;
+  }
+  td{
+    width: 100px;
+    border: none;
+
+  }
 
 
 

@@ -1,9 +1,7 @@
 .tabs {
   display: flex;
   margin: 1em 0;
-  border-bottom: 1px solid $color-border;
   white-space: nowrap;
-
 
   &,
   ul {
@@ -40,6 +38,7 @@
 
   &:not(.active) > a {
     background: $color-1;
+    color: $body-color;
   }
 
   &.active{
@@ -51,11 +50,14 @@
   &.active:hover {
     background: white;
     border-bottom-color: white;
-    color: $body-color;
+    color: $link-color;
   }
 
+
+
+
   &:not(.active):hover > a {
-    background: darken($color-tbl-thead, 5%);
+
     color: $link-color;
   }
 }

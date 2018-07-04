@@ -6,7 +6,9 @@
 
 <%= form_for [:admin, @product, @variant] do |f| %>
   <fieldset class="no-border-top" data-hook="admin_variant_new_form">
+    <h3> New variant</h3>
     <%= render partial: 'form', locals: { f: f } %>
     <%= render partial: 'spree/admin/shared/new_resource_links' %>
+
   </fieldset>
 <% end %>

@@ -1,0 +1,63 @@
+<%= paginate @variants, theme: "solidus_admin" %>
+
+<table class="index stock-table" id="listing_product_stock">
+  <colgroup>
+    <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 15%" />
+    <col style="width: 10%" />
+    <col style="width: 45%" />
+
+  </colgroup>
+  <thead>
+    <tr>
+      <th>imagen </th>
+      <th>SKU</th>
+      <th>nombre</th>
+      <th><%= t('spree.options') %></th>
+      <th> localizacion</th>
+
+
+    </tr>
+  </thead>
+  <tbody class="variant-stock-items">
+    <% variants.each do |variant| %>
+    <%- locations_without_items = @stock_item_stock_locations - variant.stock_items.flat_map(&:stock_location) %>
+    <%- display_add_row = locations_without_items.any? && can?(:create, Spree::StockItem) %>
+    <%- row_count = @stock_item_stock_%>
+      <tr id="<%= spree_dom_id variant %>">
+        <td class="no-padding" >
+          <div class='variant-container'>
+            <div class='variant-image'>
+              <%= render 'spree/admin/shared/image', image: variant.display_image(fallback: false), size: :small %>
+            </div>
+          </div>
+        </td>
+        <td><%= variant.sku%> </td>
+        <td><%= variant.name  %> </td>
+
+        <% if  variant.option_values.any? %>
+          <% variant.option_values.sort_by(&:option_type_name).each do |option_value| %>
+            <td><%= option_value.presentation %> </td>
+          <% end %>
+        <% else %>
+            <td>talla única</td>
+        <% end %>
+
+        <% variant.stock_items.each do |item| %>
+        <% if @stock_item_stock_locations.include?(item.stock_location) %>
+        <td class="js-edit-stock-item stock-item-edit-row fullwidth" data-variant-id="<%= variant.id %>" data-stock-item="<%= item.to_json %>" data-stock-location-name="<%= item.stock_location.name %>">
+            <%# This is rendered in JS %>
+          </td>
+        <% end %>
+        <% end %>
+
+      </tr>
+
+
+    <% end %>
+
+
+</table>
+
+<%= paginate @variants, theme: "solidus_admin" %>
