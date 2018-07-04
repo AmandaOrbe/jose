@@ -58,7 +58,8 @@ input[type="button"],
 button,
 .button {
   box-shadow: $box-shadow;
-      transition: ease .3s;
+  transition: ease .3s !important;
+
   &:not(.close):not([class*="btn"]) {
     // We want to apply the primary button coloring to all buttons that do not
     // currently use the Bootstrap class naming convention (`btn`).
@@ -173,6 +174,7 @@ fieldset {
   border-right: none;
   box-shadow: $box-shadow;
 
+
   h3{
     text-transform: uppercase;
     font-weight: $font-weight-normal;
@@ -261,7 +263,15 @@ input[type="text"], .custom-select,  input[type="password"], input[type="select"
   }
 }
 
-.custom-select{
+.js-edit-stock-item{
+  tr{
+    border: none;
+  }
+  td{
+    width: 100px;
+    border: none;
+
+  }
 
 
 

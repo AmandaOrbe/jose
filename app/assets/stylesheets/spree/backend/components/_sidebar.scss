@@ -1,5 +1,13 @@
 .content-sidebar {
-  padding-top: 0.65rem;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: $box-shadow;
+  h5{
+    color: $color-8;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+  }
+
 
   .has-tabs & {
     padding-top: 3.25rem;
