@@ -7,18 +7,18 @@
     <% end %>
 
     <%= f.field_container :name_en do %>
-    <%= f.label :name, "Taxon name english" ,class: 'required' %><br />
+    <%= f.label :name, "Nombre subcategoría Inglés" ,class: 'required' %><br />
     <%= error_message_on :taxon, :name, class: 'fullwidth title' %>
     <%= text_field :taxon, :name_en %>
   <% end %>
    <%= f.field_container :name_es do %>
-    <%= f.label :name, "Taxon nombre español" ,class: 'required' %><br />
+    <%= f.label :name, "Nombre subcategoría español" ,class: 'required' %><br />
     <%= error_message_on :taxon, :name, class: 'fullwidth title' %>
     <%= text_field :taxon, :name_es %>
   <% end %>
 
   <%= f.field_container :name_fr do %>
-    <%= f.label :name, "Taxon nome italiano" ,class: 'required' %><br />
+    <%= f.label :name, "Nombre subcategoría Francés" ,class: 'required' %><br />
     <%= error_message_on :taxon, :name, class: 'fullwidth title' %>
     <%= text_field :taxon, :name_fr %>
   <% end %>
