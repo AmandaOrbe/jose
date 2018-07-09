@@ -1749,6 +1749,11 @@ es:
         subtotal: ! 'Subtotal:'
         thanks: Gracias por su compra.
         total: ! 'Total Pedido:'
+        shipment: 'Envío'
+        article: 'Artículo'
+        size: 'talla'
+        amount: 'cantidad'
+        price: 'precio'
       inventory_cancellation:
         dear_customer: Estimado Cliente,
         instructions: Algunos de los artículos de su pedido han sido CANCELADOS. Por favor, guarde esta información para su control.

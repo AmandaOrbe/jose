@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_26_161707) do
+ActiveRecord::Schema.define(version: 2018_07_09_140057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -339,6 +339,8 @@ ActiveRecord::Schema.define(version: 2018_06_26_161707) do
     t.integer "store_id"
     t.string "approver_name"
     t.boolean "frontend_viewable", default: true, null: false
+    t.string "tracking"
+    t.string "language"
     t.index ["approver_id"], name: "index_spree_orders_on_approver_id"
     t.index ["bill_address_id"], name: "index_spree_orders_on_bill_address_id"
     t.index ["completed_at"], name: "index_spree_orders_on_completed_at"
@@ -458,7 +460,7 @@ ActiveRecord::Schema.define(version: 2018_06_26_161707) do
   end
 
   create_table "spree_products", id: :serial, force: :cascade do |t|
-    t.string "name", default: "", null: false
+    t.string "name", default: ""
     t.text "description"
     t.datetime "available_on"
     t.datetime "deleted_at"

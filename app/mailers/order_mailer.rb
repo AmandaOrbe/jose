@@ -6,8 +6,14 @@ module Spree
       @order = order
       @store = @order.store
       subject = build_subject(t('.subject'), resend)
-
-      mail(to: @order.email, from: from_address(@store), subject: subject)
+      I18n.locale = @order.language.to_sym
+      I18n.with_locale(@order.languageto_sym) do
+      mail(
+        to: @order.email,
+        from: from_address(@store),
+        subject: subject
+      )
+      end
     end
 
     def cancel_email(order, resend = false)
