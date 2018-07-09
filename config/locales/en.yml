@@ -37,3 +37,13 @@ en:
       english: English
       spanish: Spanish
       french: French
+
+
+  spree:
+    order_mailer:
+      confirm_email:
+        shipment: 'Shipment'
+        article: 'Article'
+        size: 'size'
+        amount: 'amount'
+        price: 'price'

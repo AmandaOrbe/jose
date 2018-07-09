@@ -1,4 +1,13 @@
 
+<p class="lede">
+        <%= t('.dear_customer') %>
+      </p>
+      <p>
+        <%= t('.instructions') %>
+      </p>
+      <p>
+        <%= t('.order_summary') %>
+      </p>
 <%=image_tag "logo.png" %>
 <h3>Order confirmation for order <%= @order.number %> </h3>
 
@@ -14,17 +23,17 @@
 
     <thead>
       <tr>
-        <th> Article </th>
-        <th>Size</th>
-        <th>Quantity</th>
-        <th>Price</th>
+        <th> <%= t('.article') %></th>
+        <th> <%= t('.size')  %></th>
+        <th><%= t('.amount') %></th>
+        <th><%= t('.price')%></th>
       </tr>
     </thead>
 
     <tbody>
     <% @order.line_items.each do |item| %>
     <tr>
-      <td><%= item.variant.product.name_en %></td>
+      <td><%= item.variant.product.name %></td>
       <td><%= item.variant.options_text %></td>
       <td><%=item.quantity%></td>
       <td><%= item.single_money %></td>
@@ -32,11 +41,11 @@
     </tr>
     <% end %>
      <tr>
-      <td colspan="3">shimpent</td>
+      <td colspan="3"><%= t('.shipment')%></td>
       <td><%=@order.shipment_total  %></td>
     </tr>
     <tr>
-      <td colspan="3">total amount</td>
+      <td colspan="3"><%= t('.total')%></td>
       <td><%=@order.total %></td>
     </tr>
       <tr class="edit-tracking vertical-middle">
