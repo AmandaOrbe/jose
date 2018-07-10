@@ -83,37 +83,31 @@
 
     &__n1{
       @extend %n-placeholder;
-      left: 0;
-      &:hover .mujer{
+      left: 5rem;
+      &:hover .t_1{
        display: flex;
       }
     }
     &__n2{
       @extend %n-placeholder;
-      left: 10rem;
-      &:hover .hombre{
+      left: 15rem;
+      &:hover .t_2{
        display: flex;
       }
     }
     &__n3{
       @extend %n-placeholder;
-      left: 20rem;
-      &:hover .niños{
+      left: 25rem;
+      &:hover .t_3{
        display: flex;
       }
     }
+
+
 
     &__n4{
       @extend %n-placeholder;
-      left: 30rem;
-      &:hover .regalos{
-       display: flex;
-      }
-    }
-
-    &__n5{
-      @extend %n-placeholder;
-      left: 40rem;
+      left: 35rem;
       &:hover .nosotros{
        display: flex;
       }
@@ -127,27 +121,14 @@
 
 
 
-.mujer{
+.t_1, .t_2, .t_3{
   display: none;
   &:hover{
     display: flex;
   }
 }
 
-.hombre{
-  display: none;
-   &:hover{
-    display: flex;
 
-  }
-}
-
-.niños{
-  display: none;
-   &:hover{
-    display: flex;
-  }
-}
 
 .regalos{
     display: none;
