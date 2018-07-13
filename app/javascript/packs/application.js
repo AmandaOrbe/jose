@@ -8,3 +8,14 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+
+const search = document.getElementById("search")
+const searchBar =  document.getElementById("search-bar")
+
+search.addEventListener("click", (event) =>{
+  console.log(event);
+  console.log(searchBar);
+  searchBar.classList.toggle("visible")
+})
+
+

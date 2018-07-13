@@ -5,7 +5,8 @@ es:
       english: Inglés
       spanish: Español
       french: Francés
-
+    searchbar:
+      placeholder: Escriba aquí el producto que desea buscar
   date:
     abbr_day_names:
       - dim

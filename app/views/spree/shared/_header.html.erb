@@ -1,59 +1,67 @@
-<div class="navbar">
+<div class="header">
 
-  <!-- Logo -->
-  <div class="navbar__logo-box">
-    <%= link_to root_path do %>
-    <%= image_tag "logo.png", class: "navbar__logo-box__image"%>
-    <% end %>
-  </div>
-
-  <!-- Links  -->
-
-  <nav  class="navbar--center taxonomies-list" data-hook>
-    <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
-      <% @taxonomies.each do |taxonomy| %>
-      <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
-          <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.position %>">
-              <h4>  <%= link_to taxonomy.name, "#{root_path}t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
-              <%= nav_tree(taxonomy.root, @taxon, max_level)%>
-          </div>
-        <% end %>
-      <% end %>
-
-      <div class="taxonomies-list__taxonomy taxonomies-list__n4">
-        <h4><%= link_to "ishvara", "#", class: "taxonomies-list__taxonomy__major" %></h4>
-         <div class="nosotros taxonomies-list__taxonomy__subtaxons list-inline">
-          <h5><%= link_to "historia", main_app.ishvara_historia_path%></h5>
-          <h5><%= link_to "prensa", main_app.ishvara_prensa_path%></h5>
-          <h5><%= link_to "pasarela", main_app.ishvara_pasarela_path%></h5>
-         </div>
+  <div id="search-bar" data-hook>
+        <%= render partial: 'spree/shared/search' %>
       </div>
-  </nav>
 
 
-  <!-- NAVBAR RIGHT ICONS-->
-  <div class="navbar--right list-inline">
-      <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
-      <%= link_to login_path do %>
-        <i class="navbar--right__icon fa fa-user" id="user"></i>
+  <div class="navbar">
+
+    <!-- Logo -->
+    <div class="navbar__logo-box">
+      <%= link_to root_path do %>
+      <%= image_tag "logo.png", class: "navbar__logo-box__image"%>
       <% end %>
-      <%= link_to "#" do %>
-        <i class="navbar--right__icon fa fa-search" id="search"></i>
-      <% end %>
-      <%= link_to spree.cart_path do %>
-        <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
-      <% end %>
+    </div>
+
+    <!-- Links  -->
+
+    <nav  class="navbar--center taxonomies-list" data-hook>
+      <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+        <% @taxonomies.each do |taxonomy| %>
+        <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
+            <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.position %>">
+                <h4>  <%= link_to taxonomy.name, "#{root_path}t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+                <%= nav_tree(taxonomy.root, @taxon, max_level)%>
+            </div>
+          <% end %>
+        <% end %>
+
+        <div class="taxonomies-list__taxonomy taxonomies-list__n4">
+          <h4><%= link_to "ishvara", "#", class: "taxonomies-list__taxonomy__major" %></h4>
+           <div class="nosotros taxonomies-list__taxonomy__subtaxons list-inline">
+            <h5><%= link_to "historia", main_app.ishvara_historia_path%></h5>
+            <h5><%= link_to "prensa", main_app.ishvara_prensa_path%></h5>
+            <h5><%= link_to "pasarela", main_app.ishvara_pasarela_path%></h5>
+           </div>
+        </div>
+    </nav>
+
+
+    <!-- NAVBAR RIGHT ICONS-->
+    <div class="navbar--right list-inline">
+        <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
+        <%= link_to login_path do %>
+          <i class="navbar--right__icon fa fa-user" id="user"></i>
+        <% end %>
+        <button id="search" class=" navbar--right__icon">
+          <i class=" fa fa-search" ></i>
+        </button>
+
+        <%= link_to spree.cart_path do %>
+          <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
+        <% end %>
+    </div>
+
+
+  </div>
+  <div class="navbar">
+
+    <%= render partial: 'spree/shared/nav_bar' %>
+
   </div>
 
-
 </div>
-<div class="navbar">
-
-  <%= render partial: 'spree/shared/nav_bar' %>
-  <%= render partial: 'spree/shared/main_nav_bar' if store_menu? %>
-</div>
-
-
 
 
 
