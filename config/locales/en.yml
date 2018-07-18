@@ -37,7 +37,12 @@ en:
       english: English
       spanish: Spanish
       french: French
-
+    searchbar:
+      placeholder: Searh for the product you are looking for
+    devise:
+      log_in: Log in
+      register: get an account now
+      register_cta: register now
 
   spree:
     order_mailer:

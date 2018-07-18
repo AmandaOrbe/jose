@@ -460,7 +460,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_140057) do
   end
 
   create_table "spree_products", id: :serial, force: :cascade do |t|
-    t.string "name", default: ""
+    t.string "name", default: "", null: false
     t.text "description"
     t.datetime "available_on"
     t.datetime "deleted_at"

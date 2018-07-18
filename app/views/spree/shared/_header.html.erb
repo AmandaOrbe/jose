@@ -1,4 +1,23 @@
-<div class="header">
+
+
+<div data-hook="login_extras"></div>
+
+  <fieldset class="header-login" id="home-login">
+      <div class="header-login__left">
+        <h3 class="header-login__title"><%=t('amanda.devise.register')%></h3>
+          <br>
+          <br>
+          <br>
+        <btn class="btn btn--black btn--down">
+          <%=t('amanda.devise.register_cta')%>
+        </btn>
+      </div>
+      <div class="header-login__right">
+      <h3 class="header-login__title"><%=t('amanda.devise.log_in')%></h3>
+
+        <%= render partial: 'spree/shared/login' %>
+      </div>
+  </fieldset>
 
   <div id="search-bar" data-hook>
         <%= render partial: 'spree/shared/search' %>
@@ -41,9 +60,9 @@
     <!-- NAVBAR RIGHT ICONS-->
     <div class="navbar--right list-inline">
         <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
-        <%= link_to login_path do %>
-          <i class="navbar--right__icon fa fa-user" id="user"></i>
-        <% end %>
+        <button id="user-icon" class=" navbar--right__icon">
+          <i class=" fa fa-user" ></i>
+        </button>
         <button id="search" class=" navbar--right__icon">
           <i class=" fa fa-search" ></i>
         </button>
@@ -55,11 +74,7 @@
 
 
   </div>
-  <div class="navbar">
 
-    <%= render partial: 'spree/shared/nav_bar' %>
-
-  </div>
 
 </div>
 
