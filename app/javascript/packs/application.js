@@ -9,13 +9,31 @@
 
 console.log('Hello World from Webpacker')
 
+// SEARCH BAR
+
+
 const search = document.getElementById("search")
 const searchBar =  document.getElementById("search-bar")
 
 search.addEventListener("click", (event) =>{
   console.log(event);
   console.log(searchBar);
-  searchBar.classList.toggle("visible")
+  login.classList.remove("login-visible");
+  searchBar.classList.toggle("visible");
+})
+
+
+// LOGIN HOME
+
+const userIcon =  document.getElementById("user-icon")
+const login = document.getElementById("home-login")
+
+
+userIcon.addEventListener("click", (event) =>{
+  console.log(userIcon);
+  console.log(login);
+  searchBar.classList.remove("visible");
+  login.classList.toggle("login-visible");
 })
 
 

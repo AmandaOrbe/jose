@@ -7,6 +7,12 @@ es:
       french: Francés
     searchbar:
       placeholder: Escriba aquí el producto que desea buscar
+    devise:
+      log_in: Acceder
+      register: Crea una cuenta ahora
+      register_cta: Regístrate ahora
+
+
   date:
     abbr_day_names:
       - dim

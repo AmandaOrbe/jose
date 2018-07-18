@@ -1,7 +1,7 @@
 #search-bar{
 position: relative;
 margin-top: 1rem;
-opacity: 1;
+opacity: 0;
 height: 0rem;
 transition: all .5s ease;
 }
@@ -40,7 +40,7 @@ transition: all .5s ease;
 
 }
 
-.btn{
+.btn-searchbar{
   position: absolute;
   right: 2rem;
   top: 1.5rem;

@@ -1,0 +1,46 @@
+.header-login{
+  position: relative;
+  height: 0rem;
+  opacity: 0;
+  border-bottom: 1px solid $color-black;
+  transition: all .5s ease;
+  background-color: white;
+
+  h3{
+    text-transform: uppercase;
+    font-family: $headers-font;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__left, &__right{
+    width: 49%;
+    position: absolute;
+    padding: 3rem 8rem;
+    height: 30rem;
+
+  }
+
+  &__left{
+     left: 0;
+  }
+
+ &__right{
+    right: 0;
+  }
+
+  .inline-form{
+    display: flex;
+  }
+
+  .title{
+    margin-right: 3rem;
+  }
+}
+
+
+.login-visible{
+  height: 30rem;
+  opacity: 1
+}

@@ -4,6 +4,6 @@
     <% cache [I18n.locale, @taxons] do %>
     <% end %>
     <%= search_field_tag :keywords, params[:keywords], placeholder: t('amanda.searchbar.placeholder') %>
-    <%= submit_tag t('spree.search'), name: nil, class: "btn btn--white-border" %>
+    <%= submit_tag t('spree.search'), name: nil, class: "btn btn--white-border btn-searchbar" %>
   <% end %>
 </div>
