@@ -6,18 +6,22 @@
         <label for="switch_to_locale" class="sr-only">
           <%= Spree.t(:'i18n.language') %>
         </label>
-        <%=
-          select_tag(
-            :switch_to_locale,
-            options_for_select(
-              available_locales.map do |locale|
-                [I18n.t(locale: locale, default: locale.to_s.upcase, fallback: false), locale]
-              end.sort,
-              selected: I18n.locale
-            ),
-            class: 'form-control'
-          )
-        %>
+        <div class="custom-select">
+
+          <%=
+            select_tag(
+              :switch_to_locale,
+              options_for_select(
+                available_locales.map do |locale|
+                  [I18n.t(locale: locale, default: locale.to_s.upcase, fallback: false), locale, class: 'form-control__items']
+
+                end.sort,
+                selected: I18n.locale
+              ),
+              class: 'form-control'
+            )
+          %>
+        </div>
         <noscript><%= submit_tag t("spree.select") %></noscript>
       </div>
     <% end %>
