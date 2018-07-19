@@ -1,0 +1,92 @@
+.footer{
+  background-color: white;
+  height: 30rem;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  color: $color-black;
+  padding-top: 10rem;
+
+
+  &__left{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 40%;
+    height: 100%;
+
+  }
+
+  &__right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    text-align: right;
+
+  }
+
+  &__list{
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: $headers-font;
+    font-weight: 200;
+    line-height: 4rem;
+    margin-top: 5rem;
+  }
+
+
+  &__logo-box{
+    width: 8rem;
+    margin: 0;
+    padding: 0px;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__image {
+  height: 6.4rem;
+  }
+
+  &__form-group{
+    h3{
+      margin-top: 6rem;
+      font-family: $headers-font;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+  }
+
+  &__icons{
+      font-family: $headers-font;
+      font-weight: 200;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      position: absolute;
+      right: 0;
+      bottom: -20rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

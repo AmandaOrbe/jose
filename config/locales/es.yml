@@ -18,6 +18,9 @@ es:
       visit: Visita nuestra tienda
       shoes: calzado
       bags: bolsos
+    footer:
+      newsletter: Suscríbete a nuestra newsletter
+      follow: Síguenos
   date:
     abbr_day_names:
       - dim

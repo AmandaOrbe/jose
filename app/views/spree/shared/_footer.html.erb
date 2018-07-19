@@ -1,8 +1,32 @@
-<footer id="footer" class="sixteen columns" data-hook>
-  <div id="footer-left" class="columns alpha eight" data-hook>
-    <ul>
-      <li></li>
+<footer id="footer" class="footer" data-hook>
+  <div  class="footer__left" data-hook>
+    <ul class="footer__list">
+      <li class="footer__item"><i class='fa fa-map-marker'></i>      Porto Saler, 6 • Sant Francesc Xavier • FORMENTERA </li>
+
+
+      <li class="footer__item"><i class='fa fa-phone'></i>     (+34)  971 323 402</li>
+      <li class="footer__item"><a href="#" class="footer__link"><i class='fa fa-envelope'></i>      info@formenteraishvara.com</a></li>
     </ul>
+    <div class="footer__logo-box">
+      <%= link_to root_path do %>
+      <%= image_tag "logo.png", class: "footer__image"%>
+      <% end %>
   </div>
-  <div id="footer-right" class="columns omega eight" data-hook></div>
+  </div>
+  <div id="footer__right" class="footer__right" data-hook>
+    <div class="footer__form-group">
+      <h3><%=t('amanda.footer.newsletter')%></h3>
+    </div>
+
+    <ul class="footer__icons list-inline">
+      <li><%=t('amanda.footer.follow')%></i></li>
+      <li><i class='fa fa-facebook'></i></li>
+      <li><i class='fa fa-instagram'></i></li>
+      <li><i class='fa fa-twitter'></i></li>
+      <li><i class='fa pinterest'></i></li>
+    </ul>
+
+
+  </div>
 </footer>
+

@@ -11,10 +11,15 @@
   background: white;
   transition: all 0.3s ease;
   height: 8rem;
-  position: relative;
+  top: 0;
+  width: 95%;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
   color: black;
+  z-index: 9999;
+  border-radius: none;
+  padding: 0 2rem;
 
   button{
     -webkit-appearance: caret !important;
@@ -51,7 +56,7 @@
   &--right{
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 8rem;
     display: flex;
     align-items: center;
     width: 16rem;
