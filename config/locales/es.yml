@@ -11,8 +11,13 @@ es:
       log_in: Acceder
       register: Crea una cuenta ahora
       register_cta: Regístrate ahora
-
-
+    home:
+      soul: Pon tu alma en cada instante
+      shop: Descubre la colección
+      jose: José Marcos Garzón llegó a Formentera en 1985 buscando un lugar de paz, y se enamoró de la isla. Como muchos otros hippies que poblaban la isla en el momento buscó volver a unos métodos de producción más artesanales. Desde su puesto callejero la gente estaba impresionada por la originalidad y el estilo de sus diseños.
+      visit: Visita nuestra tienda
+      shoes: calzado
+      bags: bolsos
   date:
     abbr_day_names:
       - dim

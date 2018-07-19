@@ -2,8 +2,8 @@
     <div class="header__banner-content"  style="background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 50%)">
       <div class="heading-primary">
         <div class="heading-primary--main">
-          <h1>Pon tu alma en cada instante</h1>
-          <a href="#" class= "btn btn--white btn--banner">Descubre la colección</a>
+          <h1><%=t('amanda.home.soul')%></h1>
+          <a href="#" class= "btn btn--white btn--banner"><%=t('amanda.home.shop')%></a>
         </div>
     </div>
 
@@ -14,7 +14,8 @@
 
 <div data-hook="homepage_products">
   <% cache(cache_key_for_products) do %>
-  <%= render partial: 'spree/shared/products', locals: { products: @products } %>
+  <%= render partial: 'spree/shared/products', locals: { products: @products[0..3] } %>
+
   <% end %>
 </div>
 
