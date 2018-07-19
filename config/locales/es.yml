@@ -18,9 +18,14 @@ es:
       visit: Visita nuestra tienda
       shoes: calzado
       bags: bolsos
+      belts: cinturones
     footer:
       newsletter: Suscríbete a nuestra newsletter
       follow: Síguenos
+    featured:
+      woman:
+        shoes_title: Albarcas
+        shoes_text: Indispensables desde 1985
   date:
     abbr_day_names:
       - dim

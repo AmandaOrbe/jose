@@ -50,9 +50,15 @@ en:
       visit: Visit our Shop
       shoes: shoes
       bags: bags
+      belts: belts
     footer:
       newsletter: Suscríbete a nuestra newsletter
       follow: Follow us
+    featured:
+      woman:
+        shoes_title: Sandals
+        shoes_text: A must have since 1985
+
   spree:
     order_mailer:
       confirm_email:

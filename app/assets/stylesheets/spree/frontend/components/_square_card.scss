@@ -28,8 +28,11 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   height: calc((86.4vw ) / 2);
   background-color: white;
   overflow: hidden;
-  box-shadow: $box-shadow-card;
   position: relative;
+
+  &--shaded{
+    box-shadow: $box-shadow-card;
+  }
 
   &:hover > .btn--featured{
     transform: translateY(-.4rem) scale(1.08);
@@ -57,3 +60,40 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
 
   }
 }
+
+.third-card{
+  margin-top: 7.2vh;
+  width: calc((96%) / 3);
+  height: calc((86.4vw ) / 3);
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+
+   &:hover > .btn--third{
+    transform: translateX(-50%) translateY(-.4rem) scale(1.08);
+  }
+
+  &:hover > a > .square-card__picture{
+      filter: blur(1px) brightness(85%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
