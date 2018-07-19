@@ -1,7 +1,7 @@
 <div class="featured">
   <div class="featured__row">
 
-      <div class="square-card square-card--text">
+      <div class="square-card square-card--shaded square-card--text">
         <div class="heading-secondary">
           <h2 class="heading-secondary--main">
             <%=t('amanda.home.visit')%>
@@ -17,7 +17,7 @@
           </span>
         </div>
       </div>
-      <div class="square-card">
+      <div class="square-card square-card--shaded">
         <%= link_to "#" do %>
           <%= image_tag "jose.jpg", class: "square-card__picture"%>
         <% end %>
@@ -27,7 +27,7 @@
 
   <div class="featured__row">
 
-      <div class="square-card">
+      <div class="square-card square-card--shaded">
         <%= link_to "/t/woman/shoes" do %>
           <%= image_tag "featured1.png", class: "square-card__picture"%>
           <a href="/t/woman/shoes" class= "btn btn--white btn--featured"><%=t('amanda.home.shoes')%></a>

@@ -1,3 +1,10 @@
+.top{
+  top: 0;
+  width: 90%;
+  position: fixed;
+  z-index: 8888;
+  background-color: white;
+}
 %n-placeholder{
   position: absolute;
   width: 30rem;
@@ -11,15 +18,15 @@
   background: white;
   transition: all 0.3s ease;
   height: 8rem;
-  top: 0;
-  width: 95%;
-  position: fixed;
+  width: 100%;
+  bottom: -8rem;
+  position: absolute;
   align-items: center;
   justify-content: space-between;
   color: black;
   z-index: 9999;
   border-radius: none;
-  padding: 0 2rem;
+
 
   button{
     -webkit-appearance: caret !important;
@@ -56,7 +63,7 @@
   &--right{
     position: absolute;
     top: 50%;
-    right: 8rem;
+    right: 1rem;
     display: flex;
     align-items: center;
     width: 16rem;

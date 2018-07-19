@@ -20,10 +20,29 @@ body{
   width: 90%;
 }
 
+.under-search{
+  margin-top: 20rem !important;
+}
+
+.under-login{
+  margin-top: 38rem !important;
+}
+
 #wrapper{
   margin:0 auto;
   padding: 0;
   width: 90%;
   margin-top: 8rem;
+  transition: all .5s ease;
 }
 
+.breadcrumbs{
+  padding: 2rem 0;
+  color: $color-black;
+  font-size: 1.2rem;
+  li:last-child{
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+}
