@@ -43,7 +43,13 @@ en:
       log_in: Log in
       register: get an account now
       register_cta: register now
-
+    home:
+      soul: There must be soul in what you do
+      shop: Discover
+      jose:  José Marcos Garzón came to Formentera in 1985 looking for a place of peace, and fell in love with the island. Like many other hippies who populated the island at the time he sought to return to more artisanal production methods. From his street stall,  people were impressed by the originality and style of his designs.
+      visit: Visit our Shop
+      shoes: shoes
+      bags: bags
   spree:
     order_mailer:
       confirm_email:

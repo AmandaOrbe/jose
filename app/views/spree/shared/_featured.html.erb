@@ -4,10 +4,10 @@
       <div class="square-card square-card--text">
         <div class="heading-secondary">
           <h2 class="heading-secondary--main">
-            visita nuestra tienda
+            <%=t('amanda.home.visit')%>
           </h2>
           <p class="heading-secondary--sub">
-            José Marcos Garzón llegó a Formentera en 1985 buscando un lugar de paz, y se enamoró de la isla. Como muchos otros hippies que poblaban la isla en el momento buscó volver a unos métodos de producción más artesanales. Desde su puesto callejero la gente estaba impresionada por la originalidad y el estilo de sus diseños.
+            <%=t('amanda.home.jose')%>
           </p>
           <br>
           <span class="padding-2">
@@ -28,10 +28,16 @@
   <div class="featured__row">
 
       <div class="square-card">
-        hello
+        <%= link_to "/t/woman/shoes" do %>
+          <%= image_tag "featured1.png", class: "square-card__picture"%>
+          <a href="/t/woman/shoes" class= "btn btn--white btn--featured"><%=t('amanda.home.shoes')%></a>
+        <% end %>
       </div>
       <div class="square-card">
-        hello
+       <%= link_to "/t/woman/bags" do %>
+          <%= image_tag "featured2.png", class: "square-card__picture"%>
+          <a href="/t/woman/bags" class= "btn btn--white btn--featured"><%=t('amanda.home.bags')%></a>
+        <% end %>
       </div>
 
   </div>
