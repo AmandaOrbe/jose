@@ -50,6 +50,9 @@ en:
       visit: Visit our Shop
       shoes: shoes
       bags: bags
+    footer:
+      newsletter: Suscríbete a nuestra newsletter
+      follow: Follow us
   spree:
     order_mailer:
       confirm_email:
