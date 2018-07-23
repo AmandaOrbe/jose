@@ -1,8 +1,12 @@
 <% if @product.taxons.present? %>
+<br>
   <h3 class="product-section-title"><%= Spree.t(:look_for_similar_items) %></h3>
+  <br>
   <ul class="list-group" id="similar_items_by_taxon" data-hook>
     <% @product.taxons.each do |taxon| %>
-      <li class="list-group-item"><%= link_to taxon.name, seo_url(taxon) %></li>
+
+      <%= render partial: 'spree/shared/products', locals: { products: taxon.products.sample(4) , taxon: taxon }%>
+
     <% end %>
   </ul>
 <% end %>

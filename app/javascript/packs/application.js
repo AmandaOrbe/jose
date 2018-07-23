@@ -17,13 +17,16 @@ const searchBar =  document.getElementById("search-bar")
 const wrapper =  document.getElementById("wrapper")
 
 
+
 search.addEventListener("click", (event) =>{
   console.log(event);
-  console.log(searchBar);
   login.classList.remove("login-visible");
   searchBar.classList.toggle("visible");
   wrapper.classList.remove("under-login");
   wrapper.classList.toggle("under-search");
+
+
+
 })
 
 
@@ -31,6 +34,8 @@ search.addEventListener("click", (event) =>{
 
 const userIcon =  document.getElementById("user-icon")
 const login = document.getElementById("home-login")
+const hiddenButton1 = document.getElementById("hidden-button1")
+const hiddenButton2 = document.getElementById("hidden-button2")
 
 
 userIcon.addEventListener("click", (event) =>{
@@ -40,6 +45,10 @@ userIcon.addEventListener("click", (event) =>{
   login.classList.toggle("login-visible");
   wrapper.classList.remove("under-search");
   wrapper.classList.toggle("under-login");
+  hiddenButton1.classList.toggle("btn--hidden");
+  hiddenButton2.classList.toggle("btn--hidden");
+
+
 })
 
 
