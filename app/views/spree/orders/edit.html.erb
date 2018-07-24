@@ -1,0 +1,40 @@
+<% @body_id = 'cart' %>
+<div data-hook="cart_container">
+<div class="cart">
+
+<!-- LEFT PART OF THE PAGE -->
+
+    <h1><%= t('spree.shopping_cart') %></h1>
+
+  <% if @order.line_items.empty? %>
+    <div data-hook="empty_cart">
+      <p><%= t('spree.your_cart_is_empty') %></p>
+      <p><%= link_to t('spree.continue_shopping'), products_path, class: 'button continue' %></p>
+    </div>
+  <% else %>
+    <div data-hook="outside_cart_form">
+      <%= form_for @order, url: update_cart_path, html: {id: 'update-cart'} do |order_form| %>
+        <div data-hook="inside_cart_form">
+          <div data-hook="cart_items" class= "cart-form">
+            <%= render 'form', order_form: order_form %>
+          </div>
+          <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
+
+
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+<!-- RIGTH PART OF THE PAGE -->
+
+
+
+</div>
+
+
+
+
+
+  <% end %>
+</div>
