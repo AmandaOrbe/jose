@@ -2090,7 +2090,7 @@ es:
         vat_refund: "excl. %{amount} %{tax_rate_name}"
     shipping_total: Total envío
     shop_by_taxonomy: Comprar por %{taxonomy}
-    shopping_cart: Carrito
+    shopping_cart: Mi cesta de la compra
     show: Mostrar
     show_active: Mostrar Activos
     show_deleted: Mostrar Borrados

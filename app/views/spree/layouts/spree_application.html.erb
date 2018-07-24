@@ -28,10 +28,11 @@
         </div>
 
         <%= yield :templates %>
+        <%= render partial: 'spree/shared/footer' %>
 
       </div>
 
-      <%= render partial: 'spree/shared/footer' %>
+
 
     </div>
      <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
