@@ -58,6 +58,8 @@ en:
       woman:
         shoes_title: Sandals
         shoes_text: A must have since 1985
+    cart:
+      warning: Delivery date is subject to product availability
 
   spree:
     order_mailer:
