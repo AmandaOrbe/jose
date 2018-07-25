@@ -6,9 +6,13 @@
 
   &--main{
     h1{
-    color: white;
+      font-family: $body-font;
+      font-size: 3.6rem;
+      font-weight: bold;
+      color: white;
       line-height: 10rem;
       margin-right: 2rem;
+      text-transform: none;
     }
   }
 }
@@ -33,6 +37,13 @@
     padding-right: 4rem;
 
 
+  }
+
+  h2{
+    font-size: 3.4rem;
+    color: black;
+    font-family: "Lora", "serif";
+    font-weight: 200;
   }
 }
 

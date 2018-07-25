@@ -1,10 +1,11 @@
-<h3><%= t('spree.order_summary') %></h3>
+<legend><%= t('spree.order_summary') %></legend>
 
 <table data-hook="order_summary">
   <tbody>
     <tr data-hook="item_total">
       <td><strong><%= t('spree.item_total') %>:</strong></td>
       <td><strong><%= order.display_item_total.to_html %></strong></td>
+
     </tr>
 
     <% if order.line_item_adjustments.nonzero.exists? %>
