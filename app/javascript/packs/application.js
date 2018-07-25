@@ -20,7 +20,8 @@ const wrapper =  document.getElementById("wrapper")
 
 search.addEventListener("click", (event) =>{
   console.log(event);
-  login.classList.remove("login-visible");
+  login.classList.remove("header-login--visible");
+  login.classList.add("header-login--invisible");
   searchBar.classList.toggle("visible");
   wrapper.classList.remove("under-login");
   wrapper.classList.toggle("under-search");
@@ -34,21 +35,74 @@ search.addEventListener("click", (event) =>{
 
 const userIcon =  document.getElementById("user-icon")
 const login = document.getElementById("home-login")
-const hiddenButton1 = document.getElementById("hidden-button1")
-const hiddenButton2 = document.getElementById("hidden-button2")
+
 
 
 userIcon.addEventListener("click", (event) =>{
   console.log(userIcon);
   console.log(login);
   searchBar.classList.remove("visible");
-  login.classList.toggle("login-visible");
+  login.classList.toggle("header-login--invisible");
   wrapper.classList.remove("under-search");
   wrapper.classList.toggle("under-login");
-  hiddenButton1.classList.toggle("btn--hidden");
-  hiddenButton2.classList.toggle("btn--hidden");
+
 
 
 })
+
+
+// PREVENT FORM
+
+const radios = document.querySelectorAll(".size-buttons input");
+
+
+function isChecked(radios){
+  let i = 0
+  let checked = false
+    if (radios[i].checked === false && i <= radios.length - 2){
+      console.log(radios[i].checked);
+      i += 1;
+      return radios[i].checked;
+    } else {
+      console.log(radios[i].checked);
+      return radios[i].checked;
+    }
+  }
+// radios.forEach((size) => {
+//   console.log(size.checked)
+// })
+
+
+
+
+document.querySelector("#add-to-cart-button").addEventListener("click", function(event) {
+  if(isChecked(radios) === false){
+    document.getElementById("output-box").classList.remove("hidden");
+    document.getElementById("output-box").style.transform = "scale(1.1)" ;
+    event.preventDefault();
+  }  else {
+    console.log("yes");
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

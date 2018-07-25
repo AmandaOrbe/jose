@@ -1,10 +1,22 @@
 .header-login{
+  transform: translateY(-2rem);
   position: relative;
-  height: 0rem;
-  opacity: 0;
+  height: 30rem;
+  opacity: 1;
+  margin-bottom: 2rem;
   border-bottom: 1px solid $color-black;
-  transition: all .5s ease;
-  background-color: white;
+  transition: height .3s linear, opacity .6s cubic-bezier(1,0,1,.57);
+  &--invisible{
+    height: 0rem;
+    opacity: 0;
+    transition: height .3s linear, opacity 0s;
+    margin-bottom: none !important;
+    *{
+      height: 0;
+    }
+  }
+
+
 
   h3{
     text-transform: uppercase;
@@ -40,7 +52,3 @@
 }
 
 
-.login-visible{
-  height: 30rem;
-  opacity: 1
-}
