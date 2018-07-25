@@ -1,6 +1,8 @@
 .cart{
   padding-top: 4rem;
   display: block;
+  min-height: calc((100vh) - (38rem));
+
   h1, h2{
     font-family: $headers-font;
     font-weight: 200;
@@ -14,25 +16,46 @@
     font-size: 1.7rem;
   }
 
+  &__empty{
+    box-shadow: $box-shadow-card;
+    width: 64%;
+    padding: 3rem;
+    margin: 0 auto;
+    * {
+      display: block;
+      text-align: center;
+    }
+
+    .btn{
+      margin: 0 auto;
+    }
+  }
+
 
 // -----------------FORM -----------------------
   .cart-form{
     color: $color-black;
-    position: relative;
-      min-height: calc((100vh) - (38rem));
-      width: 100%;
+    display: flex;
+    width: 100%;
       // display: table;
-
+    height: auto;
+    justify-content: space-between;
       // min-height: 70px;
+
 
     // -----------------FORM LEFT-----------------------
 
     .cart-form__left{
       // display: table-row;
       width: 64%;
-      position : absolute;
-      left: 0;
+
+
       box-shadow: $box-shadow-card;
+      &::after{
+        content: “”;
+        clear: both;
+        display: table;
+      }
       table{
         width: 100%;
       }
@@ -65,6 +88,10 @@
         }
       }
 
+      .line-item tr{
+        height: 15rem;
+      }
+
       td {
         font-family: $headers-font;
         font-weight:200;
@@ -88,11 +115,10 @@
     .cart-form__right{
       // background-color: rgba($color-black, 0.7);
       width: 32%;
-      position : absolute;
-      right : 0;
       color: white;
+      display: table;
       padding: 2rem;
-       box-shadow: $box-shadow-card;
+      box-shadow: $box-shadow-card;
       h2{
           color: black;
         }

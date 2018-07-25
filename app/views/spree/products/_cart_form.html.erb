@@ -3,13 +3,14 @@
 
     <% if @product.variants_and_option_values_for(current_pricing_options).any? %>
       <div id="product-variants" class="columns five alpha">
-        <h6 class="product-section-title"><%= t('spree.variants') %></h6>
+
         <div class= size-buttons>
           <div class="row">
           <% @product.variants_and_option_values_for(current_pricing_options).each_with_index do |variant, index| %>
               <div class="col-xs-3 size-buttons__container">
-                  <%= radio_button_tag "variant_id", variant.id, index == 0, 'data-price' => variant.price_for(current_pricing_options)  %>
+                  <%= radio_button_tag "variant_id", variant.id, checked = false, 'data-price' => variant.price_for(current_pricing_options)  %>
                   <%= label_tag "variant_id_#{ variant.id }" do %>
+
 
                     <span class=" size-buttons__button">
                       <%= variant.options_text.last(2)%>
@@ -54,6 +55,8 @@
         </div>
 
         <div class="add-to-cart">
+        <h6  id="output-box" class="product-section-title hidden"><%= t('amanda.show.variant') %></h6>
+
 
           <%= button_tag class: 'btn--black btn--large ', id: 'add-to-cart-button', type: :submit do %>
             <i class=" fa fa-shopping-bag" id="shop"></i>

@@ -60,6 +60,7 @@ en:
         shoes_text: A must have since 1985
     cart:
       warning: Delivery date is subject to product availability
+      dont_worry: ...but don't worry, it doesn't have to be!
 
   spree:
     order_mailer:

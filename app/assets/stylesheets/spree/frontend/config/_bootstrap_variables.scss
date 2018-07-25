@@ -28,3 +28,9 @@ $border-radius-large: .2rem;
 $border-radius-small: .2rem;
 
 // Override other variables below!
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
