@@ -61,6 +61,8 @@ en:
     cart:
       warning: Delivery date is subject to product availability
       dont_worry: ...but don't worry, it doesn't have to be!
+    summary:
+      quantity: QUANTITY
 
   spree:
     order_mailer:

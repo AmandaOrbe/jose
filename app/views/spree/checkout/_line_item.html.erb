@@ -1,0 +1,17 @@
+<div class="summary__line-items">
+  <% @order.line_items.each do |line_item| %>
+    <%  %>
+    <div class="summary__line-item">
+      <div class="summary__image" data-hook="cart_item_image">
+        <%= link_to(render('spree/shared/image', image: line_item.variant.product.display_image, size: :product)) %>
+      </div>
+      <div class="summary__details">
+        <h4><%= line_item.variant.product.name %></h4>
+        <h5><%= line_item.variant.options_text %></h5>
+        <h5> <span> <%= t('amanda.summary.quantity')%> : </span> <%=line_item.quantity %></h5>
+        <br>
+        <h5 class= "bold right"><%= line_item.display_amount.to_html %></h5>
+      </div>
+    </div>
+  <% end   %>
+</div>

@@ -26,13 +26,13 @@
   }
 
    &__left{
-    width: 47%;
-    box-shadow: $box-shadow-card;
-    padding: 3rem;
+    width: 60%;
+    // box-shadow: $box-shadow-card;
+    // padding: 3rem;
   }
 
   &__right{
-    width: 47%;
+    width: 34%;
     box-shadow: $box-shadow-card;
     display: table;
   }
