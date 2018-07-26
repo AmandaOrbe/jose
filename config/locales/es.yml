@@ -31,6 +31,8 @@ es:
     cart:
       warning: La fecha de entrega está sujeta a la disponibilidad del producto
       dont_worry: ...pero no pasa nada, no tiene por qué seguir estándolo
+    summary:
+      quantity: CANTIDAD
   date:
     abbr_day_names:
       - dim

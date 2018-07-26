@@ -25,14 +25,19 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
   h1 {
     font-size: 3.6rem;
     color: $red;
-    font-family: "Lora", "serif";
-    font-weight: bold;
+    font-family: $headers-font;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $color-black;
   }
   h2{
-    font-size: 3.4rem;
-    color: black;
-    font-family: "Lora", "serif";
+    font-size: 3.6rem;
+    font-family: $headers-font;
     font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: $color-black;
   }
   h3{
    font-size: 1.6rem;
@@ -70,11 +75,47 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
   a:hover{
     text-decoration: none;
     color: $gray;
+  }
 
+  li{
+    font-family: $headers-font;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: $color-black;
+  }
+
+  legend{
+   font-size: 3.6rem;
+    font-family: $headers-font;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: $color-black;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $light-gray;
+  }
+
+
+  label{
+    color: $color-black;
+    font-family: $headers-font;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .bold{
+    font-weight: 400 !important;
+  }
+
+  .left{
+    text-align: left !important;
+  }
+
+  .right{
+    text-align: right !important;
   }
  }
-
-
 
 
 .margin-top-medium{
@@ -83,6 +124,14 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
 
 .margin-bottom-medium{
   margin-bottom: 4rem !important;
+}
+
+.margin-bottom-small{
+   margin-bottom: 2rem !important;
+}
+
+.margin-top-small{
+   margin-top: 2rem !important;
 }
 
 

@@ -12,7 +12,7 @@
     transition: height .3s linear, opacity 0s;
     margin-bottom: none !important;
     *{
-      height: 0;
+      display: none;
     }
   }
 
