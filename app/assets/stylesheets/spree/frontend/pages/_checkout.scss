@@ -106,6 +106,61 @@
 
 }
 
+.shipping-method{
+  list-style: none;
+  padding: 1rem;
+
+}
+
+.confirm{
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+
+
+
+   &__left {
+    width: 60%;
+    box-shadow: $box-shadow-card;
+    padding: 7rem;
+    display: table;
+  }
+
+  &__right{
+    width: 34%;
+    box-shadow: $box-shadow-card;
+
+  }
+
+  &__detail{
+    legend{
+      margin-bottom: 0;
+    }
+    padding-bottom: 3rem;
+    & > *{
+      font-size: 1.2rem;
+      color: black;
+      font-family: $headers-font;
+      font-weight: 100;
+      text-transform: uppercase;
+      line-height: 2rem;
+    }
+  }
+  &__inside{
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+  .upper{
+    transform: translateY(-2.1rem);
+  }
+
+  &__button{
+    padding: 0 6rem 6rem 6rem;
+  }
+
+
+}
 
 
 

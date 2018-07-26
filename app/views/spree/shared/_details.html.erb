@@ -1,0 +1,48 @@
+
+<div class="confirm__detail" data-hook="order-ship-address">
+  <legend><%= t('spree.shipping_address') %></legend>
+  <div class="confirm__inside">
+    <h5 class= "right bold upper"><%= link_to "#{t('spree.actions.edit')}", checkout_state_path(:address) unless order.completed? %></h5>
+    <%= render partial: 'spree/shared/address', locals: { address: order.ship_address } %>
+
+  </div>
+</div>
+
+
+<div class="confirm__detail" data-hook="order-bill-address">
+  <legend><%= t('spree.billing_address') %></legend>
+    <div class="confirm__inside">
+      <h5 class= "right bold upper"><%= link_to "#{t('spree.actions.edit')}", checkout_state_path(:address) unless order.completed? %></h5 class= "right bold">
+      <%= render partial: 'spree/shared/address', locals: { address: order.bill_address } %>
+
+  </div>
+</div>
+
+<div class="confirm__detail">
+  <legend><%= t('spree.shipment') %></legend>
+  <br><br>
+  <div class="confirm__inside">
+    <% order.shipments.each do |shipment| %>
+      <div>
+        <i class='fa fa-truck'></i>
+        <%= t('spree.shipment_details', stock_location: shipment.stock_location.name, shipping_method: shipment.selected_shipping_rate.name)%>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% if order.has_checkout_step?("payment") %>
+  <div class="confirm__detail">
+    <legend><%= t('spree.payment_information') %></legend>
+    <div class="confirm__inside">
+      <h5 class= "right bold upper"><%= link_to "#{t('spree.actions.edit')}", checkout_state_path(:payment) unless order.completed? %></h5>
+      <div class="payment-info">
+        <% order.payments.valid.each do |payment| %>
+          <%= render payment %><br/>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
