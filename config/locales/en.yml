@@ -63,6 +63,7 @@ en:
       dont_worry: ...but don't worry, it doesn't have to be!
     summary:
       quantity: QUANTITY
+    confirm: confirm details
 
   spree:
     order_mailer:
@@ -73,3 +74,4 @@ en:
         amount: 'amount'
         price: 'price'
     shopping_cart: My shopping bag
+    shipment_details: "From Formentera via %{shipping_method}"

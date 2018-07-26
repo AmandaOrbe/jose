@@ -33,6 +33,7 @@ es:
       dont_worry: ...pero no pasa nada, no tiene por qué seguir estándolo
     summary:
       quantity: CANTIDAD
+    confirm: confirmar información
   date:
     abbr_day_names:
       - dim
@@ -2048,7 +2049,7 @@ es:
     shipped_at: Enviado en
     shipment: Envío
     shipment_adjustments: "Ajustes envío"
-    shipment_details: "De %{stock_location} via %{shipping_method}"
+    shipment_details: "Desde Formentera via %{shipping_method}"
     shipment_mailer:
       shipped_email:
         dear_customer: Estimado Cliente,\n
