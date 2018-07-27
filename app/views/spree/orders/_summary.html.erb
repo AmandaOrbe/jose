@@ -1,0 +1,37 @@
+  <div class="summary">
+<legend><%= t('spree.order_summary') %></legend>
+
+
+    <%= render partial: 'line_item_summary', order: @order%>
+
+
+
+
+<div class="summary__totals">
+  <div class="summary__row">
+    <% if order.adjustments.nonzero.exists? || order.line_item_adjustments.nonzero.exists? || order.shipment_adjustments.nonzero.exists? || order.shipments.any? %>
+    <div class="summary__row-left">
+      <h5><%= t('spree.cart_subtotal', count: order.line_items.sum(:quantity)) %></h5>
+    </div>
+    <div class="summary__row-right right">
+      <h5><%= order.display_item_total %></h5></td>
+    </div>
+  </div>
+  <div class="summary__row">
+    <%= render "spree/orders/adjustments" %>
+    <% end %>
+  </div>
+  <div class="summary__row">
+    <div class="summary__row-left">
+      <h4 class= "bold"><%= t('spree.total') %></h4>
+    </div>
+    <div class="summary__row-right right">
+      <h4 class= "bold"><%= order.display_total %></h4>
+    </div>
+  </div>
+</div>
+
+
+
+
+  </div>

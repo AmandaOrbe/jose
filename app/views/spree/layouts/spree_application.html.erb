@@ -14,7 +14,7 @@
 
       <%= render partial: 'spree/shared/header', locals: { taxonomies: @taxonomies}  %>
 
-
+      </div>
       <div id="wrapper" class="wrapper" data-hook>
 
         <%= taxon_breadcrumbs(@taxon) %>
@@ -25,12 +25,13 @@
           <%= flash_messages %>
 
           <%= yield %>
-        </div>
+
 
         <%= yield :templates %>
         <%= render partial: 'spree/shared/footer' %>
 
-      </div>
+        </div>
+
 
 
 
