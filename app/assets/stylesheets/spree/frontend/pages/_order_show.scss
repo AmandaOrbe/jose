@@ -1,0 +1,36 @@
+.order{
+  margin-top: 10rem;
+
+  &__titles{
+    margin-top: 15rem;
+    text-align: center;
+    h1, h2, h5{
+      font-family: $body-font;
+      text-transform: none;
+      padding: 1rem;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left{
+    width: 64%;
+    box-shadow: $box-shadow-card;
+    display: table;
+    padding: 6rem;
+  }
+  &__right{
+    width: 32%;
+    box-shadow: $box-shadow-card;
+    display: table;
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

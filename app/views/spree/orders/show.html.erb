@@ -1,0 +1,41 @@
+<div class="order ">
+  <div class="order__titles">
+    <h1><%= t('amanda.order.success') %></h1>
+    <h3><%= t('spree.order_number', number: @order.number) %></h3>
+    <h5><%= t('spree.thank_you_for_your_order') %></h5>
+  </div>
+
+<fieldset id="order_summary" data-hook>
+
+
+  <% if order_just_completed?(@order) %>
+    <strong><%= t('spree.thank_you_for_your_order') %></strong>
+  <% end %>
+
+  <div class= "order__wrapper" id="order" data-hook>
+
+    <div class="order__left">
+        <legend><%= t('spree.order_number', number: @order.number) %></legend>
+      <%= render partial: 'spree/shared/details', locals: { order: @order } %>
+      <p data-hook="links">
+        <div class="order__buttons">
+          <%= link_to t('spree.back_to_store'), spree.root_path, class: "btn btn--white-border " %>
+          <% unless order_just_completed?(@order) %>
+            <% if try_spree_current_user && respond_to?(:account_path) %>
+              <%= link_to t('spree.my_account'), spree.account_path, class: "btn btn--black" %>
+            <% end %>
+          <% end %>
+        </div>
+      </p>
+    </div>
+    <div class="order__right">
+    <%= render partial: 'summary', locals: { order: @order } %>
+    </div>
+  </div>
+    <br class="clear" />
+
+
+  </div>
+</fieldset>
+
+</div>
