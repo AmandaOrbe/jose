@@ -50,15 +50,17 @@
         </div>
         <div class="col-4">
 
-      <div data-hook="admin_product_form_option_types">
-        <%= f.field_container :option_types do %>
-          <%= f.label :option_type_ids, plural_resource_name(Spree::OptionType) %>
-          <%= f.hidden_field :option_type_ids, value: @product.option_type_ids.join(',') %>
-        <% end %>
-      </div>
+          <div data-hook="admin_product_form_option_types">
+            <%= f.field_container :option_types do %>
+              <%= f.label :option_type_ids, plural_resource_name(Spree::OptionType) %>
+              <%= f.hidden_field :option_type_ids, value: @product.option_type_ids.join(',') %>
+            <% end %>
+          </div>
         </div>
 
       </div>
+
+
 
 
       <% if show_rebuild_vat_checkbox? %>

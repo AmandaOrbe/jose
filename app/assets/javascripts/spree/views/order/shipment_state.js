@@ -1,4 +1,3 @@
-console.log('Hello World from shipment');
 Spree.Views.Order.ShipmentTracking = Backbone.View.extend({
   tagName: 'tr',
   className: 'edit-tracking',
