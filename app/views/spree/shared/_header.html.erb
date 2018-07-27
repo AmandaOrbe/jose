@@ -36,7 +36,7 @@
         <% @taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
             <div class="taxonomies-list__taxonomy taxonomies-list__n<%= taxonomy.position %>">
-                <h4>  <%= link_to taxonomy.name, "#{root_path}t/#{taxonomy.root.permalink}", class: "taxonomies-list__taxonomy__major" %></h4>
+                <h4>  <%= link_to taxonomy.name, seo_url(taxonomy.root), class: "taxonomies-list__taxonomy__major" %></h4>
                 <%= nav_tree(taxonomy.root, @taxon, max_level)%>
             </div>
           <% end %>
@@ -49,6 +49,7 @@
             <h5><%= link_to "historia", main_app.ishvara_historia_path%></h5>
             <h5><%= link_to "prensa", main_app.ishvara_prensa_path%></h5>
             <h5><%= link_to "pasarela", main_app.ishvara_pasarela_path%></h5>
+
            </div>
         </div>
 
