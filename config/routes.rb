@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
   scope '(:locale)', locale: /fr|es|en/ do
 
+     get "/", to: "spree/home#index", as: :locale_root
+
   mount Spree::Core::Engine, at: '/'
 
 end

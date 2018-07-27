@@ -31,7 +31,7 @@
 
     <!-- Links  -->
 
-    <nav  class="navbar--center taxonomies-list" data-hook>
+     <nav  class="navbar--center taxonomies-list" data-hook>
       <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
         <% @taxonomies.each do |taxonomy| %>
         <% cache [I18n.locale, taxonomy, @taxon, max_level] do %>
@@ -42,6 +42,7 @@
           <% end %>
         <% end %>
 
+
         <div class="taxonomies-list__taxonomy taxonomies-list__n4">
           <h4><%= link_to "ishvara", "#", class: "taxonomies-list__taxonomy__major" %></h4>
            <div class="nosotros taxonomies-list__taxonomy__subtaxons list-inline">
@@ -50,11 +51,17 @@
             <h5><%= link_to "pasarela", main_app.ishvara_pasarela_path%></h5>
            </div>
         </div>
+
     </nav>
 
     <!-- NAVBAR RIGHT ICONS-->
     <div class="navbar--right list-inline">
-        <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
+
+        <div class="navbar__locales">
+          <h4><li><%= link_to 'EN  |', root_path(locale: :en) %></li></h4>
+          <h4><li><%= link_to 'ES  |', root_path(locale: :es) %></li></h4>
+          <h4><li><%= link_to 'FR', root_path(locale: :fr) %></li></h4>
+        </div>
         <button id="user-icon" class=" navbar--right__icon">
           <i class=" fa fa-user" ></i>
         </button>

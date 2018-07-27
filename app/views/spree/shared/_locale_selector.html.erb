@@ -1,5 +1,6 @@
 <% available_locales = current_store.available_locales %>
 <% if available_locales.many? %>
+
   <li id="locale_selector" data-hook>
     <%= form_tag spree.select_locale_path, class: 'navbar-form' do %>
       <div class="form-group">
@@ -7,7 +8,7 @@
           <%= Spree.t(:'i18n.language') %>
         </label>
         <div class="custom-select">
-
+<% root_path = "" %>
           <%=
             select_tag(
               :switch_to_locale,
