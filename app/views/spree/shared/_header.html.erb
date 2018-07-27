@@ -1,5 +1,5 @@
 <div class="top">
-.
+  <!-- LOGIN -->
   <fieldset class="header-login header-login--invisible" id="home-login">
       <div class="header-login__left">
         <h3 class="header-login__title"><%=t('amanda.devise.register')%></h3>
@@ -12,16 +12,14 @@
       </div>
       <div class="header-login__right">
       <h3 class="header-login__title"><%=t('amanda.devise.log_in')%></h3>
-
         <%= render partial: 'spree/shared/login' %>
       </div>
   </fieldset>
-
+<!-- SEARCHBAR  -->
   <div id="search-bar" data-hook>
-        <%= render partial: 'spree/shared/search' %>
-      </div>
-
-
+    <%= render partial: 'spree/shared/search' %>
+  </div>
+<!-- NAVBAR   -->
   <div class="navbar">
 
     <!-- Logo -->
@@ -54,7 +52,6 @@
         </div>
     </nav>
 
-
     <!-- NAVBAR RIGHT ICONS-->
     <div class="navbar--right list-inline">
         <%= render 'spree/shared/locale_selector', class: "languages navbar--right__icon" %>
@@ -69,13 +66,9 @@
           <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
         <% end %>
     </div>
-
-
   </div>
 
-
 </div>
 
-</div>
 
 
