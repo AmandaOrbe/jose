@@ -20,17 +20,15 @@
     width: 64%;
     box-shadow: $box-shadow-card;
     display: table;
-    padding: 6rem;
   }
   &__right{
     width: 32%;
     box-shadow: $box-shadow-card;
-    display: table;
+     padding: 6rem;
   }
 
   &__buttons{
-    display: flex;
-    justify-content: space-between;
+
     width: 100%;
   }
 }

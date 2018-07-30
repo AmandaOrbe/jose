@@ -1,19 +1,18 @@
+
+
 <div class="confirm">
   <div class="confirm__left">
-    <fieldset id="order_details" data-hook>
+   <div id="checkout-summary" data-hook="checkout_summary_box" class="columns omega four">
+      <%= render partial: 'summary', locals: { order: @order } %>
+  </div>
+  </div>
+  <div class="confirm__right">
+     <fieldset id="order_details" data-hook>
       <div class="clear"></div>
       <legend align="center"><%= t('amanda.confirm') %></legend>
       <%= render partial: 'spree/shared/details', locals: { order: @order } %>
     </fieldset>
-  </div>
-  <div class="confirm__right">
-    <br />
-    <div id="checkout-summary" data-hook="checkout_summary_box" class="columns omega four">
-      <%= render partial: 'summary', locals: { order: @order } %>
-
-
-
-      <div class="confirm__button " data-hook="buttons">
+    <div class="confirm__button " data-hook="buttons">
         <% Spree::Frontend::Config[:require_terms_and_conditions_acceptance].tap do |requires_acceptance| %>
           <% if requires_acceptance %>
             <div class="terms_and_conditions" data-hook="terms_and_conditions">
@@ -31,6 +30,7 @@
 
         <script>Spree.disableSaveOnClick();</script>
       </div>
-  </div>
+    <br />
+
   </div>
 </div>

@@ -15,11 +15,17 @@
   <div class= "order__wrapper" id="order" data-hook>
 
     <div class="order__left">
-        <legend><%= t('spree.order_number', number: @order.number) %></legend>
+
+
+        <%= render partial: 'summary', locals: { order: @order } %>
+
+    </div>
+    <div class="order__right">
+          <legend><%= t('spree.order_number', number: @order.number) %></legend>
       <%= render partial: 'spree/shared/details', locals: { order: @order } %>
       <p data-hook="links">
         <div class="order__buttons">
-          <%= link_to t('spree.back_to_store'), spree.root_path, class: "btn btn--white-border " %>
+          <%= link_to t('spree.back_to_store'), spree.root_path, class: "btn btn--white-border margin-bottom-small" %>
           <% unless order_just_completed?(@order) %>
             <% if try_spree_current_user && respond_to?(:account_path) %>
               <%= link_to t('spree.my_account'), spree.account_path, class: "btn btn--black" %>
@@ -27,9 +33,6 @@
           <% end %>
         </div>
       </p>
-    </div>
-    <div class="order__right">
-    <%= render partial: 'summary', locals: { order: @order } %>
     </div>
   </div>
     <br class="clear" />
