@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_140057) do
+ActiveRecord::Schema.define(version: 2018_07_30_104444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 2018_07_09_140057) do
 
   create_table "spree_addresses", id: :serial, force: :cascade do |t|
     t.string "firstname"
-    t.string "lastname"
     t.string "address1"
     t.string "address2"
     t.string "city"
@@ -91,7 +90,6 @@ ActiveRecord::Schema.define(version: 2018_07_09_140057) do
     t.datetime "updated_at", precision: 6
     t.index ["country_id"], name: "index_spree_addresses_on_country_id"
     t.index ["firstname"], name: "index_addresses_on_firstname"
-    t.index ["lastname"], name: "index_addresses_on_lastname"
     t.index ["state_id"], name: "index_spree_addresses_on_state_id"
   end
 

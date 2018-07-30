@@ -75,3 +75,4 @@ en:
         price: 'price'
     shopping_cart: My shopping bag
     shipment_details: "From Formentera via %{shipping_method}"
+    full_name: Full Name
