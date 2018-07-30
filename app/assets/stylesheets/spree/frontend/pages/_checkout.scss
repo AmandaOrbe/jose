@@ -137,13 +137,15 @@
    &__left {
     width: 60%;
     box-shadow: $box-shadow-card;
-    padding: 7rem;
+
     display: table;
   }
 
   &__right{
     width: 34%;
+    padding: 3rem;
     box-shadow: $box-shadow-card;
+    display: table;
 
   }
 
@@ -171,7 +173,7 @@
   }
 
   &__button{
-    padding: 0 6rem 6rem 6rem;
+    padding: 0 6rem;
     margin-top: 3rem;
   }
 
