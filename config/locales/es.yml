@@ -1510,6 +1510,7 @@ es:
     finalized_by: Finalizado por
     first_item: Primer artículo
     first_name: Nombre
+    full_name: Nombre Completo
     first_name_begins_with: Nombre empieza con
     flat_percent: Porcentaje plano
     flat_rate_per_order: Tasa plana
@@ -2051,7 +2052,7 @@ es:
     shipped_at: Enviado en
     shipment: Envío
     shipment_adjustments: "Ajustes envío"
-    shipment_details: "Desde Formentera via %{shipping_method}"
+    shipment_details: "Desde Formentera a %{shipping_method}"
     shipment_mailer:
       shipped_email:
         dear_customer: Estimado Cliente,\n

@@ -9,6 +9,11 @@ def confirm
   elsif !@order.can_complete?
     render template: 'spree/admin/orders/confirm_advance'
   end
+
+   def billing_eq_shipping_address?
+      ship_address == bill_address
+    end
+
 end
 
 

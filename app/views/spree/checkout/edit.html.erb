@@ -14,13 +14,15 @@
             <% if @order.state == 'address' || !@order.email? %>
               <div class="checkout__form-section">
                 <legend><%= t('spree.email') %></legend>
+
                 <div class="field field-required" style='clear: both'>
                   <%= form.label :email %><br />
                   <%= form.email_field :email, required: true %>
                 </div>
-              </div>
+
             <% end %>
             <%= render @order.state, form: form %>
+            </div>
           <% end %>
 
       </div>

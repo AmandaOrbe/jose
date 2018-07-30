@@ -1,6 +1,18 @@
 .checkout{
   padding: 4rem 15px;
 
+  .form__container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .address100{
+    width: 100%;
+  }
+
+  .address50{
+    width: 47%;
+  }
 
 // PROGRESS-------------------
 
@@ -19,6 +31,8 @@
   }
 
 // PAGE STYLING-------------------------
+
+
 
   &__wrapper{
     display: flex;
@@ -41,6 +55,7 @@
     padding: 6rem;
     box-shadow: $box-shadow-card;
     margin-bottom:5rem;
+
   }
 
   // FORM STYLING-----------------
