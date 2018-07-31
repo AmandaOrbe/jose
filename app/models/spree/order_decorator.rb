@@ -6,8 +6,11 @@ module Spree
     end
      # remove_checkout_step :delivery
 
+    def select_default_shipping
+      create_proposed_shipments
+      shipments.find_each &:update_amounts
+      update_totals
+    end
 
   end
-
-
 end
