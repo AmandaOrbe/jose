@@ -13,6 +13,10 @@ module Spree
         current_index = states.index(@order.state)
         state_index = states.index(state)
 
+          css_classes << I18n.t("spree.order_state.#{state}") + " "
+
+
+
         if state_index < current_index
           css_classes << 'completed'
           text = link_to text, checkout_state_path(state)

@@ -1,6 +1,9 @@
 .checkout{
   padding: 4rem 15px;
 
+  .Delivery{
+    display: none;
+  }
   .form__container{
     display: flex;
     justify-content: space-between;
