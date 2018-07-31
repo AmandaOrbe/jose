@@ -3,7 +3,7 @@
   <legend><%= t('spree.shipping_address') %></legend>
   <div class="confirm__inside">
     <h5 class= "right bold upper"><%= link_to "#{t('spree.actions.edit')}", checkout_state_path(:address) unless order.completed? %></h5>
-    <%= render partial: 'spree/shared/address', locals: { address: order.ship_address } %>
+    <%= render partial: 'spree/shared/address', locals: { address: order.bill_address } %>
 
   </div>
 </div>

@@ -4,6 +4,7 @@ module Spree
       @order.language = i18n.locale.to_s
       where.not(completed_at: nil)
     end
+     remove_checkout_step :delivery
   end
 
 
