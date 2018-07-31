@@ -96,7 +96,12 @@ module Spree
               before_transition from: :address, do: :persist_user_address!
             end
 
-
+            if states[:delivery]
+              before_transition to: :delivery, do: :ensure_shipping_address
+              before_transition to: :delivery, do: :create_proposed_shipments
+              before_transition to: :delivery, do: :ensure_available_shipping_rates
+              before_transition from: :delivery, do: :apply_shipping_promotions
+            end
 
             before_transition to: :resumed, do: :ensure_line_item_variants_are_not_deleted
             before_transition to: :resumed, do: :validate_line_item_availability
@@ -109,7 +114,6 @@ module Spree
             before_transition to: :complete, do: :ensure_line_item_variants_are_not_deleted
             before_transition to: :complete, do: :ensure_inventory_units
             if states[:payment]
-              before_transition to: :delivery, do: :ensure_shipping_address
               before_transition to: :complete, do: :process_payments_before_complete
             end
 
