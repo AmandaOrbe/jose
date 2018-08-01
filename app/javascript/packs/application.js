@@ -53,21 +53,27 @@ userIcon.addEventListener("click", (event) =>{
 
 // PREVENT FORM
 
-const radios = document.querySelectorAll(".size-buttons input");
 
 
-function isChecked(radios){
+
+function isChecked(){
+  let radios = document.querySelectorAll(".size-buttons input");
   let i = 0
   let checked = false
-    if (radios[i].checked === false && i <= radios.length - 2){
-      console.log(radios[i].checked);
-      i += 1;
-      return radios[i].checked;
+
+  radios.forEach((radio)=> {
+    console.log("radio")
+
+    if (radio.checked === false){
+      console.log("false");
     } else {
-      console.log(radios[i].checked);
-      return radios[i].checked;
+      checked = true;
     }
-  }
+
+
+  })
+  return checked;
+}
 // radios.forEach((size) => {
 //   console.log(size.checked)
 // })
@@ -76,10 +82,12 @@ function isChecked(radios){
 
 
 document.querySelector("#add-to-cart-button").addEventListener("click", function(event) {
-  if(isChecked(radios) === false){
+
+  if(isChecked() === false){
     document.getElementById("output-box").classList.remove("hidden");
     document.getElementById("output-box").style.transform = "scale(1.1)" ;
     event.preventDefault();
+    console.log(isChecked());
   }  else {
     console.log("yes");
   }
