@@ -1,0 +1,28 @@
+.registration{
+  display: flex;
+  justify-content: space-around;
+  &__left{
+    width: 40%;
+    box-shadow: $box-shadow-card;
+    padding: 6rem;
+
+
+  }
+
+  &__right{
+    width: 40%;
+    box-shadow: $box-shadow-card;
+    padding: 6rem;
+
+    &--blind{
+      box-shadow: none;
+    }
+  }
+  .inline-form p{
+   padding-bottom: 2rem;
+  }
+
+}
+.form--large{
+  width: 100%;
+}
