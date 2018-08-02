@@ -3,19 +3,24 @@
 <%= render 'spree/shared/error_messages', target: resource %>
 
 <div id="new-customer">
-  <h6><%= Spree.t(:new_customer) %></h6>
 
-  <div data-hook="signup">
-    <%= form_for resource, as: :spree_user, url: spree.registration_path(resource) do |f| %>
-      <div data-hook="signup_inside_form">
-        <%= render partial: 'spree/shared/user_form', locals: { f: f } %>
-        <p><%= f.submit Spree.t(:create), class: 'button primary' %></p>
+  <div class="registration">
+    <div class="registration__left">
+        <legend><%= Spree.t(:new_customer) %></legend>
+
+      <div data-hook="signup">
+        <%= form_for resource, as: :spree_user, url: spree.registration_path(resource) do |f| %>
+          <div data-hook="signup_inside_form">
+            <%= render partial: 'spree/shared/user_form', locals: { f: f } %>
+            <p><%= f.submit Spree.t(:create), class: 'btn--large btn--black ' %></p>
+          </div>
+        <% end %>
+        <%= Spree.t(:or) %>&nbsp;<%= link_to Spree.t(:login_as_existing), spree.login_path %>
+
       </div>
-    <% end %>
-    <%= Spree.t(:or) %>&nbsp;<%= link_to Spree.t(:login_as_existing), spree.login_path %>
-
+    </div>
   </div>
-
+  <div class="registration__right--blind">
+  </div>
 </div>
 
-<div data-hook="login_extras"></div>
