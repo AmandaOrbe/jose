@@ -64,6 +64,7 @@ en:
     summary:
       quantity: QUANTITY
     confirm: confirm details
+    hello: Hello
 
   spree:
     order_mailer:

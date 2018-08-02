@@ -36,6 +36,7 @@ es:
     confirm: confirmar información
     order:
       success: Pedido realizado con éxito
+    hello: Hola
   date:
     abbr_day_names:
       - dim

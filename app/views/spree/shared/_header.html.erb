@@ -1,20 +1,24 @@
 <div class="top">
   <!-- LOGIN -->
-  <fieldset class="header-login header-login--invisible" id="home-login">
-      <div class="header-login__left">
-        <h3 class="header-login__title"><%=t('amanda.devise.register')%></h3>
-          <br>
-          <br>
-          <br>
-        <btn  class="btn btn--black btn--down">
-          <%=t('amanda.devise.register_cta')%>
-        </btn>
-      </div>
-      <div class="header-login__right">
-      <h3 class="header-login__title"><%=t('amanda.devise.log_in')%></h3>
-        <%= render partial: 'spree/shared/login' %>
-      </div>
-  </fieldset>
+  <% unless spree_current_user %>
+    <fieldset class="header-login header-login--invisible" id="home-login">
+        <div class="header-login__left">
+          <h3 class="header-login__title"><%=t('amanda.devise.register')%></h3>
+            <br>
+            <br>
+            <br>
+      <button><%= link_to Spree.t(:create_a_new_account), spree.signup_path, class: " btn btn--black btn--down" %> </button>
+
+
+        </div>
+        <div class="header-login__right">
+        <h3 class="header-login__title"><%=t('amanda.devise.log_in')%></h3>
+          <%= render partial: 'spree/shared/login' %>
+
+        </div>
+
+    </fieldset>
+  <% end %>
 <!-- SEARCHBAR  -->
   <div id="search-bar" data-hook>
     <%= render partial: 'spree/shared/search' %>
@@ -63,9 +67,15 @@
           <h4><li><%= link_to 'ES  |', root_path(locale: :es) %></li></h4>
           <h4><li><%= link_to 'FR', root_path(locale: :fr) %></li></h4>
         </div>
-        <button id="user-icon" class=" navbar--right__icon">
-          <i class=" fa fa-user" ></i>
-        </button>
+        <% if spree_current_user %>
+         <%= link_to spree.account_path, class: "navbar--right__icon" do %>
+            <i class=" fa fa-user" ></i>
+            <% end %>
+        <% else %>
+           <button id="user-icon" class=" navbar--right__icon">
+            <i class=" fa fa-user" ></i>
+          </button>
+        <% end %>
         <button id="search" class=" navbar--right__icon">
           <i class=" fa fa-search" ></i>
         </button>

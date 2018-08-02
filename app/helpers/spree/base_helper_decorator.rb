@@ -1,4 +1,12 @@
 module Spree::BaseHelper
+    def layout_partial
+      if devise_controller?
+        'spree/base/devise'
+      else
+        'spree/base/application'
+      end
+    end
+
     def pretty_time(time, format = :long)
          I18n.l(@order.completed_at)
     end

@@ -17,4 +17,5 @@
   </p>
 
   <p><%= f.submit Spree.t(:login), class: 'btn btn--black btn--down ', tabindex: 4 %></p>
+  <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
 <% end %>
