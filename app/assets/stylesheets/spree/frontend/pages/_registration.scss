@@ -1,22 +1,22 @@
 .registration{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
   &__left{
     width: 40%;
     box-shadow: $box-shadow-card;
     padding: 6rem;
-
-
+    background-color: white;
   }
 
   &__right{
-    width: 40%;
+    width: 50%;
     box-shadow: $box-shadow-card;
-    padding: 6rem;
 
-    &--blind{
-      box-shadow: none;
-    }
+  }
+
+   &__picture{
+    width:100%;
   }
   .inline-form p{
    padding-bottom: 2rem;

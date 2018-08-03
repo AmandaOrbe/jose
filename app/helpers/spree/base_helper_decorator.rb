@@ -11,6 +11,21 @@ module Spree::BaseHelper
          I18n.l(@order.completed_at)
     end
 
+    def link_to_cart(text = nil)
+
+      css_class = nil
+
+      if current_order.nil? || current_order.item_count.zero?
+        text = ""
+        css_class = 'empty'
+      else
+        text = " (#{current_order.item_count})</span>"
+        css_class = 'full'
+      end
+
+      link_to text.html_safe, spree.cart_path, class: "cart-info #{css_class}"
+    end
+
     def nav_tree(root_taxon, current_taxon, max_level = 1)
       return '' if max_level < 1 || root_taxon.children.empty?
       content_tag :div, class: "t_#{root_taxon.taxonomy.position} taxonomies-list__taxonomy__subtaxons list-inline" do

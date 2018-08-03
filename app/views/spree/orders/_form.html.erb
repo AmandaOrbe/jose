@@ -27,6 +27,9 @@
     </tbody>
   </table>
    <div class="cart-form__buttons margin-top-medium margin-bottom-medium" data-hook="cart_buttons ">
+    <%= link_to t('spree.continue_shopping'), root_path, class: 'btn--half btn--white-border' %>
+
+
     <%= button_tag class: ' btn--half btn--white-border', id: 'update-button' do %>
       <%= t('spree.update') %>
     <% end %>

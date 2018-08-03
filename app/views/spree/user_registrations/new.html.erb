@@ -8,6 +8,7 @@
     <div class="registration__left">
         <legend><%= Spree.t(:new_customer) %></legend>
 
+
       <div data-hook="signup">
         <%= form_for resource, as: :spree_user, url: spree.registration_path(resource) do |f| %>
           <div data-hook="signup_inside_form">
@@ -19,8 +20,13 @@
 
       </div>
     </div>
-  </div>
-  <div class="registration__right--blind">
+
+  <div class="registration__right">
+
+
+          <%= image_tag "ishvara.png", class: "registration__picture"%>
+
+
   </div>
 </div>
 

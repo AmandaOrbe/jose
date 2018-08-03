@@ -1,9 +1,14 @@
 
 
-<div id="wrapper" class="wrapper" data-hook>
+<div id="wrapper--devise" data-hook>
 
   <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
     <%= flash_messages %>
+    <div class="devise-header">
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png", class: "devise-header__picture"%>
+        <% end %>
+      </div>
     <%= yield %>
     <%= yield :templates %>
   </div>
