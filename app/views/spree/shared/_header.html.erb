@@ -1,6 +1,7 @@
 <div class="top">
   <!-- LOGIN -->
   <% unless spree_current_user %>
+
     <fieldset class="header-login header-login--invisible" id="home-login">
         <div class="header-login__left">
           <h3 class="header-login__title"><%=t('amanda.devise.register')%></h3>
@@ -72,17 +73,25 @@
             <i class=" fa fa-user" ></i>
             <% end %>
         <% else %>
-           <button id="user-icon" class=" navbar--right__icon">
-            <i class=" fa fa-user" ></i>
-          </button>
-        <% end %>
-        <button id="search" class=" navbar--right__icon">
-          <i class=" fa fa-search" ></i>
-        </button>
 
-        <%= link_to spree.cart_path do %>
-          <i class="navbar--right__icon fa fa-shopping-bag" id="shop"></i>
+           <div id="user-icon" class=" navbar--right__icon">
+            <i class=" fa fa-user" ></i>
+          </div>
         <% end %>
+        <div id="search" class=" navbar--right__icon">
+          <i class=" fa fa-search" ></i>
+        </div>
+        <%= link_to spree.cart_path do %>
+          <i class="navbar--right__icon fa fa-shopping-bag" id="link-to-cart"></i>
+        <% end %>
+
+        <h5 id="link-to-cart" data-hook>
+      <noscript>
+      </noscript>
+      &nbsp;
+    </h5>
+  </ul>
+  <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
     </div>
   </div>
 

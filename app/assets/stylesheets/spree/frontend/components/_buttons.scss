@@ -39,10 +39,14 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     background-color: white;
     color: $color-black;
     border: 1px solid $color-black;
-    &::hover,
+    transition: all .5s ease;
     &:active,
     &:focus{
       border-bottom: 3px solid $color-black;
+    }
+    &:hover{
+      background-color: $color-black;
+      color: white;
     }
   }
 
