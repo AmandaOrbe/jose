@@ -100,7 +100,7 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
   }
 
   &--half{
-    width: 30%;
+    min-width: 30%;
     text-align: center;
     text-transform: uppercase;
     padding: 1.1rem 1.8rem;

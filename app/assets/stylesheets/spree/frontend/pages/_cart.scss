@@ -105,12 +105,14 @@
 
 
 
-    // -----------------FORM LEFT-----------------------
+    // -----------------FORM right-----------------------
     .cart-form__right{
       // background-color: rgba($color-black, 0.7);
       width: 32%;
       color: white;
       display: table;
+      position: sticky;
+      top: 10rem;
       padding: 2rem;
       box-shadow: $box-shadow-card;
       h2{
