@@ -25,6 +25,10 @@ transition: all .5s ease;
   font-weight: 300;
   border-bottom: 1px solid $color-black;
 
+  @include respond(landscape) { // width < 1200
+    width: 67%;
+  }
+
   &::input-placeholder{
     color: $gray;
     font-weight: 300;

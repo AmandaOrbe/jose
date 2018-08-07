@@ -31,7 +31,9 @@
     position: absolute;
     padding: 3rem 8rem;
     height: 0rem;
-
+    @include respond(landscape) { // width < 1200
+      padding: 3rem 0;
+    }
   }
 
   &__left{
