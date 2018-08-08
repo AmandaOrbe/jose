@@ -21,9 +21,11 @@
 
     </div>
     <div class="order__right">
+      <div class="order__right--padded">
           <legend><%= t('spree.order_number', number: @order.number) %></legend>
       <%= render partial: 'spree/shared/details', locals: { order: @order } %>
       <p data-hook="links">
+      </div>
         <div class="order__buttons">
           <%= link_to t('spree.back_to_store'), spree.root_path, class: "btn btn--white-border margin-bottom-small" %>
           <% unless order_just_completed?(@order) %>

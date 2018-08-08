@@ -56,24 +56,24 @@ userIcon.addEventListener("click", (event) =>{
 
 
 
-function isChecked(){
-  let radios = document.querySelectorAll(".size-buttons input");
-  let i = 0
-  let checked = false
+// function isChecked(){
+//   let radios = document.querySelectorAll(".size-buttons input");
+//   let i = 0
+//   let checked = false
 
-  radios.forEach((radio)=> {
-    console.log("radio")
+//   radios.forEach((radio)=> {
+//     console.log("radio")
 
-    if (radio.checked === false){
-      console.log("false");
-    } else {
-      checked = true;
-    }
+//     if (radio.checked === false){
+//       console.log("false");
+//     } else {
+//       checked = true;
+//     }
 
 
-  })
-  return checked;
-}
+//   })
+//   return checked;
+// }
 // radios.forEach((size) => {
 //   console.log(size.checked)
 // })
@@ -81,20 +81,41 @@ function isChecked(){
 
 
 
-document.querySelector("#add-to-cart-button").addEventListener("click", function(event) {
+// document.querySelector("#add-to-cart-button").addEventListener("click", function(event) {
 
-  if(isChecked() === false){
-    document.getElementById("output-box").classList.remove("hidden");
-    document.getElementById("output-box").style.transform = "scale(1.1)" ;
-    event.preventDefault();
-    console.log(isChecked());
-  }  else {
-    console.log("yes");
-  }
-});
+//   if(isChecked() === false){
+//     document.getElementById("output-box").classList.remove("hidden");
+//     document.getElementById("output-box").style.transform = "scale(1.1)" ;
+//     event.preventDefault();
+//     console.log(isChecked());
+//   }  else {
+//     console.log("yes");
+//   }
+// });
 
 
 
+function removeLastCard(){
+  document.querySelectorAll(".card")[4].style.display = "none"
+};
+function addLastCard(){
+  document.querySelectorAll(".card")[4].style.display = "block"
+};
+
+function howManyCards(){
+  if(993 > window.screen.width && 732 < window.screen.width) {
+    removeLastCard();
+    console.log("tab");
+  }else{
+    addLastCard()
+  };
+}
+
+window.addEventListener("resize", (event) =>{
+  console.log("resize");
+  howManyCards();
+
+})
 
 
 

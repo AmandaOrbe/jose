@@ -2,6 +2,9 @@
   padding: 6rem;
   position: sticky;
   top: 10rem;
+  @include respond(portrait) { // width < 1200
+    padding: 4rem;
+  }
 
   &__line-items{
 
@@ -16,13 +19,16 @@
   }
 
   &__image{
+    width: 50%;
+
     img{
-    width: 10rem;
+    width: 100%;
+    max-width: 12rem;
     }
   }
 
   &__details{
-    width: calc(90% - 10rem);
+    width: 50%;
     text-align: left;
     margin-left: 1rem;
     padding-top: 1rem;

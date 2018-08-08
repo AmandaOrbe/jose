@@ -7,13 +7,22 @@
   margin: 0;
   position: relative;
 
+  @include respond(portrait) {
+    height: 50vh;
+  }
+
   &__banner-content{
   position: absolute;
   top: 0;
   right: 0;
+  left:0;
   height: 86vh;
-  width: 70rem;
+  width: 100%;
   text-align: right;
+
+  @include respond(portrait) {
+    height: 50vh;
+  }
   }
 }
 

@@ -20,11 +20,18 @@
   &__images{
    display: flex;
    width: 100%;
+   @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
+    display: block;
+    }
  }
 
  &__image{
   width: 350%;
   margin: 0 5rem;
+  @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
+    width: 100%;
+    margin: 10rem 0 0 0;
+    }
   img{
     width: 100%;
     backface-visibility: hidden;
@@ -42,6 +49,27 @@
     margin: 0 2rem 2rem 2rem;
     width: 100%;
     backface-visibility: hidden;
+    @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
+    height: 10rem;
+    width: auto;
+    margin: 1rem;
+    }
+  }
+
+  &--left{
+  @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
+    display: none;
+  }
+  }
+  &--down{
+    display: none;
+    @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
+    display: flex;
+    .inline{
+      display: flex;
+      justify-content: left;
+    }
+    }
   }
 }
 

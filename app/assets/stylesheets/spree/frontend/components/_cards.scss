@@ -1,12 +1,18 @@
 $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+// .product-listing{
+//   background-color: orange;
+// }
+
 .card{
   height: 31.2rem;
   width: 100%;
+  max-width: 26rem;
   background-color: #FFFFFF;
   box-shadow: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
   position: relative;
-  margin-bottom: 4rem;
+  // margin-bottom: 4rem;
   transition: all ease .5s;
+  margin: 2rem auto;
   &:hover{
     filter:  brightness(90%);
     transform: scale(1.02)

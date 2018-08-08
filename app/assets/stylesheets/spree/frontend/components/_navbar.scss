@@ -1,6 +1,6 @@
 .top{
   top: 0;
-  width: 90%;
+  width: 100%;
   position: fixed;
   z-index: 8888;
   background-color: white;
@@ -33,6 +33,12 @@
   color: black;
   z-index: 9999;
   border-radius: none;
+  // border: 1px solid red;
+  @include respond(portrait) {
+    height: 6rem;
+    bottom: -6.5rem;
+  }
+
 
 
   button{
@@ -44,15 +50,20 @@
   &__logo-box{
   width: 16rem;
   margin: 0;
-  padding: 0px;
+  padding-left: 5vw;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-
-
+  @include respond(portrait) {
+    padding-left: 2.5vw;
+  }
     &__image {
     height: 6.4rem;
+     @include respond(portrait) {
+    height: 5.4rem;
+
+  }
     }
   }
 
@@ -62,21 +73,29 @@
     margin: 0 auto;
     width: 50rem;
     height: 8rem;
-    top: 50%;
+    top: 45%;
     transform: translateY(-0.9rem);
+    @include respond(portrait) { // width < 1200
+      width: 35rem;
+    }
 
   }
 
 
   &--right{
     position: absolute;
-    top: 50%;
-    right: 1rem;
+    top: 51%;
+    right: 0;
     display: flex;
     align-items: center;
     width: 20rem;
     justify-content: space-between;
     transform: translateY(-50%);
+    margin-right: 5vw;
+    @include respond(portrait) { // width < 1200
+      width: 15rem;
+      margin-right: 1vw;
+    }
     &__icon{
       font-size: 2rem;
 
@@ -120,6 +139,9 @@
     &__n2{
       @extend %n-placeholder;
       left: 15rem;
+      @include respond(portrait) { // width < 1200
+        left: 11rem;
+      }
       &:hover .t_2{
        display: flex;
       }
@@ -127,6 +149,9 @@
     &__n3{
       @extend %n-placeholder;
       left: 25rem;
+      @include respond(portrait) { // width < 1200
+        left: 17rem;
+      }
       &:hover .t_3{
        display: flex;
       }
@@ -137,6 +162,9 @@
     &__n4{
       @extend %n-placeholder;
       left: 35rem;
+      @include respond(portrait) { // width < 1200
+        left: 23rem;
+      }
       &:hover .nosotros{
        display: flex;
       }

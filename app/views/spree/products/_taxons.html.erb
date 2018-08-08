@@ -5,6 +5,7 @@
   <ul class="list-group" id="similar_items_by_taxon" data-hook>
     <% @product.taxons.each do |taxon| %>
 
+
       <%= render partial: 'spree/shared/products', locals: { products: taxon.products.sample(4) , taxon: taxon }%>
 
     <% end %>

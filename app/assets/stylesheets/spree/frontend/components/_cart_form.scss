@@ -23,6 +23,10 @@
     text-transform: uppercase;
     font-size: 1.5rem;
     padding-left: 2rem;
+    @include respond(portrait) {
+      padding-left: 1rem;
+      margin: 0;
+    }
   }
 
   input{

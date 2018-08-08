@@ -2,18 +2,27 @@
   display: flex;
   justify-content: space-between;
 
+
   &__left{
     width: 47%;
     box-shadow: $box-shadow-card;
     padding: 6rem;
     background-color: white;
+    display: table;
   }
 
   &__right{
     width: 47%;
     box-shadow: $box-shadow-card;
-   padding: 6rem;
+    padding: 6rem;
+    background-color: white;
+    display: table;
   }
+
+  &__right--picture{
+    width: 47%;
+  }
+
 
    &__picture{
     width:100%;

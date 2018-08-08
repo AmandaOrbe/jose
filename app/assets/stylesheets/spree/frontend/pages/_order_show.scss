@@ -2,7 +2,7 @@
   margin-top: 10rem;
 
   &__titles{
-    margin-top: 15rem;
+    margin-top: 5rem;
     text-align: center;
     h1, h2, h5{
       font-family: $body-font;
@@ -17,18 +17,26 @@
   }
 
   &__left{
-    width: 64%;
+    width: 60%;
     box-shadow: $box-shadow-card;
     display: table;
   }
   &__right{
-    width: 32%;
+    width: 38%;
     box-shadow: $box-shadow-card;
-     padding: 6rem;
+
+    &--padded{
+      padding: 6rem 6rem 0 6rem;
+      @include respond(portrait) { // width < 1200
+        padding: 4rem 4rem 0 4rem;
+      }
+    }
   }
 
   &__buttons{
 
     width: 100%;
+    text-align: center;
+    padding-bottom: 6rem;
   }
 }

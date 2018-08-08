@@ -78,9 +78,12 @@
 
       .cart-item-description{
         padding-left: 5rem;
+        @include respond(portrait) { // width < 1200
+          padding-left: 1rem;
+        }
       }
       .cart-item-quantity input{
-        width: 5rem;
+        width: 2rem;
         height: 3rem;
 
         &:focus{

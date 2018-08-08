@@ -5,15 +5,19 @@
   <div class="product-show">
     <div class="product-show__left">
       <div id="product-images" class="product-show__images" data-hook="product_images">
-        <div id="thumbnails" data-hook class="product-show__thumbnails">
+        <div id="thumbnails" data-hook class="product-show__thumbnails product-show__thumbnails--left" >
           <%= render partial: 'thumbnails' %>
         </div>
         <div id="main-image" data-hook class= "product-show__image">
           <%= render partial: 'image' %>
         </div>
+        <div id="thumbnails" data-hook class="product-show__thumbnails product-show__thumbnails--down" >
+          <%= render partial: 'thumbnails' %>
+        </div>
 
       </div>
     </div>
+
 
     <div class="product-show__right">
       <h1 class="product-show__title" itemprop="name"><%= @product.name %></h1>

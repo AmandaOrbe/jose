@@ -35,7 +35,7 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   }
 
   &:hover > .btn--featured{
-    transform: translateY(-.4rem) scale(1.08);
+    transform: translate(-50%, -.4rem) scale(1.08);
   }
 
   &:hover > a > &__picture{
@@ -57,6 +57,7 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   &__picture{
     width: auto;
     height: 102%;
+    min-width: 100%;
 
   }
 }

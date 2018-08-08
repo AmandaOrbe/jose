@@ -9,7 +9,7 @@
 html{
   font-size: 62.5%; //1rem = 10px,  10/16 = 62,5%
 
-  @include respond(landscape) { // width < 1200
+  @include respond(phone) { // width < 1200
     font-size: 56,25%; //1rem = 9px,  9/16 = 56,25%
   }
 
@@ -17,7 +17,7 @@ html{
     font-size: 50%; //1rem = 8px,  8/16 = 50%
   }
 
-  @include respond(phone) {
+  @include respond(landscape) {
     font-size: 40%;
   }
   @include respond(big-screen) {
@@ -33,11 +33,11 @@ body{
 .container1{
   margin: 0 auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
 }
 
 .under-search{
-  margin-top: 20rem !important;
+  margin-top: 16rem !important;
 }
 
 .under-login{
@@ -50,8 +50,20 @@ body{
   width: 90%;
   margin-top: 8rem;
   transition: all .5s ease;
+  min-height: calc(100vh - 40rem);
+
+  @include respond(portrait) { // width < 1200
+    width: 95%;
+    margin-top: 6rem;
+
+  }
 }
 
+
+.footer-wrapper{
+  width: 90%;
+  margin:0 auto;
+}
 #wrapper--devise{
     // background-color: $color-black;
     // opacity: .9;
