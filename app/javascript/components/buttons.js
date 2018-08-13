@@ -4,10 +4,10 @@ function isChecked(){
   let checked = false
 
   radios.forEach((radio)=> {
-    console.log("radio")
+
 
     if (radio.checked === false){
-      console.log("false");
+
     } else {
       checked = true;
     }

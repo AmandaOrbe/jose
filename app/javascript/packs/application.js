@@ -10,15 +10,24 @@
 
 console.log('Hello World from Webpacker')
 
+
+//taxons
+
 import { howManyCards} from '../components/similar';
 
-window.addEventListener("resize", (event) =>{
-  console.log("resize");
+if(document.querySelectorAll("#similar_items_by_taxon .card")[4]){
+    window.addEventListener("resize", (event) =>{
+    console.log("resize");
+    howManyCards();
+
+  })
+
   howManyCards();
+}else{
+  console.log("else");
+};
 
-})
 
-howManyCards();
 
 
 import { hello } from '../components/greeter';
