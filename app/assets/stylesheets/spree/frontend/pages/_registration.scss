@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include respond(phone) {
+    display: block;
+  }
+
 
   &__left{
     width: 47%;
@@ -9,6 +13,11 @@
     padding: 6rem;
     background-color: white;
     display: table;
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem;
+      box-shadow:none;
+    }
   }
 
   &__right{
@@ -17,10 +26,18 @@
     padding: 6rem;
     background-color: white;
     display: table;
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem;
+      box-shadow:none;
+    }
   }
 
   &__right--picture{
     width: 47%;
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
 

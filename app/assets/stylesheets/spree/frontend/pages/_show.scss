@@ -4,6 +4,10 @@
   margin: 0 auto;
   position: relative;
 
+  @include respond(phone) {
+    // height: 100vh;
+  }
+
 
   // ------------LEFT PART--------------
 
@@ -15,6 +19,11 @@
     top: 0;
     height: 600px;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__images{
@@ -49,10 +58,15 @@
     margin: 0 2rem 2rem 2rem;
     width: 100%;
     backface-visibility: hidden;
+
     @include respond(portrait) { // width < 900 -->more specific: it should be later on our code
-    height: 10rem;
-    width: auto;
-    margin: 1rem;
+      height: 10rem;
+      width: auto;
+      margin: 1rem;
+    }
+
+    @include respond(phone) {
+      height: 7rem;
     }
   }
 
@@ -74,7 +88,9 @@
 }
 
 
-
+.id-content{
+  border: 1px solid red;
+}
 
   // ------------RIGHT PART--------------
 
@@ -87,6 +103,12 @@
     height: 600px;
     padding: 2rem;
 
+    @include respond(phone) {
+      width: 100%;
+      position: relative;
+      height: auto;
+    }
+
     h1{
       font-family: $headers-font;
       color: $color-black;
@@ -95,6 +117,10 @@
       text-transform: uppercase;
       font-size: 2.5rem;
       margin-top: 1rem;
+
+      @include respond(phone) {
+        margin-bottom: 1rem;
+      }
     }
   }
 

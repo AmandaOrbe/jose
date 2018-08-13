@@ -28,6 +28,9 @@
       // display: table;
     height: auto;
     justify-content: space-between;
+    @include respond(phone) {
+      display: block;
+    }
       // min-height: 70px;
 
 
@@ -37,6 +40,10 @@
       // display: table-row;
       width: 64%;
       box-shadow: $box-shadow-card;
+      @include respond(phone) {
+        width: 100%;
+        box-shadow: none;
+      }
       &::after{
         content: “”;
         clear: both;
@@ -54,7 +61,10 @@
         font-family: $body-font;
       }
       img{
-        max-width: 150px;
+        max-width: 15rem;
+        @include respond(phone) {
+          max-width: 10rem;
+        }
       }
 
       td {
@@ -118,6 +128,12 @@
       top: 10rem;
       padding: 2rem;
       box-shadow: $box-shadow-card;
+      @include respond(phone) {
+        position: relative;
+        width: 100%;
+        top: 0;
+        box-shadow: none;
+      }
       h2{
           color: black;
         }

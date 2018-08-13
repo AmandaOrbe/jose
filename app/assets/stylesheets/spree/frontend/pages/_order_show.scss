@@ -14,16 +14,30 @@
   &__wrapper{
     display: flex;
     justify-content: space-between;
+
+    @include respond(phone) {
+      display: block;
+    }
+
   }
 
   &__left{
     width: 60%;
     box-shadow: $box-shadow-card;
     display: table;
+
+     @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
   }
   &__right{
     width: 38%;
     box-shadow: $box-shadow-card;
+     @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
 
     &--padded{
       padding: 6rem 6rem 0 6rem;

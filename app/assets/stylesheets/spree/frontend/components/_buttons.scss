@@ -117,7 +117,10 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     position: relative;
     bottom: 30%;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    @include respond(phone) {
+      bottom: 15%;
+    }
   }
 
   &--large{

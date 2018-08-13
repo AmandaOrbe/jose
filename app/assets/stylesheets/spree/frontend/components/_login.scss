@@ -8,9 +8,10 @@
   margin-bottom: 2rem;
   border-bottom: 1px solid $color-black;
   transition: height .3s linear, opacity .6s cubic-bezier(1,0,1,.57);
-   @include respond(portrait) {
+  @include respond(portrait) {
     margin-left: 3vw;
-    }
+  }
+
   &--invisible{
     height: 0rem;
     opacity: 0;

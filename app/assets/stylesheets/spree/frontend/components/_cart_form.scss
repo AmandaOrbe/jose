@@ -2,10 +2,18 @@
   // border: 1px solid red;
   width: 90%;
   height: 12rem;
+  @include respond(phone) {
+    height: 8rem;
+    padding-left: 2rem;
+  }
+
 
   &__container{
     position: relative;
     height: 6rem;
+    @include respond(phone) {
+      height: 4rem;
+    }
   }
 
   &__button{
