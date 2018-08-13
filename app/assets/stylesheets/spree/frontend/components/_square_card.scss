@@ -95,6 +95,11 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   overflow: hidden;
   position: relative;
 
+  @include respond(phone) {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 0;
+  }
    &:hover > .btn--third{
     transform: translateX(-50%) translateY(-.4rem) scale(1.08);
   }
@@ -102,6 +107,7 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   &:hover > a > .square-card__picture{
       filter: blur(1px) brightness(85%);
     }
+
 }
 
 

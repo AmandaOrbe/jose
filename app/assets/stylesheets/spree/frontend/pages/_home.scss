@@ -12,7 +12,7 @@
   }
 
   @include respond(phone) {
-    height: 92vh;
+    height: calc(100vh - 6rem);
   }
 
   &__banner-content{

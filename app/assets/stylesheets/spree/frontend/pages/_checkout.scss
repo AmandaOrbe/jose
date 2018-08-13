@@ -8,6 +8,7 @@
   .form__container{
     display: flex;
     justify-content: space-between;
+
   }
 
   .address100{
@@ -49,18 +50,28 @@
   &__wrapper{
     display: flex;
     justify-content: space-between;
+    @include respond(phone) {
+      display: block;
+    }
   }
 
    &__left{
     width: 60%;
     // box-shadow: $box-shadow-card;
     // padding: 3rem;
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__right{
     width: 34%;
     box-shadow: $box-shadow-card;
     display: table;
+    @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
   }
 
   &__form-section{
@@ -69,6 +80,10 @@
     margin-bottom:5rem;
     @include respond(portrait) { // width < 1200
       padding: 4rem;
+    }
+    @include respond(phone) {
+      padding: 2rem;
+      box-shadow: none;
     }
 
   }
@@ -146,16 +161,26 @@
   width: 90vw;
   display: flex;
   justify-content: space-between;
+
   @include respond(portrait) { // width < 1200
     width: 95vw;
   }
+
+  @include respond(phone) {
+    display: block;
+  }
+
 
 
    &__left {
     width: 60%;
     box-shadow: $box-shadow-card;
-
     display: table;
+
+    @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
   }
 
   &__right{
@@ -166,6 +191,13 @@
     position: sticky;
     top: 10rem;
     margin-left: 3rem;
+    @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+      position: relative;
+      top: 0;
+      margin-left: 0;
+    }
 
   }
 

@@ -183,6 +183,9 @@
       }
       &:hover .t_1{
        display: flex;
+       @include respond(phone) {
+        display: none;
+      }
       }
     }
     &__n2{
@@ -196,6 +199,9 @@
       }
       &:hover .t_2{
        display: flex;
+       @include respond(phone) {
+        display: none;
+      }
       }
     }
     &__n3{
@@ -209,6 +215,9 @@
       }
       &:hover .t_3{
        display: flex;
+       @include respond(phone) {
+        display: none;
+      }
       }
     }
 
@@ -225,6 +234,9 @@
       }
       &:hover .nosotros{
        display: flex;
+      @include respond(phone) {
+        display: none;
+      }
       }
     }
 
@@ -240,6 +252,9 @@
   display: none;
   &:hover{
     display: flex;
+    @include respond(phone) {
+      display:none;
+    }
   }
 }
 
@@ -267,5 +282,9 @@
   margin-top: 3rem;
 }
 
-
+#user-icon{
+  @include respond(phone) {
+    display: none;
+  }
+}
 

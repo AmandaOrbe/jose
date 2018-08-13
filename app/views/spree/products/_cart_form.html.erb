@@ -37,9 +37,8 @@
       <br>
     <p class= "warning"><%= t('amanda.cart.warning') %></p>
 
-    <br>
     <br><br>
-    <br>
+
 
     <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <%= !@product.has_variants? ? 'alpha' : 'omega' %>">
