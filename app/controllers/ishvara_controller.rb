@@ -1,5 +1,6 @@
 class IshvaraController < ApplicationController
   def historia
+    @historia = "historia"
   end
 
   def prensa
