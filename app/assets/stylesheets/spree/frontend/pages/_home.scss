@@ -11,6 +11,10 @@
     height: 50vh;
   }
 
+  @include respond(phone) {
+    height: 92vh;
+  }
+
   &__banner-content{
   position: absolute;
   top: 0;
@@ -22,6 +26,10 @@
 
   @include respond(portrait) {
     height: 50vh;
+  }
+
+  @include respond(phone) {
+    height: 100vh;
   }
   }
 }

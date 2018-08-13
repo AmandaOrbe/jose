@@ -39,6 +39,14 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     box-shadow: $box-shadow-button;
     font-weight: 400;
 
+    @include respond(phone) {
+      width: 101%;
+      opacity: .9;
+      z-index: 200;
+      font-size: 1.8rem;
+      padding: 1.8rem;
+    }
+
   }
   &--white-border{
     background-color: white;
@@ -59,9 +67,15 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
 
 
   &--banner{
-   position: absolute;
-  right: 10rem;
-  box-shadow: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,0,0.5);;
+    position: absolute;
+    right: 10rem;
+    top: 65%;
+    box-shadow: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,0,0.5);
+    @include respond(phone) {
+      left: 0;
+      top: calc(100vh - 11.5rem);
+      box-shadow:none;
+    }
   }
 
 
@@ -93,6 +107,9 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
+     @include respond(phone) {
+      bottom: 6.2rem;
+    }
 
   }
 
@@ -113,6 +130,14 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     font-family: "Montserrat", "Helvetica", "sans-serif";
     transition: all .5s ease;
     border-radius: 0;
+  }
+
+  &--jose{
+    display: none;
+    @include respond(phone) {
+      display: block;
+      bottom: 7.5rem;
+    }
   }
 
   &--half{

@@ -14,6 +14,9 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   &__row{
    display: flex;
    justify-content: space-between;
+    @include respond(phone) {
+      display: block;
+    }
    &:last-child{
     margin-bottom: $gutter-vertical-small;
    }
@@ -21,7 +24,17 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   }
 }
 
+.phone-address{
+  display:none;
+  @include respond(phone) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      font-size: 1.6rem;
+    }
 
+}
 .square-card{
   margin-top: 7.2vh;
   width: calc((96%) / 2);
@@ -29,9 +42,18 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   background-color: white;
   overflow: hidden;
   position: relative;
+  @include respond(phone) {
+    width: 100vw;
+    height: 100vw;
+    margin-top:  0rem;
+    z-index: 0;
+  }
 
   &--shaded{
     box-shadow: $box-shadow-card;
+    @include respond(phone) {
+      box-shadow: none;
+    }
   }
 
   &:hover > .btn--featured{
@@ -49,9 +71,12 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   }
 
   &--text{
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__picture{
