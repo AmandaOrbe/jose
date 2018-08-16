@@ -78,6 +78,9 @@
       font-weight: 200;
       text-transform: uppercase;
     }
+    a{
+      color: green;
+    }
     @include respond(phone) {
       display: none;
     }
