@@ -23,15 +23,25 @@
       <%= form.label :city, t('spree.city') %>
       <%= form.text_field :city, class: 'required', autocomplete: address_type + ' address-level2',  required: true %>
     </div>
+<% countries = [] %>
+<% Spree::Zone.all.each do |zone| %>
+  <% zone.countries.each do |country| %>
+    <% countries << country %>
+    <% countries.sort! { |a, z| a <=> z } %>
+  <% end %>
+<% end %>
 
     <div class="field field-required address50" id=<%="#{address_id}country" %>>
       <%= form.label :country_id, t('spree.country') %>
       <span id=<%="#{address_id}country-selection" %>>
-        <%= form.collection_select :country_id, available_countries, :id, :name, {},
+        <%= form.collection_select :country_id, countries, :id, :name, {:selected => countries.select { |country| country.id == 68 }},
             class: 'required',
             autocomplete: address_type + ' country-name',
-            required: true
+            required: true,
+            default_country_id: 68
+
           %>
+
       </span>
     </div>
 

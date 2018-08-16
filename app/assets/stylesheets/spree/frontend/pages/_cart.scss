@@ -4,6 +4,7 @@
   min-height: calc((100vh) - (38rem));
 
 
+
   &__empty{
     box-shadow: $box-shadow-card;
     width: 64%;
@@ -40,6 +41,7 @@
       // display: table-row;
       width: 64%;
       box-shadow: $box-shadow-card;
+      z-index: 150;
       @include respond(phone) {
         width: 100%;
         box-shadow: none;
@@ -93,7 +95,7 @@
         }
       }
       .cart-item-quantity input{
-        width: 2rem;
+        width: 4rem;
         height: 3rem;
 
         &:focus{
@@ -128,6 +130,7 @@
       top: 10rem;
       padding: 2rem;
       box-shadow: $box-shadow-card;
+      z-index: 150;
       @include respond(phone) {
         position: relative;
         width: 100%;

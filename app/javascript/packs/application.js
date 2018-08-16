@@ -33,14 +33,19 @@ if(document.querySelectorAll("#similar_items_by_taxon .card")[4]){
 import { hello } from '../components/greeter';
 hello();
 
-// SEARCH BAR
+// NAVBAR
+import { navBar,  navBarLoggedIn } from '../components/navbar';
 
-import { navBar } from '../components/navbar';
-navBar();
+if(document.getElementById("home-login")){
+   navBar();
+} else{
+  navBarLoggedIn();
+}
 
 
 // PREVENT FORM
 import { preventCart } from '../components/buttons';
+
 if(document.querySelectorAll(".size-buttons input").length != 0){
   preventCart();
 }else{

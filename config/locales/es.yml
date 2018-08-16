@@ -36,6 +36,9 @@ es:
     order:
       success: Pedido realizado con éxito
     hello: Hola
+    cvv: el número de seguridad está compuesto por tres dígitos en la parte trasera de su trajeta (4 dígitps en las trajetas American Express)
+    zip: PC
+
   date:
     abbr_day_names:
       - dim
@@ -1436,7 +1439,7 @@ es:
     empty_cart: Carrito vacío
     enable_mail_delivery: Habilitar Entrega por correo
     end: Fin
-    ending_in: Terminado en
+    ending_in: Terminada en
     error: error
     errors:
       messages:
@@ -1634,7 +1637,7 @@ es:
     login_failed: No se ha podido iniciar la sesión, error de autenticación.
     login_name: Acceder
     logout: Desconectar
-    look_for_similar_items: Puede que también te guste
+    look_for_similar_items: Productos similares
     make_refund: Efectuar Reintegro
     make_sure_the_above_reimbursement_amount_is_correct: Asegurarse de que la cantidad del reembolso arriba indicada es correcta
     manage_promotion_categories: Gestionar Categorías de Promoción

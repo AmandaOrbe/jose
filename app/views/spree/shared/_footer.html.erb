@@ -15,8 +15,9 @@
   </div>
   <div id="footer__right" class="footer__right" data-hook>
     <div class="footer__form-group">
-      <h3><%= link_to t('amanda.footer.follow'), "https://www.instagram.com/ishvara.formentera/" %></h3>
-        <h3><i class="fa fa-instagram"></i></h3>
+      <%= link_to "https://www.instagram.com/ishvara.formentera/" do %>
+        <h3><i class="fa fa-instagram"></i>     <%=t('amanda.footer.follow')%></h3>
+      <% end %>
     </div>
 
 
