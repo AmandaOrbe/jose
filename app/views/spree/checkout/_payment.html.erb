@@ -36,7 +36,7 @@
         </div>
       <% end %>
 
-      <div id="payment-method-fields" data-hook>
+      <div id="payment-method-fields" class="credit-card-hidden" data-hook>
         <% @order.available_payment_methods.each do |method| %>
         <p>
           <label>
@@ -49,11 +49,11 @@
 
       <ul id="payment-methods" data-hook>
         <% @order.available_payment_methods.each do |method| %>
-          <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
+          <div id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
             <fieldset>
               <%= render partial: "spree/checkout/payment/#{method.partial_name}", locals: { payment_method: method } %>
             </fieldset>
-          </li>
+          </div>
         <% end %>
       </ul>
       <br style="clear:both;" />

@@ -51,9 +51,10 @@ en:
       shoes: shoes
       bags: bags
       belts: belts
+    show:
+      variant: Please select your size
     footer:
-      newsletter: Suscríbete a nuestra newsletter
-      follow: Follow us
+      follow: Follow us on Instragram
     featured:
       woman:
         shoes_title: Sandals
@@ -65,6 +66,8 @@ en:
       quantity: QUANTITY
     confirm: confirm details
     hello: Hello
+    cvv: the security number is composed of the three numbers on the back of your credit card (4 digits for American Express card )
+    zip: PC
 
   spree:
     order_mailer:
@@ -78,3 +81,4 @@ en:
     shipment_details: "From Formentera via %{shipping_method}"
     full_name: Full Name
     thank_you_for_your_order: Thank you for your order. Please print out a copy of this confirmation page for your records.
+

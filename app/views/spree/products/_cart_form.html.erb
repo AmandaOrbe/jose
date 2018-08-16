@@ -35,7 +35,7 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
       <br>
-    <p class= "warning"><%= t('amanda.cart.warning') %></p>
+
 
     <br><br>
 
@@ -74,6 +74,7 @@
   <div itemprop="description" data-hook="description" class="product-description">
 
      <p> <%= product_description(@product) rescue t('spree.product_has_no_description') %></p>
+
   </div>
 <% end %>
 

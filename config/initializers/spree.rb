@@ -64,3 +64,16 @@ Spree::Api::Config.configure do |config|
 end
 
 Spree.user_class = "Spree::LegacyUser"
+
+Spree::Auth.config do |config|
+  config.registration_step = false
+end
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@
   position: relative;
   color: $color-black;
   padding-top: 10rem;
-  z-index: -10;
+  z-index: 0;
 
   @include respond(phone) {
     padding-top: 0;
@@ -78,40 +78,20 @@
       font-weight: 200;
       text-transform: uppercase;
     }
+
     @include respond(phone) {
-      display: none;
-    }
-  }
+      position: relative;
+      text-align: center;
+      margin-top: -4rem;
 
-  &__icons{
-      font-family: $headers-font;
-      font-weight: 200;
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      position: absolute;
-      right: 0;
-      bottom: -20rem;
-      @include respond(phone) {
-        position: relative;
-        width: 100%;
-        bottom: 0;
-        li{
-         font-size: 3rem;
-         padding: 3rem;
-        }
     }
   }
 
 
 
-}
 
-.follow{
-  @include respond(phone) {
-    display: none !important;
-  }
-}
 
+}
 
 
 

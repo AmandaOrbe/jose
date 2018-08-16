@@ -39,6 +39,7 @@
     li{
       width: 13%;
       text-transform: uppercase;
+      margin: 1rem;
 
     }
   }
@@ -236,15 +237,30 @@
 
 
 
+.credit-card-hidden{
+  display: none;
+}
 
 
+.cvv{
+  height: 3rem;
 
+  &__explain{
+    display: none;
+  }
 
+  &__text{
+    font-size: 1rem;
+    color: $gray;
+  }
 
+  &:hover &__explain{
+    display: block;
+    color: $gray;
+    font-size: .8rem;
+  }
 
-
-
-
+}
 
 
 

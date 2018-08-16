@@ -4,7 +4,8 @@ function navBar(){
   const search = document.getElementById("search")
   const searchBar =  document.getElementById("search-bar")
   const wrapper =  document.getElementById("wrapper")
-
+  const userIcon =  document.getElementById("user-icon")
+  const login = document.getElementById("home-login")
 
   search.addEventListener("click", (event) =>{
     console.log(event);
@@ -16,9 +17,6 @@ function navBar(){
   })
 
   // login
-
-  const userIcon =  document.getElementById("user-icon")
-  const login = document.getElementById("home-login")
 
 
 
@@ -35,4 +33,18 @@ function navBar(){
 })
 }
 
-export { navBar };
+function navBarLoggedIn(){
+  const search = document.getElementById("search")
+  const searchBar =  document.getElementById("search-bar")
+  const wrapper =  document.getElementById("wrapper")
+
+
+  search.addEventListener("click", (event) =>{
+    console.log(event);
+    searchBar.classList.toggle("visible");
+    wrapper.classList.remove("under-login");
+    wrapper.classList.toggle("under-search");
+  })
+}
+
+export { navBar, navBarLoggedIn };

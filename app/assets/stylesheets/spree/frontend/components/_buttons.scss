@@ -70,11 +70,19 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     position: absolute;
     right: 10rem;
     top: 65%;
+    background-color: black;
+    color: white;
     box-shadow: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,0,0.5);
     @include respond(phone) {
       left: 0;
       top: calc(100vh - 11.5rem);
       box-shadow:none;
+      background-color: white;
+    }
+    &:hover{
+      opacity: .7;
+      background-color: white;
+      color: black;
     }
   }
 
