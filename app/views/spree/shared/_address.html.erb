@@ -20,7 +20,11 @@
       <span class="locality"><%= address.city %></span>
       <span class="region"><%= t('amanda.zip') %></span>
       <span class="postal-code"><%= address.zipcode %></span>
-      <div class="country-name"><%= address.country.try(:name) %></div>
+      <% country_translated = "amanda.countries.#{address.country.try(:name).downcase}" %>
+      <div class="country-name"><%= t(country_translated) %></div>
+
+
+
     </div>
   </div>
   <% unless address.phone.blank? %>
