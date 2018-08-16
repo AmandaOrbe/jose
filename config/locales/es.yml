@@ -37,7 +37,16 @@ es:
       success: Pedido realizado con éxito
     hello: Hola
     cvv: el número de seguridad está compuesto por tres dígitos en la parte trasera de su trajeta (4 dígitps en las trajetas American Express)
-    zip: PC
+    zip: CP
+    countries:
+      spain: España
+      france: Francia
+      germany: Alemania
+      united kingdom: Reino Unido
+      united states: Estados Unidos
+      italy: Italia
+      canada: Canadá
+      finland: Finlandia
 
   date:
     abbr_day_names:
