@@ -1,6 +1,7 @@
 <br>
 <div class="account-titles">
-<h1><%=t('amanda.hello')  %> <%=@user.bill_address.first_name.split.first  %></h1>
+
+<h1><%=t('amanda.hello')  %> <%=@user.bill_address ? @user.bill_address.first_name.split.first : " " %></h1>
  <%= link_to Spree.t(:logout), spree.logout_path , class: "logout"%>
 <br>
 </div>
