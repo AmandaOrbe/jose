@@ -19,7 +19,9 @@
                   <%= form.label :email %><br />
                   <%= form.email_field :email, required: true %>
                 </div>
-
+                <% unless spree_current_user %>
+                  <%= link_to "accede a tu cuenta", checkout_registration_path  %>
+                <% end  %>
             <% end %>
             <%= render @order.state, form: form %>
             </div>
