@@ -96,11 +96,17 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     &:hover{
       opacity: .6;
     }
-     &:focus{
+
+    &:focus{
       outline: none;
       transform:  scaleX(1.01) scaleY(1.07);
       opacity: .9;
     }
+
+    &:visited a{
+      color: white;
+    }
+
   }
 
   &--down{

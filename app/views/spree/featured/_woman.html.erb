@@ -1,32 +1,46 @@
 <div class="featured">
-  <%= render partial: 'spree/shared/featured_product', locals: { product: @products.find_by(slug: "espalmador-sandals")}%>
+  <!-- first product -->
+  <% if @products.find_by(slug: "espalmador-sandals") %>
+  <% product ||= @products.find_by(slug: "espalmador-sandals") %>
+  <% else %>
+  <% product ||= Spree::Taxon.find_by(permalink: "woman/shoes").products.first %>
+  <% end %>
 
-  <%= render partial: 'spree/shared/taxon_card'%>
+  <% if product %>
+  <%= render partial: 'spree/shared/featured_product', locals: { product: product}%>
+  <% else %>
+  <p>no product</p>
+  <% end %>
 
+<!-- first taxon -->
+
+  <%= render partial: 'spree/shared/taxon_card', locals: { taxon: Spree::Taxon.find_by(permalink: "woman/shoes"), image: "tienda-jose-calzado.png"}%>
+
+
+<!-- second product -->
+  <% if @products.find_by(slug: "espalmador-sandals") %>
+  <% product2 ||= @products.find_by(slug: "migjorn-handbag") %>
+  <% else %>
+  <% product2 ||= Spree::Taxon.find_by(permalink: "woman/bags").products.first %>
+  <% end %>
+
+  <% if product2 %>
+  <%= render partial: 'spree/shared/featured_product', locals: { product: product2}%>
+  <% else %>
+  <p>no product</p>
+  <% end %>
+
+<!-- second taxon -->
+  <%= render partial: 'spree/shared/taxon_card', locals: { taxon: Spree::Taxon.find_by(permalink: "woman/bags"), image: "bolsos.png"}%>
+
+
+<!-- remaining taxons -->
   <div class="featured__row">
-  <%= render partial: 'spree/shared/taxon_card_small'%>
-  <%= render partial: 'spree/shared/taxon_card_small'%>
-  </div>
-  <div class="featured__row">
 
-      <div class="third-card ">
-        <%= link_to "/t/woman/shoes" do %>
-          <%= image_tag "featured1.png", class: "square-card__picture"%>
-          <a href="/t/woman/shoes" class= "btn btn--white btn--third"><%=t('amanda.home.shoes')%></a>
-        <% end %>
-      </div>
-      <div class="third-card">
-       <%= link_to "/t/woman/bags" do %>
-          <%= image_tag "featured2.png", class: "square-card__picture"%>
-          <a href="/t/woman/bags" class= "btn btn--white btn--third"><%=t('amanda.home.bags')%></a>
-        <% end %>
-      </div>
-      <div class="third-card">
-       <%= link_to "/t/woman/bags" do %>
-          <%= image_tag "featured2.png", class: "square-card__picture"%>
-          <a href="/t/woman/bags" class= "btn btn--white btn--third"><%=t('amanda.home.belts')%></a>
-        <% end %>
-      </div>
+    <%= render partial: 'spree/shared/taxon_card_small', locals: { taxon: Spree::Taxon.find_by(permalink: "woman/belts"), image: "cinturones.png"}%>
+
+    <%= render partial: 'spree/shared/taxon_card_small', locals: { taxon: Spree::Taxon.find_by(permalink: "woman/accessories"), image: "pulseras.png"}%>
 
   </div>
+
 </div>

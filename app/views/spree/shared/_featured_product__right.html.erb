@@ -1,27 +1,32 @@
-<div class="featured__row">
 
-  <div class="square-card square-card--text">
+<div class="featured__row">
+      <div class="square-card square-card--text">
     <div class="heading-secondary">
       <h2 class="heading-secondary--main">
-        <%=t('amanda.featured.woman.shoes_title')%>
+        <%=product.name%>
       </h2>
       <p class="heading-secondary--sub">
-        <%=t('amanda.featured.woman.shoes_text_l1')%>
-        <br>
-        <%=t('amanda.featured.woman.shoes_text_l2')%>
+        <%= product_description(product)%>
       </p>
       <br>
       <span class="padding-2"></span>
 
-      <a href="/t/woman/bags" class= "btn btn--black margin-top-medium"><%=t('amanda.home.belts')%></a>
+      <a href="/t/woman/bags" class= "btn btn--black margin-top-medium"><%=t('amanda.buy')%></a>
     </div>
   </div>
 
-  <div class="square-card">
-    <%= link_to "/t/woman/shoes" do %>
-    <%= image_tag "featured1.png", class: "square-card__picture"%>
-    <% end %>
-    <p class="featured__price--right">Sandalias eva <strong>85€</strong></p>
-  </div>
+    <div class="square-card">
+      <%= link_to spree.product_path(product, taxon_id: @taxon.try(:id)) do %>
+        <% if defined?(image) && image %>
+          <%= render 'spree/shared/image_featured', image: image, size: :large, itemprop: "image" , class: "square-card__picture"%>
+        <% else %>
+          <%= render 'spree/shared/image_featured', image: product.display_image, size: :large, itemprop: "image" , class: "square-card__picture"%>
+          <% end %>
+      <p class="featured__price--right"><%=product.name  %> &nbsp <strong><%=product.price.to_f.truncate(0)  %> €</strong></p>
+      <% end %>
+    </div>
+
+
+
 
 </div>

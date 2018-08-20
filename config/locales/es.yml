@@ -40,6 +40,7 @@ es:
     hello: Hola
     cvv: el número de seguridad está compuesto por tres dígitos en la parte trasera de su trajeta (4 dígitps en las trajetas American Express)
     zip: CP
+    discover: descubrir
     countries:
       spain: España
       france: Francia
