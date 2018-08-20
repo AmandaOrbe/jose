@@ -1,5 +1,6 @@
 <div class="featured">
-  <%= render partial: 'spree/shared/featured_product'%>
+  <%= render partial: 'spree/shared/featured_product', locals: { product: @products.find_by(slug: "espalmador-sandals")}%>
+
   <%= render partial: 'spree/shared/taxon_card'%>
 
   <div class="featured__row">

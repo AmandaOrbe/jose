@@ -32,6 +32,7 @@
 en:
   hello: "Hello world"
   amanda:
+    buy: buy now
     productpage:
       generalaspects: General Aspects
       english: English
