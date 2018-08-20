@@ -1,0 +1,12 @@
+<% size ||= :large %>
+<% itemprop ||= nil %>
+
+<% if image && image.attachment? %>
+  <% if itemprop %>
+    <%= image_tag image.attachment(size), itemprop: itemprop , class: "square-card__picture" %>
+  <% else %>
+    <%= image_tag image.attachment(size), class: "square-card__picture" %>
+  <% end %>
+<% else %>
+  <span class="square-card__picture <%= size %>"></span>
+<% end %>
