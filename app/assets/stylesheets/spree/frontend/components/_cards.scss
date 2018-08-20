@@ -32,6 +32,14 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
+
+    a{
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+    }
 
     a > img{
       width: 100%;
@@ -45,7 +53,7 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
 
   &__footer{
     position: absolute;
-    height: 6.1rem;
+    // height: 6.1rem;
     width: 100%;
     bottom: 0px;
     left: 0;

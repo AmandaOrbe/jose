@@ -70,6 +70,7 @@ en:
     hello: Hello
     cvv: the security number is composed of the three numbers on the back of your credit card (4 digits for American Express card )
     zip: PC
+    discover: discover
 
   spree:
     order_mailer:

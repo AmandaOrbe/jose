@@ -3,10 +3,13 @@
     <div class="square-card">
       <%= link_to spree.product_path(product, taxon_id: @taxon.try(:id)) do %>
         <% if defined?(image) && image %>
-          <%= render 'spree/shared/image_featured', image: image, size: :large, itemprop: "image" , class: "square-card__picture"%>
+
+          <%= render 'spree/shared/image_featured', image: image, size: :large, itemprop: "image"%>
+
         <% else %>
-          <%= render 'spree/shared/image_featured', image: product.display_image, size: :large, itemprop: "image" , class: "square-card__picture"%>
+          <%= render 'spree/shared/image_featured', image: product.display_image, size: :large, itemprop: "image" %>
           <% end %>
+
       <p class="featured__price"><%=product.name  %> &nbsp <strong><%=product.price.to_f.truncate(0)  %> €</strong></p>
       <% end %>
     </div>

@@ -38,7 +38,7 @@
             <div id="product_<%= product.id %>" class="columns three card<%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
             <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
               <div class="card__image-frame">
-                <%= link_to(render('spree/shared/image', image: product.display_image, size: :product, itemprop: "image" , class: 'card__image'), url, itemprop: 'url') %>
+                <%= link_to(render('spree/shared/image', image: product.display_image, size: :product, itemprop: "image" , class: 'card__image'), url, itemprop: 'url')%>
               </div>
 
               <!-- card footer -->
