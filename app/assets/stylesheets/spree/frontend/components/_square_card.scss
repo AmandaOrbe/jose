@@ -97,9 +97,14 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
     }
   }
 
+  &__frame{
+    height: 90%;
+    overflow: hidden;
+  }
+
   &__picture{
     width: auto;
-    height: 90%;
+    height: auto;
     min-width: 100%;
   }
 }
