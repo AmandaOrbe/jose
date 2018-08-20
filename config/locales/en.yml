@@ -58,7 +58,8 @@ en:
     featured:
       woman:
         shoes_title: Sandals
-        shoes_text: A must have since 1985
+        shoes_text_l1: 100% pure leather
+        shoes_text_l2: Perfect fot the farniente
     cart:
       warning: Delivery date is subject to product availability
       dont_worry: ...but don't worry, it doesn't have to be!

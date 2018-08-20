@@ -1,0 +1,27 @@
+.taxon-card-small{
+  width: 45%;
+  background-color: $light-gray;
+  padding: 3rem;
+
+
+  &__top{
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__picture{
+    width: 100%;
+    height: auto;
+  }
+
+  &__bottom{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .heading-secondary--main{
+      margin: 2rem 0;
+    }
+  }
+
+}
