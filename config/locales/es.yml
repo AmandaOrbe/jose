@@ -2246,7 +2246,7 @@ es:
         message: Si ha recibido este email, sus datos de correo son correctos.
         subject: Mail de prueba
     test_mode: Modo Test
-    thank_you_for_your_order: Gracias por su pedido.  Por favor, imprima una copia de esta página para su control.
+    thank_you_for_your_order: Muchas gracias por su compra en Ishvara, hemos recibido correctamente su pedido. En los próximos días nos pondremos en contacto con usted con los detalles del envío.
     there_are_no_items_for_this_order: No hay artículos en este pedido. Por favor, añadir un artículo al pedido para continuar.
     there_were_problems_with_the_following_fields: Hay problemas con los siguientes campos
     this_order_has_already_received_a_refund: Este pedido ya ha recibido un reintegro

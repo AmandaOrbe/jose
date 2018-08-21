@@ -11,7 +11,9 @@
       <br>
       <span class="padding-2"></span>
 
-      <a href="/t/woman/bags" class= "btn btn--black margin-top-medium"><%=t('amanda.buy')%></a>
+      <%=  link_to spree.product_path(product, taxon_id: @taxon.try(:id)) do%>
+        <p class= "btn btn--black margin-top-medium"><%=t('amanda.buy')%></a>
+      <% end %>
     </div>
   </div>
 
