@@ -1,7 +1,13 @@
 /* -------------------------------------
  * Your CSS code for flash notices and alerts
 * ------------------------------------- */
-
+// Sidebar
+//--------------------------------------------------------------
+$width-sidebar:                  200px !default;
+$width-sidebar-flyout:           225px !default;
+$border-sidebar:                 none;
+$main-header-height:             100px;
+// Main
 .alert {
   margin: 0;
   text-align: center;
@@ -13,4 +19,71 @@
 }
 .alert-warning {
   background: #E95262 !important;
+}
+
+@mixin solidus-deprecated-variable($variable, $replacement) {
+  @if $output-solidus-deprecation-warnings == true {
+    @if global-variable-exists($variable) {
+      @warn "[Solidus] [Deprecation] `$#{$variable}` is deprecated and will be " +
+        "removed in 3.0.0. Please use Bootstraps $#{$replacement} instead";
+    }
+  }
+}
+
+.errorExplanation {
+  padding: 5px;
+  border: 1px solid very-light(theme-color("danger"), 12);
+  background-color: very-light(theme-color("danger"), 6);
+  border-radius: 3px;
+  color: very-light(theme-color("danger"), 30);
+  margin-bottom: 15px;
+
+  h2 {
+    font-size: 140%;
+    color: very-light(theme-color("danger"), 30);
+    margin-bottom: 5px;
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  ul {
+    list-style-position: inside;
+
+    li {
+      font-weight: 400;
+    }
+  }
+}
+
+.flash-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: $width-sidebar;
+  right: 0;
+  z-index: 1000;
+}
+
+.flash {
+  padding: 16px;
+  text-align: center;
+  font-size: 120%;
+  color: white;
+  font-weight: 400;
+
+  &.notice  { color: #9FC820  }
+  &.success { color: #F19663}
+  &.error   { color: #C60F13 }
+}
+
+.alert {
+  position: relative;
+  font-weight: normal !important;
+
+  a {
+    text-decoration: underline;
+  }
+
+  &.error a { color: very-light(theme-color("danger"), 10) }
 }
