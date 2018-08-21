@@ -1,0 +1,23 @@
+<div class="taxon-card margin-top-medium">
+
+
+
+    <div class="taxon-card__right">
+      <%= link_to taxon.permalink do %>
+      <%= image_tag image, class: "taxon-card__picture"%>
+      <% end %>
+    </div>
+
+      <div class="taxon-card__left">
+    <div class="heading-secondary">
+      <h2 class="heading-secondary--main">
+        <%= taxon.name %>
+      </h2>
+
+       <%= link_to t('amanda.discover'), taxon.permalink, class: "btn btn--black margin-top-medium"  %>
+
+    </div>
+
+  </div>
+</div>
+
