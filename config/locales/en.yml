@@ -71,6 +71,15 @@ en:
     cvv: the security number is composed of the three numbers on the back of your credit card (4 digits for American Express card )
     zip: PC
     discover: discover
+    history:
+      title1: A Life with a Soul
+      text1: Since 1985 José Marcos Garzón brings all his knowledge to the island and even the apple grab José Marcos Garzón arrived in Formentera in 1985 looking for a place of peace, and fell in love with the island.
+      title2: The Arrival
+      text2: Since 1985 José Marcos Garzón brings all his knowledge to the island and even the apple grab José Marcos Garzón arrived in Formentera in 1985 looking for a place of peace, and fell in love with the island.
+      title3: Savoir-faire
+      text3: blablabla
+      title4: A Fashion Brand
+      text4: blablabla
 
   spree:
     order_mailer:

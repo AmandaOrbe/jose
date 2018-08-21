@@ -2,7 +2,7 @@
  <%= render partial: 'spree/featured/'+ @taxon.permalink %>
 
 
- <% unless @taxon.permalink == "woman" || @taxon.permalink == "man" %>
+ <% unless @taxon.permalink == "woman" || @taxon.permalink == "man"|| @taxon.permalink == "ishvara"|| @taxon.permalink == "ishvara/history" || @taxon.permalink == "ishvara/press" %>
 
 <div data-hook="taxon_products">
   <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>

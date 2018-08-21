@@ -134,7 +134,16 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
 
 }
 
+.whole-width{
+  width: 100%;
+  height: calc((86.4vw ) / 2);
+  overflow: hidden;
 
+  &__picture{
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 
