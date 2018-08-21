@@ -1,4 +1,5 @@
 <div class="featured">
+  <!-- first row (store) -->
   <div class="featured__row">
 
       <div class="square-card square-card--shaded square-card--text">
@@ -17,29 +18,155 @@
           </span>
         </div>
       </div>
-      <div class="square-card square-card--shaded">
+
+      <div class="square-card ">
           <%= image_tag "jose.jpg", class: "square-card__picture"%>
            <h2 class= "btn btn--white btn--featured btn--jose"><%=t('amanda.home.visit')%></h2>
       </div>
       <div class="phone-address">
         <p>• Porto Saler, 6 • Sant Francesc Xavier • Formentera •</p>
+
       </div>
   </div>
 
+  <!-- second row (1 taxons woman) -->
   <div class="featured__row">
-
-      <div class="square-card square-card--shaded">
+      <div class="square-card">
         <%= link_to "/t/woman/shoes" do %>
           <%= image_tag "featured1.png", class: "square-card__picture"%>
-          <a href="/t/woman/shoes" class= "btn btn--white btn--featured"><%=t('amanda.home.shoes')%></a>
+
         <% end %>
       </div>
-      <div class="square-card">
+
+
+
+      <div class="square-card  square-card--text">
+        <div class="heading-secondary">
+          <h2 class="heading-secondary--main">
+            <%=t('amanda.home.shoes-women-title')%>
+          </h2>
+          <p class="">
+            <%=t('amanda.home.shoes-women-text')%>
+          </p>
+          <a href="/t/woman/shoes" class= "btn btn--black margin-top-medium"><%=t('amanda.home.shop')%></a>
+
+        </div>
+      </div>
+
+  </div>
+
+
+
+
+  <!-- third row (3taxons woman) -->
+   <div class="featured__row">
+
+      <div class="square-card third-card">
        <%= link_to "/t/woman/bags" do %>
           <%= image_tag "featured2.png", class: "square-card__picture"%>
           <a href="/t/woman/bags" class= "btn btn--white btn--featured"><%=t('amanda.home.bags')%></a>
         <% end %>
       </div>
 
+      <div class="square-card third-card">
+        <%= link_to "/t/woman/belts" do %>
+          <%= image_tag "cinturones.png", class: "square-card__picture"%>
+          <a href="/t/woman/belts" class= "btn btn--white btn--featured"><%=t('amanda.home.belts')%></a>
+        <% end %>
+      </div>
+
+      <div class="square-card third-card">
+        <%= link_to "/t/woman/accessories" do %>
+          <%= image_tag "pulseras.png", class: "square-card__picture"%>
+          <a href="/t/woman/accessories" class= "btn btn--white btn--featured"><%=t('amanda.home.accessories')%></a>
+        <% end %>
+      </div>
+
   </div>
+
+
+
+
+<!-- forth row (1 taxon man) -->
+
+<div class="featured__row">
+
+      <div class="square-card square-card--text">
+        <div class="heading-secondary">
+          <h2 class="heading-secondary--main">
+            <%=t('amanda.home.shoes-men-title')%>
+          </h2>
+          <p class="heading-secondary--sub">
+            <%=t('amanda.home.shoes-men-text')%>
+          </p>
+
+        </div>
+      </div>
+
+      <div class="square-card ">
+          <%= image_tag "albarcas-hombre.png", class: "square-card__picture"%>
+           <h2 class= "btn btn--white btn--featured btn--jose"><%=t('amanda.home.visit')%></h2>
+           <a href="/t/man/shoes" class= "btn btn--black margin-top-medium"><%=t('amanda.home.shop')%></a>
+      </div>
+
+  </div>
+
+  <!-- fifth row (3taxons woman) -->
+    <div class="featured__row">
+
+      <div class="square-card third-card">
+       <%= link_to "/t/man/bags" do %>
+          <%= image_tag "bolso-hombre.png", class: "square-card__picture"%>
+          <a href="/t/man/bags" class= "btn btn--white btn--featured"><%=t('amanda.home.bags')%></a>
+        <% end %>
+      </div>
+
+      <div class="square-card third-card">
+        <%= link_to "/t/man/belts" do %>
+          <%= image_tag "cinturones-hombre.jpg", class: "square-card__picture"%>
+          <a href="/t/man/belts" class= "btn btn--white btn--featured"><%=t('amanda.home.belts')%></a>
+        <% end %>
+      </div>
+
+      <div class="square-card third-card">
+        <%= link_to "/t/man/accessories" do %>
+          <%= image_tag "pulseras2.png", class: "square-card__picture"%>
+          <a href="/t/man/accessories" class= "btn btn--white btn--featured"><%=t('amanda.home.accessories')%></a>
+        <% end %>
+      </div>
+
+  </div>
+
+<!-- sixth row (1 kids) -->
+
+<div class="featured__row">
+      <div class="square-card">
+        <%= link_to "/t/woman/shoes" do %>
+          <%= image_tag "kids.png", class: "square-card__picture"%>
+
+        <% end %>
+      </div>
+
+
+
+      <div class="square-card  square-card--text">
+        <div class="heading-secondary">
+          <h2 class="heading-secondary--main">
+            <%=t('amanda.home.kids-title')%>
+          </h2>
+          <p class="">
+            <%=t('amanda.home.kids-text')%>
+          </p>
+          <a href="/t/kids" class= "btn btn--black margin-top-medium"><%=t('amanda.home.shop')%></a>
+
+        </div>
+      </div>
+
+  </div>
+
+
+
+
+
+
 </div>
