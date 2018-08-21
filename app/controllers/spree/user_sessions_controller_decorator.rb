@@ -15,7 +15,6 @@ def create
         format.html do
           flash.now[:error] = t('devise.failure.invalid')
           render :new
-          raise
           redirect_back_or_default(after_sign_in_path_for(spree_current_user))
 
         end
