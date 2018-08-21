@@ -1,1 +1,47 @@
-<h1>man</h1>
+<div class="featured">
+  <!-- first product -->
+  <% if @products.find_by(slug: "barberia-sandals") %>
+  <% product ||= @products.find_by(slug: "barberia-sandals") %>
+  <% else %>
+  <% product ||= Spree::Taxon.find_by(permalink: "woman/shoes").products.first %>
+  <% end %>
+
+  <% if product %>
+  <%= render partial: 'spree/shared/featured_product__right', locals: { product: product}%>
+  <% else %>
+  <p>no product</p>
+  <% end %>
+
+<!-- first taxon -->
+
+  <%= render partial: 'spree/shared/taxon_card__right', locals: { taxon: Spree::Taxon.find_by(permalink: "man/shoes"), image: "calzado2.png"}%>
+
+
+<!-- second product -->
+  <% if @products.find_by(slug: "es-ram-bag") %>
+  <% product2 ||= @products.find_by(slug: "es-ram-bag") %>
+  <% else %>
+  <% product2 ||= Spree::Taxon.find_by(permalink: "woman/bags").products.first %>
+  <% end %>
+
+  <% if product2 %>
+  <%= render partial: 'spree/shared/featured_product__right', locals: { product: product2}%>
+  <% else %>
+  <p>no product</p>
+  <% end %>
+
+<!-- second taxon -->
+  <%= render partial: 'spree/shared/taxon_card__right', locals: { taxon: Spree::Taxon.find_by(permalink: "man/handbags"), image: "bolsos-tienda.png"}%>
+
+
+<!-- remaining taxons -->
+  <div class="featured__row">
+
+    <%= render partial: 'spree/shared/taxon_card_small', locals: { taxon: Spree::Taxon.find_by(permalink: "man/belts"), image: "cinturones-hombre.jpg"}%>
+
+    <%= render partial: 'spree/shared/taxon_card_small', locals: { taxon: Spree::Taxon.find_by(permalink: "man/accessories"), image: "pulseras2.png"}%>
+
+  </div>
+
+</div>
+
