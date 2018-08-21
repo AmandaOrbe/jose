@@ -232,7 +232,7 @@
       @include respond(phone) {
         left: 0;
       }
-      &:hover .nosotros{
+      &:hover .t_4{
        display: flex;
       @include respond(phone) {
         display: none;
@@ -248,7 +248,7 @@
 
 
 
-.t_1, .t_2, .t_3{
+.t_1, .t_2, .t_3, .t_4{
   display: none;
   &:hover{
     display: flex;
@@ -259,23 +259,6 @@
 }
 
 
-
-.regalos{
-    display: none;
-     &:hover{
-    display: flex;
-  }
-}
-
-.nosotros{
-  display: none;
-   &:hover{
-    display: flex;
-  }
-  h5{
-    white-space: nowrap;
-  }
-}
 
 
 .languages{
