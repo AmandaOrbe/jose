@@ -1,0 +1,83 @@
+<mjml>
+  <mj-head>
+     <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Lora"  />
+     <mj-attributes>
+      <mj-button color="#fff" background-color= "#F80058" padding="0" font-weight= "500" text-transform= "uppercase" font-size= "12" border-radius="37px" height="37px" />
+       <mj-divider border-width="1px" border-style="solid" border-color="lightgrey" padding="40px" />
+      <mj-class name="header" color="#F80058" />
+      <mj-class name="big" font-size="20px" />
+      <mj-all font-family="Montserrat" padding="0" align="left" />
+    </mj-attributes>
+  </mj-head>
+
+
+  <mj-body>
+    <mj-container>
+
+
+      <mj-section padding="77px 0px 108px 0px" background-url="z-images/water.jpg" background-size="cover" full-width= "full-width">
+        <mj-column>
+          <mj-image padding-bottom="14" width="92"  align="center" src= "z-images/logo.png"></mj-image >
+
+
+         </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <mj-section padding="40px " background-color="#fff" border-radius= "4px">
+        <mj-column>
+          <mj-text mj-class="text" line-height="22px" font-size="14" font-weight="100"> Dear Miriam, <br>
+            <br>
+            Merci pour votre commande Ishvara. <br>
+            Cet e-mail de confirmation est votre bon de commande. <br>
+          </mj-text>
+          <mj-divider></mj-divider>
+          <mj-table padding="40px 0" line-height= "26px" >
+          <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+            <th style="padding: 0 15px 0 0;">picture</th>
+            <th style="padding: 0 15px;">article</th>
+            <th style="padding: 0 15px;">size</th>
+            <th style="padding: 0 15px;">amount</th>
+            <th style="padding: 0 0 0 15px;">price</th>
+          </tr>
+          <tr>
+            <td style="padding: 0 15px 0 0;">1995</td>
+            <td style="padding: 0 15px;">PHP</td>
+            <td style="padding: 0 15px;">PHP</td>
+            <td style="padding: 0 15px;">PHP</td>
+            <td style="padding: 0 0 0 15px;">C, Shell Unix</td>
+          </tr>
+          <tr>
+            <td style="padding: 0 15px 0 0;">1995</td>
+            <td style="padding: 0 15px;">JavaScript</td>
+            <td style="padding: 0 15px;">JavaScript</td>
+            <td style="padding: 0 15px;">JavaScript</td>
+            <td style="padding: 0 0 0 15px;">Scheme, Self</td>
+          </tr>
+        </mj-table>
+          <mj-divider></mj-divider>
+          <mj-text mj-class="text" line-height="18px" font-size="12" font-weight="300" align="center"> El pedido será enviado a: <br>
+            José Marcos Garzón <br>
+            Ishvara Formentera <br>
+            (+34) 971 323 402 <br>
+            Porto Saler, 6 • Sant Francesc Xavier • FORMENTERA <br>
+
+          </mj-text>
+           <mj-divider></mj-divider>
+          <mj-text mj-class="text" line-height="18px" font-size="12" font-weight="300"> Muchas gracias <br>
+            José Marcos Garzón <br>
+            Ishvara Formentera <br>
+            (+34) 971 323 402 <br>
+            Porto Saler, 6 • Sant Francesc Xavier • FORMENTERA <br>
+            www.formenteraishvara.com
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+
+
+
+
+    </mj-container>
+  </mj-body>
+<mjml>

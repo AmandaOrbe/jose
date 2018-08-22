@@ -585,6 +585,9 @@ body.outlook p {
 
 /*  Media Queries */
 
+
+
+
 @media only screen and (max-width: 600px) {
 
   table[class="body"] img {
@@ -692,6 +695,15 @@ body.outlook p {
   table[class="body"] .hide-for-desktop {
     display: inherit !important;
   }
+
+   @media only screen and (max-width:480px) {
+      table.full-width-mobile {
+        width: 100% !important;
+      }
+      td.full-width-mobile {
+        width: auto !important;
+      }
+    }
 }
 
   </style>
