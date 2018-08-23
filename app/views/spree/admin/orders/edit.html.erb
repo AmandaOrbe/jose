@@ -10,6 +10,7 @@
 <%= render partial: 'spree/admin/shared/order_tabs', locals: { current: 'Shipments' } %>
 <% admin_breadcrumb(plural_resource_name(Spree::Shipment)) %>
 
+
 <div data-hook="admin_order_edit_header">
   <%= render partial: 'spree/shared/error_messages', locals: { target: @order } %>
 </div>
@@ -33,3 +34,4 @@
     <%= render partial: 'form', locals: { order: @order }%>
   </div>
 </div>
+
