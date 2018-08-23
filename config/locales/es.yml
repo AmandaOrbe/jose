@@ -1,5 +1,6 @@
 es:
   amanda:
+    cancel: Cancelar
     thanks: "Muchas gracias"
     shipment_to: 'El pedido será enviado a:'
     buy: comprar

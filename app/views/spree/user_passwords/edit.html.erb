@@ -1,0 +1,30 @@
+<%= render partial: 'spree/shared/error_messages', locals: { target: @spree_user } %>
+<div id="change-password">
+  <div class="registration">
+    <div class="registration__left">
+      <legend><%= Spree.t(:change_my_password) %></legend>
+      <div class="centered">
+
+        <%= form_for @spree_user, as: :spree_user, url: spree.update_password_path, method: :put do |f| %>
+        <p>
+          <%= f.label :password, Spree.t(:password) %><br />
+          <%= f.password_field :password, class: 'title form-item  margin-bottom-medium password' %><br />
+        </p>
+        <p>
+          <%= f.label :password_confirmation, Spree.t(:confirm_password) %><br />
+          <%= f.password_field :password_confirmation , class: 'title form-item  margin-bottom-medium password' %><br />
+        </p>
+        <%= f.hidden_field :reset_password_token %>
+        <%= f.submit Spree.t(:update), class: 'btn btn--black  ' %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+  <div class="registration__right--picture">
+    <%= image_tag "ishvara.png", class: "registration__picture"%>
+  </div>
+
+</div>
+
+

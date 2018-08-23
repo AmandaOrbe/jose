@@ -1,0 +1,27 @@
+<%= render partial: 'spree/shared/error_messages', locals: { target: @spree_user } %>
+
+<div id="forgot-password">
+  <div class="registration">
+    <div class="registration__left">
+      <legend><%= Spree.t(:forgot_password) %></legend>
+      <div class="centered">
+        <div>
+        <br>
+        <p><%= Spree.t(:instructions_to_reset_password) %></p>
+        <%= form_for Spree::User.new, as: :spree_user, url: spree.reset_password_path do |f| %> <br>
+          <p><%= f.label :email, Spree.t(:email) %><br /></p> <br>
+          <%= f.email_field :email , class: 'title form-item  margin-bottom-medium password'%>
+          <%= f.submit Spree.t(:reset_password),class: 'btn btn--black margin-bottom-medium' %>
+          <br>
+           <%= link_to t("amanda.cancel"), root_path, class: "btn btn--white-border"  %>
+        <% end %>
+        </div>
+      </div>
+      </div>
+      <div class="registration__right--picture">
+            <%= image_tag "ishvara.png", class: "registration__picture"%>
+      </div>
+
+  </div>
+</div>
+

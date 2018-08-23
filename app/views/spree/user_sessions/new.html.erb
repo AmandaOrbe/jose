@@ -4,10 +4,20 @@
 
 <% @body_id = 'login' %>
 <div id="existing-customer">
-  <h6><%= Spree.t(:login_as_existing) %></h6>
-  <div data-hook="login">
-    <%= render partial: 'spree/shared/login2' %>
-    <%= Spree.t(:or) %>&nbsp;<%= link_to Spree.t(:create_a_new_account), spree.signup_path %> | <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+  <div class="registration">
+    <div class="registration__left">
+      <legend><%= Spree.t(:login_as_existing) %></legend>
+
+        <div data-hook="login">
+          <%= render partial: 'spree/shared/login2' %>
+          <%= Spree.t(:or) %>&nbsp;<%= link_to Spree.t(:create_a_new_account), spree.signup_path %> | <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+        </div>
+      <div data-hook="login_extras"></div>
+
+  </div>
+    <div class="registration__right--picture">
+      <%= image_tag "ishvara.png", class: "registration__picture"%>
+    </div>
   </div>
 </div>
-<div data-hook="login_extras"></div>
+
