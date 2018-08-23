@@ -1,5 +1,7 @@
 es:
   amanda:
+    thanks: "Muchas gracias"
+    shipment_to: 'El pedido será enviado a:'
     buy: comprar
     productpage:
       generalaspects: Características Generales
@@ -2087,13 +2089,14 @@ es:
     shipment_details: "Desde Formentera a %{shipping_method}"
     shipment_mailer:
       shipped_email:
-        dear_customer: Estimado Cliente,\n
-        instructions: Su pedido ha sido enviado
-        shipment_summary: Resumen del envío
+        dear_customer: Hola %{name}
+        instructions: Su pedido %{number} ha sido enviado
+        shipment_summary: 'Resumen del envío:'
         subject: Notificación de Envío
         thanks: "¡Gracias por su compra!"
-        track_information: 'Información Seguimiento: %{tracking}'
+        track_information: 'Número de seguimiento: %{tracking}'
         track_link: 'Link del Tracking: %{url}'
+        shipment_method: 'Método de Envío: %{method}'
     shipment_date: Fecha de envío
     shipment_number: Número de envío
     shipment_numbers: Números de envío

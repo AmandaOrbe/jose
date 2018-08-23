@@ -32,6 +32,8 @@
 en:
   hello: "Hello world"
   amanda:
+    thanks: "Thank you"
+    shipment_to: "The order will be sent to:"
     buy: buy now
     productpage:
       generalaspects: General Aspects
@@ -98,6 +100,15 @@ en:
         price: 'price'
     shopping_cart: My shopping bag
     shipment_details: "From Formentera via %{shipping_method}"
+    shipment_mailer:
+      shipped_email:
+        dear_customer: Hi %{name}
+        instructions: Your order %{number} has been shipped
+        shipment_summary: 'Shipment Summary:'
+        thanks: "Thank you for your purchase"
+        track_information: 'Tracking number: %{tracking}'
+        track_link: 'Shipment Link: %{url}'
+        shipment_method: 'Shipment Method: %{method}'
     full_name: Full Name
     thank_you_for_your_order: Thank you very much for your purchase in Ishvara, we have received your order correctly. In the next few days we will contact you with the details of the shipment.
 
