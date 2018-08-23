@@ -29,13 +29,14 @@
                           <tr>
                             <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
                               <div style="font-family:Montserrat;font-size:14px;font-weight:100;line-height:22px;text-align:left;color:#000000;"> <%= t('spree.shipment_mailer.shipped_email.dear_customer', name: @order.user.ship_address.firstname)   %><br>
-                               <br> <%= t('spree.shipment_mailer.shipped_email.instructions') %><br><%= t('spree.shipment_mailer.shipped_email.shipment_summary') %>
+                               <br> <%= t('spree.shipment_mailer.shipped_email.instructions', number: @order.number ) %><br><%= t('spree.shipment_mailer.shipped_email.shipment_summary') %>
                                <div class="padded" style="padding:20px;">
                                <br>
-                                <%= t('spree.shipment_mailer.shipped_email.track_information', tracking: @carton.tracking) if @carton.tracking %>
-                               <br>
-                               <br>
                                 <%= t('spree.shipment_mailer.shipped_email.shipment_method', method: @carton.shipping_method.name) if @carton.shipping_method %>
+
+                               <br>
+                               <br>
+                                <%= t('spree.shipment_mailer.shipped_email.track_information', tracking: @carton.tracking) if @carton.tracking %>
                                 <br>
                                 </div>
 

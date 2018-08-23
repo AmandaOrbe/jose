@@ -103,7 +103,7 @@ en:
     shipment_mailer:
       shipped_email:
         dear_customer: Hi %{name}
-        instructions: Your order has been shipped
+        instructions: Your order %{number} has been shipped
         shipment_summary: 'Shipment Summary:'
         thanks: "Thank you for your purchase"
         track_information: 'Tracking number: %{tracking}'

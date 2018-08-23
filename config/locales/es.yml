@@ -2090,7 +2090,7 @@ es:
     shipment_mailer:
       shipped_email:
         dear_customer: Hola %{name}
-        instructions: Su pedido ha sido enviado
+        instructions: Su pedido %{number} ha sido enviado
         shipment_summary: 'Resumen del envío:'
         subject: Notificación de Envío
         thanks: "¡Gracias por su compra!"

@@ -22,6 +22,7 @@
             >
           <![endif]-->
               <div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
                   <tbody>
                     <tr>
@@ -29,7 +30,7 @@
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tr>
                             <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                              <div style="font-family:Montserrat;font-size:14px;font-weight:100;line-height:22px;text-align:left;color:#000000;"><%= t('.dear_customer') %><br> <br> <%= t('.instructions') %><br> <%= t('.order_summary') %> <br> </div>
+                              <div style="font-family:Montserrat;font-size:14px;font-weight:100;line-height:22px;text-align:left;color:#000000;"><%= t('.dear_customer') %><br> <br> <%= t('.instructions') %><br> <br> <%= t('.order_summary') %>  <%= @order.number %> <br> </div>
                             </td>
                           </tr>
                           <tr>
@@ -54,30 +55,31 @@
                                 <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
 
                                   <th style="padding: 0 15px 0 0;"><%= t('.article') %></th>
-                                  <th style="padding: 0 15px;"><%= t('.size')  %></th>
-                                  <th style="padding: 0 15px;"><%= t('.amount') %></th>
-                                  <th style="padding: 0 0 0 15px;"><%= t('.price')%></th>
+
+                                  <th style="padding: 0 0 0 15px;text-align:right;"><%= t('.price')%></th>
                                 </tr>
                                 <% @order.line_items.each do |item| %>
+                                  <tr style="padding-top: 15px">
 
-                                  <tr>
+                                    <td style="padding-top: 15px;font-family:Montserrat;"><%= item.variant.product.name %> <br><%= item.variant.options_text %></td>
 
-                                    <td style="padding: 0 15px;"><%= item.variant.product.name %></td>
-                                    <td style="padding: 0 15px;"><%= item.variant.options_text %></td>
-                                    <td style="padding: 0 15px;"><%=item.quantity%></td>
-                                    <td style="padding: 0 0 0 15px;"><%= item.single_money %></td>
+
+                                    <td style="padding-top:15px;font-family:Montserrat;text-align:right; min-width: 100px;"><%=item.quantity%> x <%=item.single_money%></td>
                                   </tr>
+
+
                                 <% end %>
 
                                 <tr>
 
-                                  <td colspan="3" style="padding: 0 15px;"><%= t('.shipment')%></td>
-                                  <td><%=@order.shipment_total  %></td>
+                                  <td  style="padding-top: 15px ;font-family:Montserrat; color:gray"><%= t('.shipment')%></td>
+                                  <td style="text-align:right;font-family:Montserrat;padding-top: 15px; color:gray "><%=@order.shipment_total  %></td>
                                 </tr>
                                 <tr>
 
-                                  <td colspan="3" style="padding: 0 0 0 15px;"><%= t('.total')%></td>
-                                  <td><%=@order.total %></td>
+                                  <td style="padding-top: 15px;font-family:Montserrat;"><%= t('.total')%></td>
+                                  <td style= "text-align:right; font-family:Montserrat;padding-top: 15px "><strong> <%=@order.total %></strong></td>
+
                                 </tr>
                                   <tr class="edit-tracking vertical-middle">
                                   </tr>
@@ -103,7 +105,9 @@
                           </tr>
                           <tr>
                             <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
-                              <div style="font-family:Montserrat;font-size:12px;font-weight:300;line-height:18px;text-align:center;color:#000000;"> El pedido será enviado a: <br> <%=@order.ship_address%>
+                              <div style="font-family:Montserrat;font-size:12px;font-weight:300;line-height:18px;text-align:center;color:#000000;"> <%=t("amanda.shipment_to")  %>  <br><br> <%=@order.ship_address.full_name%> <br><%=@order.ship_address.address1%> <br><%=@order.ship_address.zipcode%> &nbsp; <%=@order.ship_address.city%> <br><%=@order.ship_address.state.name%><%=  @order.ship_address.country.name%> <br> <br>
+                                <%= t('spree.shipment_mailer.shipped_email.thanks') %>
+
                             </td>
                           </tr>
                           <tr>
@@ -124,7 +128,7 @@
                           </tr>
                           <tr>
                             <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                              <div style="font-family:Montserrat;font-size:12px;font-weight:300;line-height:18px;text-align:left;color:#000000;"> Muchas gracias <br> José Marcos Garzón <br> Ishvara Formentera <br> (+34) 971 323 402 <br> Porto Saler, 6 • Sant Francesc Xavier • FORMENTERA <br> www.formenteraishvara.com </div>
+                              <div style="font-family:Montserrat;font-size:12px;font-weight:300;line-height:22px;text-align:center;color:#000000;"> <%= t("amanda.thanks")  %><br> José Marcos Garzón <br> Ishvara Formentera <br> (+34) 971 323 402 <br> Porto Saler, 6 • Sant Francesc Xavier • FORMENTERA <br> www.formenteraishvara.com </div>
                             </td>
                           </tr>
                         </table>
