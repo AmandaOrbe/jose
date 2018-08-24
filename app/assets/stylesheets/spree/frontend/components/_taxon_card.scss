@@ -3,16 +3,25 @@
   justify-content: space-between;
   background-color: $light-gray;
   padding: 3rem;
+  @include respond(phone) {
+    margin-top:0 !important;
+    }
 
   &__left{
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__right{
     width: 55%;
+    @include respond(phone) {
+      width:100%;
+    }
   }
 
   &__picture{

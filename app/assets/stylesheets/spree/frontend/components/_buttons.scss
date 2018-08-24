@@ -18,6 +18,7 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
   }
 
 
+
   &:hover{
     opacity: 1;
     transform: translateY(-.1rem) scale(1.01);
@@ -44,7 +45,7 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
       opacity: .9;
       z-index: 200;
       font-size: 1.8rem;
-      padding: 1.8rem;
+      padding: 2.3rem;
     }
 
   }
@@ -75,9 +76,15 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     box-shadow: 0 1.5rem 4.5rem 0 rgba(0,0,0,0.6), 0 .2rem .3rem 0 rgba(0,0,0,0.5);
     @include respond(phone) {
       left: 0;
-      top: calc(100vh - 11.5rem);
-      box-shadow:none;
+      top: calc(100vh - 10.5rem);
+      -webkit-box-shadow: none;
+      box-shadow: none;
       background-color: white;
+      font-size: 1.8rem;
+      width: 100%;
+      color: black;
+      opacity: 0.9;
+      height: 5rem;
     }
     &:hover{
       opacity: .7;
@@ -123,7 +130,16 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     transform: translateX(-50%);
      @include respond(phone) {
       bottom: 6.2rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
+
+  &--featured-product{
+    position: relative;
+      bottom: 8rem;
+      left: 0%;
+      transform: translateX(0%);
 
   }
 
@@ -158,7 +174,7 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     display: none;
     @include respond(phone) {
       display: block;
-      bottom: 7.5rem;
+      bottom: 7rem;
     }
   }
 
@@ -172,6 +188,15 @@ $box-shadow-button: 0 1.5rem 4.5rem 0 rgba(0, 0, 0, 0.1), 0 0.2rem 2rem 0 rgba(0
     font-family: "Montserrat", "Helvetica", "sans-serif";
     transition: all .5s ease;
     border-radius: 0;
+  }
+
+  &--phone{
+    display:none;
+     @include respond(phone) {
+      display: block;
+      box-shadow:none;
+    }
+
   }
 
 }
