@@ -29,9 +29,15 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
     color: $color-black;
     text-align: right;
     padding-top: 1rem;
+    @include respond(phone) {
+      display: none;
+    }
 
     &--right{
       text-align:left;
+       @include respond(phone) {
+      display: none;
+    }
     }
   }
 }
@@ -98,6 +104,11 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
     @include respond(phone) {
       display: none;
     }
+    &--ishvara{
+      display: flex;
+      justify-content: space-around;
+    align-items: center;
+    }
   }
 
   &__frame{
@@ -148,7 +159,14 @@ $box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0
   }
 }
 
-
+.featured-product-mobile{
+  @include respond(phone) {
+  height: 90vw;
+    .square-card__frame{
+      height: 100%
+    }
+  }
+}
 
 
 

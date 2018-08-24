@@ -1,6 +1,6 @@
 <div class="featured__row">
 
-    <div class="square-card">
+    <div class="square-card featured-product-mobile">
       <%= link_to spree.product_path(product, taxon_id: @taxon.try(:id)) do %>
         <% if defined?(image) && image %>
 
@@ -9,6 +9,7 @@
         <% else %>
           <%= render 'spree/shared/image_featured', image: product.display_image, size: :large, itemprop: "image" %>
           <% end %>
+          <h2 class= "btn btn--white btn--featured-product btn--phone"><%=product.name%></h2>
 
       <p class="featured__price"><%=product.name  %> &nbsp <strong><%=product.price.to_f.truncate(0)  %> €</strong></p>
       <% end %>
