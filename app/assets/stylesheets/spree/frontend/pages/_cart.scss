@@ -1,0 +1,161 @@
+.cart{
+  padding-top: 4rem;
+  display: block;
+  min-height: calc((100vh) - (38rem));
+
+
+
+  &__empty{
+    box-shadow: $box-shadow-card;
+    width: 64%;
+    padding: 3rem;
+    margin: 0 auto;
+    * {
+      display: block;
+      text-align: center;
+    }
+
+    .btn{
+      margin: 0 auto;
+    }
+  }
+
+
+// -----------------FORM -----------------------
+  .cart-form{
+    color: $color-black;
+    display: flex;
+    width: 100%;
+      // display: table;
+    height: auto;
+    justify-content: space-between;
+    @include respond(phone) {
+      display: block;
+    }
+      // min-height: 70px;
+
+
+    // -----------------FORM LEFT-----------------------
+
+    .cart-form__left{
+      // display: table-row;
+      width: 64%;
+      box-shadow: $box-shadow-card;
+      z-index: 150;
+      @include respond(phone) {
+        width: 100%;
+        box-shadow: none;
+      }
+      &::after{
+        content: “”;
+        clear: both;
+        display: table;
+      }
+      table{
+        width: 100%;
+      }
+      thead{
+        border-bottom: 1px solid $color-black;
+        font-size: 1.4rem;
+      }
+      th{
+        padding: 1rem 0;
+        font-family: $body-font;
+      }
+      img{
+        max-width: 15rem;
+        @include respond(phone) {
+          max-width: 10rem;
+        }
+      }
+
+      td {
+        font-family: $headers-font;
+        font-weight:200;
+        font-size: 1.2rem;
+      }
+
+
+    }
+    .cart-item-description-header{
+        padding-left: 2rem !important;
+      }
+      // .line-item:not(:last-child) {
+      //   border-bottom: 1px solid $iron;
+      // }
+
+      .line-item-description{
+        white-space: pre-line;
+      }
+
+      .cart-item-description{
+        padding-left: 5rem;
+        @include respond(portrait) { // width < 1200
+          padding-left: 1rem;
+        }
+      }
+      .cart-item-quantity input{
+        width: 4rem;
+        height: 3rem;
+
+        &:focus{
+          outline: black;
+        }
+      }
+
+      .line-item tr{
+        height: 15rem;
+      }
+
+            .delete img{
+        max-width: 1.4rem;
+      }
+
+    &__buttons{
+
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem;
+    }
+
+
+
+    // -----------------FORM right-----------------------
+    .cart-form__right{
+      // background-color: rgba($color-black, 0.7);
+      width: 32%;
+      color: white;
+      display: table;
+      position: sticky;
+      top: 10rem;
+      padding: 2rem;
+      box-shadow: $box-shadow-card;
+      z-index: 150;
+      @include respond(phone) {
+        position: relative;
+        width: 100%;
+        top: 0;
+        box-shadow: none;
+      }
+      h2{
+          color: black;
+        }
+
+      table{
+        margin-top: 3rem;
+        width: 100%;
+        td{
+          padding: .5rem;
+        }
+        h5{
+        color: rgba(black, 0.7);
+        text-align: left;
+        font-size: 1.2rem;
+        }
+
+
+
+      }
+    }
+  }
+}

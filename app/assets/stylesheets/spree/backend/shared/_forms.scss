@@ -1,0 +1,278 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="time"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  color: $input-color;
+  border: $input-btn-border-width solid $input-border-color;
+  border-radius: $input-border-radius;
+  background: $input-bg;
+  font-size: $font-size-base;
+  line-height: $input-btn-line-height;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: 0;
+  }
+
+  &:disabled {
+    background: $input-disabled-bg;
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+}
+
+textarea {
+  line-height: 19px;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+label {
+  &.required:after {
+    content: " *";
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 0.25rem;
+  }
+}
+
+.label-block label { display: block }
+
+input[type="submit"],
+input[type="button"],
+button,
+.button {
+  box-shadow: $box-shadow;
+  transition: ease .3s !important;
+
+  &:not(.close):not([class*="btn"]) {
+    // We want to apply the primary button coloring to all buttons that do not
+    // currently use the Bootstrap class naming convention (`btn`).
+    //
+    // In order to avoid the clashing between using `:not(.btn)` and
+    // `@extend .btn` we need to use an attribute selector of `[class*="btn"]`.
+    @extend .btn;
+    @include button-variant(theme-color("primary"), theme-color("primary"));
+  }
+  &:hover{
+        transform: scale(1.05);
+      }
+       &::after{
+        transform: scaleX(1.4) scaleX(1.8);
+        opacity: 0;
+
+
+        border: none;
+    }
+  &:before {
+    font-weight: $font-weight-normal;
+  }
+
+  &.fullwidth {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+span.info {
+  font-size: 85%;
+  color: lighten($body-color, 15);
+  display: block;
+  line-height: 20px;
+  margin: 5px 0;
+  .field & {
+    font-style: italic;
+  }
+}
+
+.field {
+  padding: 10px 0;
+
+  &.checkbox {
+    min-height: 5.9rem;
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+
+    label {
+      cursor: pointer;
+      margin-top: 2.25rem;
+      font-weight: $font-weight-normal;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0.5rem 0;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 1rem;
+
+      label {
+        font-weight: $font-weight-normal;
+        text-transform: none;
+        margin-bottom: 0;
+      }
+
+      &.white-space-nowrap {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.withError {
+    .field_with_errors {
+      label {
+        color: very-light(theme-color("danger"), 30);
+      }
+
+      input {
+        border-color: very-light(theme-color("danger"), 15);
+      }
+    }
+    .formError {
+      color: very-light(theme-color("danger"), 30);
+      font-style: italic;
+      font-size: 85%;
+    }
+    .select2-container {
+      border-radius: 4px;
+      border: 1px solid very-light(theme-color("danger"), 15);
+    }
+  }
+}
+
+fieldset {
+
+  position: relative;
+  margin-bottom: 35px;
+  margin-top: 5px;
+  padding: 40px;
+  padding-bottom: 80px;
+  border-left: none;
+  border-right: none;
+  box-shadow: $box-shadow;
+
+
+  h3{
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+    margin-top: 40px;
+  }
+  &.no-border-bottom {
+    border-bottom: none;
+  }
+
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  &.no-border-top {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  legend {
+    color: $color-8;
+    font-size: 20px;
+    font-weight: $font-weight-normal;
+    text-align: left;
+    width: auto;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transform: translateY(40px);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    i {
+      color: $link-color;
+    }
+
+  }
+
+  .filter-actions {
+    margin-bottom: -32px;
+    margin-top: 15px;
+    text-align: center;
+
+    form {
+      display: inline-block;
+    }
+
+
+
+    // Always make sure the choices at the bottom of a fieldset are spaced out
+    > * + * {
+      margin-left: 2em;
+    }
+  }
+}
+
+.form-actions {
+  margin-top: 28px;
+}
+.form-buttons {
+  text-align: center;
+   margin-top: 28px;
+}
+
+.input-group-text {
+  color: $color-6;
+}
+
+input[type="text"], .custom-select,  input[type="password"], input[type="select"], input[type="email"], input[type="date"], input[type="datetime"], input[type="time"], input[type="url"], input[type="number"], input[type="tel"], textarea{
+  padding: 0.375rem 0.75rem;
+  color: $color-10;
+  font-weight: $font-weight-normal;
+  border: 1px solid #cee1f4;
+  border-radius: 0px;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 2.1rem;
+ &:focus{
+    border-color:  #cee1f4;
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba($color-8, .1);
+    border-bottom: 3px solid $color-2;
+    }
+
+  &:focus:invalid{
+    border-bottom: 3px solid $color-6;
+  }
+}
+
+.js-edit-stock-item{
+  tr{
+    border: none;
+  }
+  td{
+    width: 100px;
+    border: none;
+
+  }
+}
+.shipment{
+  border: 1px solid red;
+}

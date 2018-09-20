@@ -1,0 +1,21 @@
+.breadcrumb {
+  font-family: $font-family-lora;
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  padding-left: 4rem;
+  color: $color-1;
+  font-weight: bold;
+  a{
+    font-weight: $font-weight-normal;
+    font-size: 1.8rem;
+    color: $color-8;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: $color-8;
+    content: "/";
+}

@@ -1,0 +1,56 @@
+.order{
+  margin-top: 1rem;
+
+  &__titles{
+    margin-top: 5rem;
+    text-align: center;
+    h1, h2, h5{
+      font-family: $body-font;
+      text-transform: none;
+      padding: 1rem;
+    }
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      display: block;
+    }
+
+  }
+
+  &__left{
+    width: 60%;
+    box-shadow: $box-shadow-card;
+    display: table;
+
+     @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+  &__right{
+    width: 38%;
+    box-shadow: $box-shadow-card;
+     @include respond(phone) {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    &--padded{
+      padding: 6rem 6rem 0 6rem;
+      @include respond(portrait) { // width < 1200
+        padding: 4rem 4rem 0 4rem;
+      }
+    }
+  }
+
+  &__buttons{
+
+    width: 100%;
+    text-align: center;
+    padding-bottom: 6rem;
+  }
+}

@@ -1,0 +1,26 @@
+.content-sidebar {
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: $box-shadow;
+  h5{
+    color: $color-8;
+    text-transform: uppercase;
+    font-weight: $font-weight-normal;
+  }
+
+
+  .has-tabs & {
+    padding-top: 3.25rem;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+}
+
+.sidebar-title {
+  @include line-through($color: $color-border);
+  color: $color-2;
+  font-size: 14px;
+  font-weight: $font-weight-normal;
+}

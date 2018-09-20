@@ -1,0 +1,89 @@
+$box-shadow-card: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+// .product-listing{
+//   background-color: orange;
+// }
+
+.card{
+  height: 31.2rem;
+  width: 100%;
+  max-width: 26rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 1.5rem 5.5rem 0 rgba(0,0,0,0.04), 0 .2rem .4rem 0 rgba(0,0,0,0.3);
+  position: relative;
+  // margin-bottom: 4rem;
+  transition: all ease .5s;
+  margin: 2rem auto;
+
+  @include respond(phone) {
+    height: 25rem;
+  }
+
+  &:hover{
+    filter:  brightness(90%);
+    transform: scale(1.02)
+  }
+
+  &__image-frame{
+    height: 27.1rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+
+    a{
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+    }
+
+    a > img{
+      width: 100%;
+      position:relative;
+      top: -2rem;
+
+    }
+  }
+
+
+
+  &__footer{
+    position: absolute;
+    // height: 6.1rem;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    text-align: center;
+    text-transform: lowercase;
+    h4{
+      line-height: 0.8;
+    }
+
+  &--info{
+    text-transform: uppercase;
+    font-weight: Thin;
+    color: #777;
+  }
+
+  &--price{
+    font-weight: 200;
+    transform: translateY(-.4rem)
+  }
+}
+
+}
+.product-listing{
+  @include respond(phone) {
+     margin-left: 2rem;
+     margin-right: 2rem;
+  }
+}
+
+
+
+
+

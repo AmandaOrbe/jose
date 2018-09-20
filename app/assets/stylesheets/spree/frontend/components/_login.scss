@@ -1,0 +1,64 @@
+.header-login{
+  margin-left: 5vw;
+  transform: translateY(-2rem);
+  position: relative;
+  // border: 1px solid red;
+  height: 30rem;
+  opacity: 1;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $color-black;
+  transition: height .3s linear, opacity .6s cubic-bezier(1,0,1,.57);
+  @include respond(portrait) {
+    margin-left: 3vw;
+  }
+
+  &--invisible{
+    height: 0rem;
+    opacity: 0;
+    transition: height .3s linear, opacity 0s;
+    margin-bottom: none !important;
+    *{
+      display: none;
+    }
+  }
+
+
+
+  h3{
+    text-transform: uppercase;
+    font-family: $headers-font;
+    font-weight: 200;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__left, &__right{
+
+    position: absolute;
+    padding: 3rem 8rem;
+    height: 0rem;
+    @include respond(landscape) { // width < 1200
+      padding: 3rem 0;
+    }
+  }
+
+  &__left{
+width: 39%;
+     left: 0;
+  }
+
+ &__right{
+  width: 59%;
+    right: 0;
+  }
+
+  .inline-form{
+    display: flex;
+  }
+
+  .title{
+    margin-right: 3rem;
+  }
+}
+
+
