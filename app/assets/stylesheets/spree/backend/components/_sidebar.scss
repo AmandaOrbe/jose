@@ -1,4 +1,5 @@
-.content-sidebar {
+@import 'spree/backend/globals/variables_override';
+@import 'spree/backend/bootstrap_custom';.content-sidebar {
   margin-top: 1rem;
   background-color: white;
   box-shadow: $box-shadow;
