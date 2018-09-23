@@ -1,11 +1,10 @@
 
 /*// Graphical variables*/
-@import "config/colors";
-@import "config/fonts";
-@import "config/bootstrap_variables";
-@import "config/responsive";
-@import "config/typography";
-
+@import "spree/frontend/config/colors";
+@import "spree/frontend/config/fonts";
+@import "spree/frontend/config/bootstrap_variables";
+@import "spree/frontend/config/responsive";
+@import "spree/frontend/config/typography";
 
 /*// External libraries*/
 @import "bootstrap-sprockets";
@@ -14,8 +13,8 @@
 @import "font-awesome";
 
 /*// Your CSS partials*/
-@import "layouts/index";
-@import "components/index";
-@import "pages/index";
+@import "spree/frontend/layouts/index";
+@import "spree/frontend/components/index";
+@import "spree/frontend/pages/index";
 
 
