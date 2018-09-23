@@ -1,3 +1,5 @@
+@import 'spree/backend/bootstrap_custom';
+
 table {
     padding: 40px;
     box-shadow: $box-shadow;
@@ -7,7 +9,7 @@ table {
   td{
     height: 100px;
   }
-  @extend .table;
+  @extend .table !optional;
   border-spacing: 0;
 
 
@@ -28,8 +30,8 @@ table {
     text-overflow: ellipsis;
     vertical-align: middle;
     .handle {
-      @extend .fa;
-      @extend .fa-bars;
+      @extend .fa !optional;
+      @extend .fa-bars !optional;
       cursor: move;
       display: none;
       text-align: center;

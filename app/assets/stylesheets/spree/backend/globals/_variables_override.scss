@@ -55,11 +55,11 @@ $color-navbar-footer-active:    $color-2 !default;
 
 // Basic flash colors
 // @include solidus-deprecated-variable("color-success", "brand-success");
-$color-success:                  $color-2 !default;
-// @include solidus-deprecated-variable("color-notice", "brand-warning");
-$color-notice:                   $color-6 !default;
+$brand-success:                  $color-2 !default;
+// @include solidus-deprecated-variable("brand-warning", "brand-warning");
+$brand-warning:                   $color-6 !default;
 // @include solidus-deprecated-variable("color-error", "brand-danger");
-$color-error:                    $color-5 !default;
+$brand-danger:                    $color-5 !default;
 
 // Color for spinner
 $color-spinner: #fff;
@@ -101,24 +101,24 @@ $color-pill-error: #ff967b;
 $color-pill-error-text: $color-pill-text;
 
 // Actions colors
-$color-action-edit-bg:           very-light($color-success, 5  ) !default;
-$color-action-edit-brd:          very-light($color-success, 20 ) !default;
-$color-action-clone-bg:          very-light($color-notice,  5  ) !default;
-$color-action-clone-brd:         very-light($color-notice,  15 ) !default;
-$color-action-remove-bg:         very-light($color-error,   5  ) !default;
-$color-action-remove-brd:        very-light($color-error,   10 ) !default;
-$color-action-void-bg:           very-light($color-error,   10 ) !default;
-$color-action-void-brd:          very-light($color-error,   20 ) !default;
-$color-action-cancel-bg:         very-light($color-notice,  10 ) !default;
-$color-action-cancel-brd:        very-light($color-notice,  20 ) !default;
-$color-action-capture-bg:        very-light($color-success, 5  ) !default;
-$color-action-capture-brd:       very-light($color-success, 20 ) !default;
-$color-action-save-bg:           very-light($color-success, 5  ) !default;
-$color-action-save-brd:          very-light($color-success, 20 ) !default;
-$color-action-mail-bg:           very-light($color-success, 5  ) !default;
-$color-action-mail-brd:          very-light($color-success, 20 ) !default;
-$color-action-failure-bg:        very-light($color-error,   10 ) !default;
-$color-action-failure-brd:       very-light($color-error,   20 ) !default;
+$color-action-edit-bg:           very-light($brand-success, 5  ) !default;
+$color-action-edit-brd:          very-light($brand-success, 20 ) !default;
+$color-action-clone-bg:          very-light($brand-warning,  5  ) !default;
+$color-action-clone-brd:         very-light($brand-warning,  15 ) !default;
+$color-action-remove-bg:         very-light($brand-danger,   5  ) !default;
+$color-action-remove-brd:        very-light($brand-danger,   10 ) !default;
+$color-action-void-bg:           very-light($brand-danger,   10 ) !default;
+$color-action-void-brd:          very-light($brand-danger,   20 ) !default;
+$color-action-cancel-bg:         very-light($brand-warning,  10 ) !default;
+$color-action-cancel-brd:        very-light($brand-warning,  20 ) !default;
+$color-action-capture-bg:        very-light($brand-success, 5  ) !default;
+$color-action-capture-brd:       very-light($brand-success, 20 ) !default;
+$color-action-save-bg:           very-light($brand-success, 5  ) !default;
+$color-action-save-brd:          very-light($brand-success, 20 ) !default;
+$color-action-mail-bg:           very-light($brand-success, 5  ) !default;
+$color-action-mail-brd:          very-light($brand-success, 20 ) !default;
+$color-action-failure-bg:        very-light($brand-danger,   10 ) !default;
+$color-action-failure-brd:       very-light($brand-danger,   20 ) !default;
 
 // Available states
 $states: (

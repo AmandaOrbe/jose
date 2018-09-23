@@ -1,5 +1,7 @@
 @import 'spree/backend/globals/variables_override';
-@import 'spree/backend/bootstrap_custom';.content-sidebar {
+@import 'spree/backend/bootstrap_custom';
+
+.content-sidebar {
   margin-top: 1rem;
   background-color: white;
   box-shadow: $box-shadow;
@@ -20,7 +22,7 @@
 }
 
 .sidebar-title {
-  @include line-through($color: $color-border);
+  // @include line-through($color: $color-border);
   color: $color-2;
   font-size: 14px;
   font-weight: $font-weight-normal;

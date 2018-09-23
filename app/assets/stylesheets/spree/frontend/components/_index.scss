@@ -1,4 +1,7 @@
 // Import your components CSS files here.
+@import "spree/frontend/config/responsive";
+@import "spree/frontend/config/colors";
+@import "spree/frontend/config/fonts";
 @import "alert";
 @import "buttons";
 @import "cards";

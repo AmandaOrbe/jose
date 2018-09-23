@@ -1,3 +1,5 @@
+@import 'spree/backend/bootstrap_custom';
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -7,30 +9,30 @@ input[type="time"],
 input[type="url"],
 input[type="number"],
 input[type="tel"],
-textarea {
-  padding: $input-btn-padding-y $input-btn-padding-x;
-  color: $input-color;
-  border: $input-btn-border-width solid $input-border-color;
-  border-radius: $input-border-radius;
-  background: $input-bg;
-  font-size: $font-size-base;
-  line-height: $input-btn-line-height;
+// textarea {
+  // padding: $input-btn-padding-y $input-btn-padding-x;
+  // color: $input-color;
+  // border: $input-btn-border-width solid $input-border-color;
+  // border-radius: $input-border-radius;
+  // background: $input-bg;
+  // font-size: $font-size-base;
+  // line-height: $input-btn-line-height;
 
-  &:focus {
-    border-color: $input-focus-border-color;
-    outline: 0;
-  }
+//   &:focus {
+//     border-color: $input-focus-border-color;
+//     outline: 0;
+//   }
 
-  &:disabled {
-    background: $input-disabled-bg;
-  }
+//   &:disabled {
+//     background: $input-disabled-bg;
+//   }
 
-  &::placeholder {
-    color: $input-placeholder-color;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
-    opacity: 1;
-  }
-}
+//   &::placeholder {
+//     color: $input-placeholder-color;
+//     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+//     opacity: 1;
+//   }
+// }
 
 textarea {
   line-height: 19px;
@@ -56,38 +58,38 @@ label {
 input[type="submit"],
 input[type="button"],
 button,
-.button {
-  box-shadow: $box-shadow;
-  transition: ease .3s !important;
+// .button {
+//   box-shadow: $box-shadow;
+//   transition: ease .3s !important;
 
-  &:not(.close):not([class*="btn"]) {
-    // We want to apply the primary button coloring to all buttons that do not
-    // currently use the Bootstrap class naming convention (`btn`).
-    //
-    // In order to avoid the clashing between using `:not(.btn)` and
-    // `@extend .btn` we need to use an attribute selector of `[class*="btn"]`.
-    @extend .btn;
-    @include button-variant(theme-color("primary"), theme-color("primary"));
-  }
-  &:hover{
-        transform: scale(1.05);
-      }
-       &::after{
-        transform: scaleX(1.4) scaleX(1.8);
-        opacity: 0;
+//   &:not(.close):not([class*="btn"]) {
+//     // We want to apply the primary button coloring to all buttons that do not
+//     // currently use the Bootstrap class naming convention (`btn`).
+//     //
+//     // In order to avoid the clashing between using `:not(.btn)` and
+//     // `@extend .btn` we need to use an attribute selector of `[class*="btn"]`.
+//     @extend .btn;
+//     @include button-variant(theme-color("primary"), theme-color("primary"));
+//   }
+//   &:hover{
+//         transform: scale(1.05);
+//       }
+//        &::after{
+//         transform: scaleX(1.4) scaleX(1.8);
+//         opacity: 0;
 
 
-        border: none;
-    }
-  &:before {
-    font-weight: $font-weight-normal;
-  }
+//         border: none;
+//     }
+//   &:before {
+//     font-weight: $font-weight-normal;
+//   }
 
-  &.fullwidth {
-    width: 100%;
-    text-align: center;
-  }
-}
+//   &.fullwidth {
+//     width: 100%;
+//     text-align: center;
+//   }
+// }
 
 span.info {
   font-size: 85%;

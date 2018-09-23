@@ -1,9 +1,6 @@
-.product-search-field-show-deleted.field.checkbox {
-  // extra specificity to override styles
-  @include make-col(2);
-  min-height: initial; // override .field.checkbox
-  margin-bottom: 0; // override .checkbox
-}
+@import 'spree/backend/bootstrap_custom';
+
+
 
 div[data-hook="admin_products_index_search_buttons"] {
   margin-top: 2rem;
