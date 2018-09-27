@@ -106,9 +106,20 @@ label{
 
 
 
+body {
+  margin: 0;
+  font-family: "Montserrat", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #000;
+  text-align: left;
+  background-color: #FFFFFF;
+}
 
-
-
+.btn, .input-group-text{
+  font-size: 1.3rem;
+}
 
 
 
