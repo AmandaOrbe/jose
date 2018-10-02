@@ -1,11 +1,12 @@
-<div class="featured">
-  <%= render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+<!-- <div class="featured">
+  <%= #render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
 
-  <%= render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
-  <%= render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
-  <%= render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
-  <%= render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
-  <%= render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
-  <% @products = @products.reject{|product| product == @products.find_by(slug: "la-mola-necklace")} %>
+  <%= #render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+  <%= #render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+  <%= #render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+  <%= #render partial: 'spree/shared/featured_product' , locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+  <%= #render partial: 'spree/shared/featured_product__right', locals: { product: @products.find_by(slug: "la-mola-necklace")}%>
+  <% @products = @products.reject{|#| product == @products.find_by(#slug: "la-mola-necklace")} %>
 
-</div>
+</div> -->
+<%= @products.find_by(slug: "la-mola-necklace").name %>
