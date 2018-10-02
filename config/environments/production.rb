@@ -78,6 +78,16 @@ Rails.application.configure do
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
+   # @!attribute [rw] checkout_zone
+    #   @return [String] Name of a {Zone}, which limits available countries to those included in that zone. (default: +nil+)
+    preference :checkout_zone, :string, default: nil
+
+
+ # @!attribute [rw] default_country_id
+    #   @deprecated
+    #   @return [Integer,nil] id of {Country} to be selected by default in dropdowns (default: nil)
+    preference :default_country_id, :integer
+
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
