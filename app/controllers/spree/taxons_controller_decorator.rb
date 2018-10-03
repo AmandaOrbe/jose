@@ -66,17 +66,17 @@ module Spree
       #   end
       # end
 
-      def destroy
-        @taxon = Spree::Taxon.find(params[:id])
-        @taxon.destroy
-        respond_with(@taxon) { |format| format.json { render json: '' } }
-      end
+      # def destroy
+      #   @taxon = Spree::Taxon.find(params[:id])
+      #   @taxon.destroy
+      #   respond_with(@taxon) { |format| format.json { render json: '' } }
+      # end
 
-      private
+      # private
 
-      def taxon_params
-        params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_fr, :name_en)
-      end
+      # def taxon_params
+      #   params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_fr, :name_en)
+      # end
     end
   end
 end
