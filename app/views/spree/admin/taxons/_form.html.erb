@@ -1,10 +1,5 @@
 <div data-hook="admin_inside_taxon_form" class="row">
   <div class="col-5">
-    <%= f.field_container :name do %>
-      <%= f.label :name, class: 'required' %><br />
-      <%= text_field :taxon, :name, class: 'fullwidth' %>
-      <%= error_message_on :taxon, :name, class: 'fullwidth title' %>
-    <% end %>
 
     <%= f.field_container :name_en do %>
     <%= f.label :name, "Nombre subcategoría Inglés" ,class: 'required' %><br />
