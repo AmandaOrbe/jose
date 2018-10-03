@@ -31,52 +31,52 @@ module Spree
       #   end
       # end
 
-      # def edit
-      #   @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
-      #   @taxon = @taxonomy.taxons.find(params[:id])
-      #   @permalink_part = @taxon.permalink.split("/").last
-      # end
+      def edit
+        @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
+        @taxon = @taxonomy.taxons.find(params[:id])
+        @permalink_part = @taxon.permalink.split("/").last
+      end
 
-      # def update
-      #   @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
-      #   @taxon = @taxonomy.taxons.find(params[:id])
-      #   parent_id = params[:taxon][:parent_id]
-      #   new_position = params[:taxon][:position]
+      def update
+        @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
+        @taxon = @taxonomy.taxons.find(params[:id])
+        parent_id = params[:taxon][:parent_id]
+        new_position = params[:taxon][:position]
 
-      #   if parent_id
-      #     @taxon.parent = Spree::Taxon.find(parent_id.to_i)
-      #   end
+        if parent_id
+          @taxon.parent = Spree::Taxon.find(parent_id.to_i)
+        end
 
-      #   if new_position
-      #     @taxon.child_index = new_position.to_i
-      #   end
+        if new_position
+          @taxon.child_index = new_position.to_i
+        end
 
-      #   if params[:permalink_part]
-      #     @taxon.permalink_part = params[:permalink_part].to_s
-      #   end
+        if params[:permalink_part]
+          @taxon.permalink_part = params[:permalink_part].to_s
+        end
 
-      #   @taxon.assign_attributes(taxon_params)
+        @taxon.assign_attributes(taxon_params)
 
-      #   if @taxon.save
-      #     flash[:success] = flash_message_for(@taxon, :successfully_updated)
-      #   end
+        if @taxon.save
+          flash[:success] = flash_message_for(@taxon, :successfully_updated)
+        end
 
-      #   respond_with(@taxon) do |format|
-      #     format.html { redirect_to edit_admin_taxonomy_url(@taxonomy) }
-      #   end
-      # end
+        respond_with(@taxon) do |format|
+          format.html { redirect_to edit_admin_taxonomy_url(@taxonomy) }
+        end
+      end
 
-      # def destroy
-      #   @taxon = Spree::Taxon.find(params[:id])
-      #   @taxon.destroy
-      #   respond_with(@taxon) { |format| format.json { render json: '' } }
-      # end
+      def destroy
+        @taxon = Spree::Taxon.find(params[:id])
+        @taxon.destroy
+        respond_with(@taxon) { |format| format.json { render json: '' } }
+      end
 
-      # private
+      private
 
-      # def taxon_params
-      #   params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_fr, :name_en)
-      # end
+      def taxon_params
+        params.require(:taxon).permit(permitted_taxon_attributes, :name_es, :name_fr, :name_en)
+      end
     end
   end
 end
