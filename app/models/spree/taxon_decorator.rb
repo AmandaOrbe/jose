@@ -1,7 +1,7 @@
 module Spree
   Taxon.class_eval do
     extend Mobility
-    translates :name,  type: :string;
+    translates :name,  type: :string, default: "____ ";
   end
 
 
