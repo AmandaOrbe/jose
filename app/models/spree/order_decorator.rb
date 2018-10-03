@@ -4,7 +4,7 @@ module Spree
       # @order.language = i18n.locale.to_s
       where.not(completed_at: nil)
     end
-     # remove_checkout_step :delivery
+     remove_checkout_step :delivery
 
     def select_default_shipping
       create_proposed_shipments
