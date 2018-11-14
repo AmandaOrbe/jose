@@ -16,20 +16,20 @@ module Spree
         end
       end
 
-      def create
-        @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
-        @taxon = @taxonomy.taxons.build(params[:taxon])
-        if @taxon.save
-          respond_with(@taxon) do |format|
-            format.json { render json: @taxon.to_json }
-          end
-        else
-          flash[:error] = t('spree.errors.messages.could_not_create_taxon')
-          respond_with(@taxon) do |format|
-            format.html { redirect_to @taxonomy ? edit_admin_taxonomy_url(@taxonomy) : admin_taxonomies_url }
-          end
-        end
-      end
+      # def create
+      #   @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])
+      #   @taxon = @taxonomy.taxons.build(params[:taxon])
+      #   if @taxon.save
+      #     respond_with(@taxon) do |format|
+      #       format.json { render json: @taxon.to_json }
+      #     end
+      #   else
+      #     flash[:error] = t('spree.errors.messages.could_not_create_taxon')
+      #     respond_with(@taxon) do |format|
+      #       format.html { redirect_to @taxonomy ? edit_admin_taxonomy_url(@taxonomy) : admin_taxonomies_url }
+      #     end
+      #   end
+      # end
 
       def edit
         @taxonomy = Spree::Taxonomy.find(params[:taxonomy_id])

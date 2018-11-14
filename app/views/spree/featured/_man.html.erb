@@ -3,7 +3,7 @@
   <% if @products.find_by(slug: "barberia-sandals") %>
   <% product ||= @products.find_by(slug: "barberia-sandals") %>
   <% else %>
-  <% product ||= Spree::Taxon.find_by(permalink: "woman/shoes").products.first %>
+  <% product ||= Spree::Taxon.find_by(permalink: "man/shoes").products.first %>
   <% end %>
 
   <% if product %>
