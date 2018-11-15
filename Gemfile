@@ -50,7 +50,7 @@ gem 'kaminari-i18n', '~> 0.5.0'
 gem 'aws-sdk', '< 2.0'
 gem "aws-sdk-s3", require: false
 
-
+gem 'fog-aws'
 
 gem 'routing-filter', '~> 0.6.0'
 
