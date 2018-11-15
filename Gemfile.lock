@@ -58,13 +58,20 @@ GEM
       execjs
     awesome_nested_set (3.1.4)
       activerecord (>= 4.0.0, < 5.3)
-    aws-sdk (2.11.171)
-      aws-sdk-resources (= 2.11.171)
-    aws-sdk-core (2.11.171)
+    aws-eventstream (1.0.1)
+    aws-partitions (1.113.0)
+    aws-sdk-core (3.38.0)
+      aws-eventstream (~> 1.0)
+      aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.11.171)
-      aws-sdk-core (= 2.11.171)
+    aws-sdk-kms (1.11.0)
+      aws-sdk-core (~> 3, >= 3.26.0)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-s3 (1.23.1)
+      aws-sdk-core (~> 3, >= 3.26.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.3)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -415,7 +422,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  aws-sdk (< 3.0)
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.7)
   byebug
