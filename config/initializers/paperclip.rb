@@ -13,3 +13,5 @@ if Rails.application.secrets.aws_access_key_id
   Spree::Image.attachment_definitions[:attachment].delete(:url)
   Spree::Image.attachment_definitions[:attachment].delete(:path)
 end
+
+
