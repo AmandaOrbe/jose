@@ -47,6 +47,10 @@ gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'kaminari-i18n', '~> 0.5.0'
 
+gem 'aws-sdk', '< 2.0'
+
+
+
 gem 'routing-filter', '~> 0.6.0'
 
 gem 'mobility', '~> 0.7.5'
