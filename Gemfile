@@ -47,8 +47,7 @@ gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'kaminari-i18n', '~> 0.5.0'
 
-gem 'aws-sdk', '< 2.0'
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk', '2.10.47'
 
 gem 'fog-aws'
 
