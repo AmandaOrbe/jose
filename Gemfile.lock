@@ -428,7 +428,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  aws-sdk (< 2.0)
+  aws-sdk
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.7)
