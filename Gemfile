@@ -30,7 +30,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 
-
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'autoprefixer-rails'
 
@@ -47,8 +46,11 @@ gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'kaminari-i18n', '~> 0.5.0'
 
-gem 'aws-sdk',  '< 2.0'
+gem 'paperclip', '~>  5.3.0'
+
+gem 'aws-sdk',  '< 3.0'
 gem "aws-sdk-s3", require: false
+
 
 gem 'fog-aws'
 
@@ -67,6 +69,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'dotenv-rails'
 end
 
 group :development do

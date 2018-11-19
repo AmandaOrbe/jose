@@ -126,6 +126,10 @@ GEM
       devise (>= 2.1.0)
     discard (1.0.0)
       activerecord (>= 4.2, < 6)
+    dotenv (2.5.0)
+    dotenv-rails (2.5.0)
+      dotenv (= 2.5.0)
+      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     excon (0.62.0)
     execjs (2.7.0)
@@ -432,7 +436,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  aws-sdk (< 2.0)
+  aws-sdk (< 3.0)
   aws-sdk-s3
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.7)
@@ -440,6 +444,7 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  dotenv-rails
   fog-aws
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.5)
@@ -448,6 +453,7 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   mobility (~> 0.7.5)
+  paperclip (~> 5.3.0)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (= 5.2.0)

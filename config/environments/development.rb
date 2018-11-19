@@ -34,14 +34,15 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
+  config.paperclip_defaults = {
     storage: :s3,
-  s3_credentials: {
-    bucket: ENV.fetch('S3_BUCKET_NAME'),
-    access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-    secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-    s3_region: ENV.fetch('AWS_REGION'),
+    s3_credentials: {
+      bucket:  ENV['BUCKET_NAME'],
+      access_key_id: ENV['ACCESS_KEY_ID'],
+      secret_access_key: ENV['SECRET_ACCESS_KEY'],
+      s3_region: ENV['AWS_REGION'],
+    }
   }
-}
 
 
   # letter_opener configuration
