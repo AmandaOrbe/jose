@@ -94,6 +94,8 @@ if Rails.env.production?
     default_url:    'noimage/:style.png',
     default_style:  'product'
   }
+Aws::VERSION =  Gem.loaded_specs["aws-sdk"].version
+
 
   attachment_config.each do |key, value|
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
