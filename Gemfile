@@ -48,7 +48,7 @@ gem 'kaminari-i18n', '~> 0.5.0'
 
 gem 'paperclip', '~>  5.3.0'
 
-gem 'aws-sdk',  '< 3.0'
+gem 'aws-sdk'
 gem "aws-sdk-s3", require: false
 
 
