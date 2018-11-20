@@ -28,6 +28,7 @@ module Spree
         @products = Spree::Product.all
       end
       @taxonomies = Spree::Taxonomy.includes(root: :children)
+
     end
 
   end
