@@ -29,6 +29,7 @@ module Spree
       end
       @taxonomies = Spree::Taxonomy.includes(root: :children)
 
+
     end
 
   end
