@@ -77,6 +77,17 @@
               <%= f.error_message_on :slug %>
             <% end %>
           </div>
+
+        <div data-hook="admin_product_form_featured">
+        <%= f.field_container :featured do %>
+          <label>
+            <%= f.check_box :featured %>
+            <%= Spree::Product.human_attribute_name(:featured) %>
+          </label>
+          <%= f.field_hint :featured %>
+        <% end %>
+      </div>
+
         </div>
 
         <div class="col-4">
