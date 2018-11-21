@@ -58,6 +58,9 @@ gem 'routing-filter', '~> 0.6.0'
 
 gem 'mobility', '~> 0.7.5'
 
+gem "solidus_stripe",  :github => 'solidusio-contrib/solidus_stripe'
+
+
 gem 'stripe'
 
 # Use Capistrano for deployment
