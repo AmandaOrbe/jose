@@ -2,30 +2,7 @@
   <fieldset id="payment" data-hook>
     <legend><%= t('spree.payment_information') %></legend>
     <div data-hook="checkout_payment_step">
-      <% if @wallet_payment_sources.present? %>
-        <div class="card_options">
-          <%= radio_button_tag 'use_existing_card', 'yes', true %>
-          <label for="use_existing_card_yes">
-            <%= t('spree.use_existing_cc') %>
-          </label>
-          <br/>
-          <%= radio_button_tag 'use_existing_card', 'no' %>
-          <label for="use_existing_card_no">
-            <%= t('spree.use_new_cc_or_payment_method') %>
-          </label>
-        </div>
 
-        <div id="existing_cards">
-          <div class="field" data-hook="existing_cards">
-            <table class="existing-credit-card-list">
-              <tbody>
-
-
-              </tbody>
-            </table>
-          </div>
-        </div>
-      <% end %>
 
       <div id="payment-method-fields" class="credit-card-hidden" data-hook>
         <% @order.available_payment_methods.each do |method| %>
