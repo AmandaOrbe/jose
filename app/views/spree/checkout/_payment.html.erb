@@ -19,19 +19,8 @@
           <div class="field" data-hook="existing_cards">
             <table class="existing-credit-card-list">
               <tbody>
-                <% @wallet_payment_sources.each do |wallet_payment_source| %>
-                  <% unless wallet_payment_source.payment_source_id = 2%>
-                    <%=
-                      #render(
-                        #partial: "spree/checkout/existing_payment/#{wallet_payment_source.payment_source.payment_method.partial_name}",
-                        #locals: {
-                          #wallet_payment_source: wallet_payment_source,
-                          #default: wallet_payment_source == @default_wallet_payment_source,
-                        }
-                      )
-                    %>
-                  <% end %>
-                <% end %>
+
+
               </tbody>
             </table>
           </div>
