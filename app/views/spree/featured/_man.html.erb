@@ -21,7 +21,7 @@
   <% if @products.find_by(slug: "es-ram-bag") %>
   <% product2 ||= @products.find_by(slug: "es-ram-bag") %>
   <% else %>
-  <% product2 ||= Spree::Taxon.find_by(permalink: "woman/bags").products.first %>
+  <% product2 ||= Spree::Taxon.find_by(permalink: "man/bags").products.first %>
   <% end %>
 
   <% if product2 %>
